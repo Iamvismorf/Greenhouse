@@ -1,0 +1,49 @@
+{
+  "logo": {
+	  "source": "~/Greenhouse/bugs/vix/config/fastfetch/art.txt"
+  },
+  "display": {
+    "separator": "\t\t",
+    "color":{
+      "keys":"blue"
+    },
+    "key": {
+      "width": 12
+    }
+  },
+
+  "modules": [
+    "break",
+    {
+    "type": "os",
+    "key": "Distro",
+    "format": "{3}"
+    },
+    {
+      "type": "kernel",
+      "key": "Kernel",
+      "format": "{release}"
+    },
+    {
+      "type": "packages",
+      "key": "pkgs",
+      "format": "{1}"
+    },
+    {
+      "type": "shell",
+      "key": "shell",
+      "format":"{pretty-name}"
+
+    },
+    {
+      "type": "wm",
+      "key": "wm",
+      "format": "{2}"
+    },
+    {
+      "type": "terminal",
+      "key": "Terminal",
+      "format": "{pretty-name}"
+    }
+  ]
+}

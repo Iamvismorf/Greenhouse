@@ -1,0 +1,99 @@
+{
+  "pins": {
+    "flake-compat": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "GitHub",
+        "owner": "edolstra",
+        "repo": "flake-compat"
+      },
+      "pre_releases": false,
+      "version_upper_bound": null,
+      "release_prefix": null,
+      "submodules": false,
+      "version": "v1.1.0",
+      "revision": "ff81ac966bb2cae68946d5ed5fc4994f96d0ffec",
+      "url": "https://api.github.com/repos/edolstra/flake-compat/tarball/v1.1.0",
+      "hash": "19d2z6xsvpxm184m41qrpi1bplilwipgnzv9jy17fgw421785q1m"
+    },
+    "ghostty": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "ghostty-org",
+        "repo": "ghostty"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "74b204b6ce8493fb3eaaba439da8aed2713b6e25",
+      "url": "https://github.com/ghostty-org/ghostty/archive/74b204b6ce8493fb3eaaba439da8aed2713b6e25.tar.gz",
+      "hash": "02882m016lz9marcyzg6qsjdjnzxw5q6jq5s89cmfkmiswrdzwjc"
+    },
+    "hjem": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "feel-co",
+        "repo": "hjem"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "2426d6ad20e767895e936ed0c9563cc4e2b6c96f",
+      "url": "https://github.com/feel-co/hjem/archive/2426d6ad20e767895e936ed0c9563cc4e2b6c96f.tar.gz",
+      "hash": "0lnn46m56qlv58g1l3d3pd3gxk3m3i4aj3k3xqjk49mdzw7g97jq"
+    },
+    "hyprland": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "hyprwm",
+        "repo": "Hyprland"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "ecc9e4d8cd7a86f5f7d7541bee9b092122d2fa83",
+      "url": "https://github.com/hyprwm/Hyprland/archive/ecc9e4d8cd7a86f5f7d7541bee9b092122d2fa83.tar.gz",
+      "hash": "1cgndgd7i5sqkcihjdy5hjdiaf2hv0502qlrsiyv9bic6xs41wjs"
+    },
+    "mnw": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "Gerg-L",
+        "repo": "mnw"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "ed6cc3e48557ba18266e598a5ebb6602499ada16",
+      "url": "https://github.com/Gerg-L/mnw/archive/ed6cc3e48557ba18266e598a5ebb6602499ada16.tar.gz",
+      "hash": "0qcw9k6rb94p6spswqwfpz3hhzdjajpr0dnxv36ahi1slkhn395z"
+    },
+    "nixos-hardware": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "Nixos",
+        "repo": "nixos-hardware"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "11b2a10c7be726321bb854403fdeec391e798bf0",
+      "url": "https://github.com/Nixos/nixos-hardware/archive/11b2a10c7be726321bb854403fdeec391e798bf0.tar.gz",
+      "hash": "0saswrdg59v4xfwfl7q61b47davz6yf58xfj707wzcip3s5zpm1y"
+    },
+    "nixpkgs": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "NixOs",
+        "repo": "nixpkgs"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "0f561d2683a3ffd3f02a5e06fb6237c9ab98c3e2",
+      "url": "https://github.com/NixOs/nixpkgs/archive/0f561d2683a3ffd3f02a5e06fb6237c9ab98c3e2.tar.gz",
+      "hash": "0jbw950lzs04alzpfn4mdprby2cby2ckdld9lzh97rwbq7ba6944"
+    }
+  },
+  "version": 5
+}

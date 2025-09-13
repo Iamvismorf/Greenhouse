@@ -1,0 +1,3 @@
+{
+  nC = import ./hosts;
+}
