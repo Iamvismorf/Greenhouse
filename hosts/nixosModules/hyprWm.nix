@@ -6,15 +6,12 @@
   sources,
   pkgs,
   ...
-}:
-let
+}: let
   hyprland =
     (fl-compat {
       src = sources.hyprland;
     }).defaultNix;
-in
-
-{
+in {
   options = {
     hyprWm.enable = myLib.mkTrueOption "enable hyprWm module";
   };
@@ -33,13 +30,20 @@ in
       withUWSM = true;
       package = hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
       portalPackage = hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
-
     };
 
-    xdg.portal = with pkgs; {
+    xdg.portal = {
       enable = true;
+      config = {
+        hyprland = {
+          default = [
+            "hyprland"
+            "kde"
+          ];
+        };
+      };
       extraPortals = [
-        kdePackages.xdg-desktop-portal-kde
+        pkgs.kdePackages.xdg-desktop-portal-kde
         #no need for hyprland because is enabled by programs.hyprland
       ];
     };
@@ -49,6 +53,5 @@ in
       pkgs.libsForQt5.qt5.qtwayland
       pkgs.hyprpolkitagent
     ];
-
   };
 }

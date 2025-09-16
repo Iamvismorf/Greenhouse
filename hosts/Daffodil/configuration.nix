@@ -1,28 +1,27 @@
-{ config, lib, pkgs, ... }:
 {
-  imports =
-    [ 
-      ./hardware-configuration.nix
-      ./hostSpecific
-      # ../../bugs/vix #TODO: create default.nix to import all users and pass it in hosts/default.nix? and when needed 
-    ];
-    
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
+  imports = [
+    ./hardware-configuration.nix
+    ./hostSpecific
+    # ../../bugs/vix #TODO: create default.nix to import all users and pass it in hosts/default.nix? and when needed
+  ];
 
-   networking.hostName = "Daffodil"; # Define your hostname.
+  networking.hostName = "Daffodil"; # Define your hostname.
 
+  steam.enable = false;
+  vix.enable = true;
+  qt.enable = true;
+  # required for mounting mobile phones
+  services.gvfs.enable = true;
 
-   steam.enable = false;
-   vix.enable = true;
+  # environment.variables = {
+  #   EDITOR = "nvim";
+  #   VISUAL = "nvim";
+  # };
 
-
-
-   environment.variables = {
-       EDITOR = "nvim";
-       VISUAL = "nvim";
-   };
-
-
-  system.stateVersion = "24.11"; 
-
+  system.stateVersion = "24.11";
 }
-

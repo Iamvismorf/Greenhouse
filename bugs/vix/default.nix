@@ -7,49 +7,54 @@
   options,
   lib,
   ...
-}:
-let
+}: let
   username = "vix";
-  ghostty = import sources.ghostty;
-  vixvim = (import sources.mnw).lib.wrap pkgs {
-  };
-in
-{
+in {
   options = {
     vix.enable = lib.mkEnableOption "user vix";
   };
   config = lib.mkIf config.vix.enable {
+    fonts.packages = [
+      pkgs.nerd-fonts.commit-mono
+
+      pkgs.nerd-fonts.symbols-only
+      pkgs.atkinson-hyperlegible-next
+      pkgs.material-symbols
+      pkgs.font-awesome
+    ];
+
     users.users.${username} = {
       isNormalUser = true;
+      packages = [
+      ];
       extraGroups = [
         "networkmanager"
         "input"
         "wheel"
       ];
-      # shell = pkgs.zsh;
+      shell = pkgs.fish;
     };
-    # programs.zsh.enable = true;
+    programs.fish.enable = true;
+    hjem.linker = pkgs.smfh;
     hjem.users.${username} = {
       clobberFiles = true;
-      xdg.config.files = {
-        "fastfetch".source = ./config/fastfetch;
-	"git".source = ./config/git;
+      files = {
       };
-      packages = builtins.attrValues {
-        inherit (pkgs)
-	  fastfetch
-	  viewnior
-	  equibop
-	  fuzzel
-          ;
-      }++
-      [
-	(pkgs.callPackage (ghostty + "/nix/package.nix") {
-	  optimize = "ReleaseFast";
-	  revision = sources.ghostty.revision;
-	})
-	vixvim
-      ];
+      xdg.config.files = {
+        "ghostty".source = ./config/ghostty;
+        "fastfetch".source = ./config/fastfetch;
+        "git".source = ./config/git;
+        # "fish/config.fish".source = ./config/fish/config.fish;
+        # "yazi".source = ./config/yazi;
+        "yazi/flavors".source = ./config/yazi/flavors;
+        "yazi/init.lua".source = ./config/yazi/init.lua;
+        "yazi/plugins/relative-motions.yazi".source = pkgs.yaziPlugins.relative-motions;
+        "yazi/keymap.toml".source = ./config/yazi/keymap.toml;
+        "yazi/theme.toml".source = ./config/yazi/theme.toml;
+        "yazi/yazi.toml".source = ./config/yazi/yazi.toml;
+        "starship.toml".source = ./config/starship.toml;
+      };
+      packages = import ./packages.nix {inherit sources pkgs;};
     };
   };
 }
