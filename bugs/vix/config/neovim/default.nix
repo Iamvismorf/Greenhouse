@@ -19,6 +19,8 @@ in {
       pkgs.stylua
       pkgs.lua-language-server
       pkgs.alejandra
+      pkgs.nixd
+      pkgs.shfmt
     ];
   enable = true;
   plugins = {
@@ -39,7 +41,7 @@ in {
           nvim-web-devicons
           plenary-nvim
           snacks-nvim # replace scroll with neoscroll
-          neo-tree-nvim # replace with yazi.nvim
+          statuscol-nvim
           ;
       }
       ++ [
@@ -57,28 +59,25 @@ in {
       builtins.attrValues {
         inherit
           (pkgs.vimPlugins)
-          nvim-lint
+          # nvim-lint
           conform-nvim
-          blink-cmp
           friendly-snippets
           lspkind-nvim
-          nvim-lspconfig # remove
-          telescope-fzf-native-nvim
-          telescope-nvim
-          telescope-ui-select-nvim
           nvim-ufo
+          gitsigns-nvim
+          blink-cmp
           promise-async
           barbecue-nvim
           nvim-navic
           bufferline-nvim
           indent-blankline-nvim
           lualine-nvim
-          nui-nvim
+          fzf-lua
           nvim-window-picker
           flash-nvim
           nvim-autopairs
           nvim-surround
-          gitsigns-nvim
+          yazi-nvim
           ;
       }
       ++ [

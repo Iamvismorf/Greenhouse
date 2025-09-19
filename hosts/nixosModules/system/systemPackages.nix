@@ -26,6 +26,11 @@
         brightnessctl
         libnotify
         npins
+        grim
+        slurp
+        swappy
+        imagemagick
+        # direnv
         ;
     };
   };

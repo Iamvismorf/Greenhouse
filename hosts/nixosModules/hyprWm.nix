@@ -44,6 +44,7 @@ in {
       };
       extraPortals = [
         pkgs.kdePackages.xdg-desktop-portal-kde
+        pkgs.xdg-desktop-portal-gtk
         #no need for hyprland because is enabled by programs.hyprland
       ];
     };
@@ -52,6 +53,7 @@ in {
       pkgs.kdePackages.qtwayland
       pkgs.libsForQt5.qt5.qtwayland
       pkgs.hyprpolkitagent
+      pkgs.kdePackages.qt6ct
     ];
   };
 }
