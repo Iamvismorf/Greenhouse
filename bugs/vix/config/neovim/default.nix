@@ -20,6 +20,7 @@ in {
       pkgs.lua-language-server
       pkgs.alejandra
       pkgs.nixd
+      pkgs.clang-tools
       pkgs.shfmt
     ];
   enable = true;

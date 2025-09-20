@@ -2,6 +2,14 @@ return {
 	"gitsigns.nvim",
 	after = function()
 		require("gitsigns").setup({
+			signs = {
+				add = { text = "|" },
+				change = { text = "|" },
+			},
+			signs_staged = {
+				add = { text = "|" },
+				change = { text = "|" },
+			},
 			on_attach = function(bufnr)
 				local gs = package.loaded.gitsigns
 				local function map(mode, l, r, opts)

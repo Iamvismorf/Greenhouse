@@ -14,7 +14,9 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 vim.o.winborder = "single"
 vim.o.laststatus = 3
+
 vim.o.numberwidth = 3
+vim.o.statuscolumn = ""
 -- vim.o.scrolloff = 8
 -- vim.o.sidescrolloff = 8
 

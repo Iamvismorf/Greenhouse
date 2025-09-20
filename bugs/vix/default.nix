@@ -86,6 +86,7 @@ in {
         "yazi/keymap.toml".source = ./config/yazi/keymap.toml;
         "yazi/theme.toml".source = ./config/yazi/theme.toml;
         "yazi/yazi.toml".source = ./config/yazi/yazi.toml;
+        "yazi/plugins/git.yazi".source = pkgs.yaziPlugins.git;
         "fish/config.fish".source = ./config/fish/config.fish;
         "fish/functions".source = ./config/fish/functions;
       };
