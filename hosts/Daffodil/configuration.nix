@@ -13,8 +13,6 @@
 
   steam.enable = false;
   vix.enable = true;
-  # required for mounting mobile phones
-  services.gvfs.enable = true;
 
   # environment.variables = {
   #   EDITOR = "nvim";

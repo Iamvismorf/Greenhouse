@@ -1,0 +1,12 @@
+font-family= "Commit Mono Nerd Font Mono"
+font-style = "bold"
+font-style-italic = false
+font-style-bold-italic = false
+font-size = 11
+adjust-cell-height = 20%
+gtk-single-instance = true
+link-url = false
+theme = "kanso-ink"
+custom-shader = shaders/cursor_smear.glsl
+confirm-close-surface = false
+

@@ -22,7 +22,6 @@
         kitty
         nh
         wl-clipboard
-        glib
         brightnessctl
         libnotify
         npins

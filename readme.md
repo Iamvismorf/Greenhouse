@@ -19,7 +19,7 @@ As of 20/09/2025, to `switch/boot` you launch nix shell. However, in a future re
 │   │   │   ├── git/
 │   │   │   ├── gtk/
 │   │   │   ├── neovim/
-│   │   │   ├── wm/
+│   │   │   ├── wm/                     # for now there are only wallpapers without landhypr configs
 │   │   │   └── yazi/
 │   │   ├── default.nix
 │   │   └── packages.nix
