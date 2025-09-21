@@ -7,40 +7,34 @@ let
   myLib = import ../myLib;
   nixosSystem = import "${sources.nixpkgs}/nixos/lib/eval-config.nix";
 
-  hjem = (fl-compat {
-    src = sources.hjem;
-  }).defaultNix;
+  hjem =
+    (fl-compat {
+      src = sources.hjem;
+    }).defaultNix;
 
-
-  mkHost =
-    hostname:
+  mkHost = hostname:
     nixosSystem {
       specialArgs = {
         inherit sources pkgs fl-compat myLib;
       };
       modules = [
         ./${hostname}/configuration.nix
-	./nixosModules
+        ./nixosModules
         hjem.nixosModules.default
-	../bugs
+        ../bugs
         # {
         #   config.nixpkgs.pkgs = pkgs;
         # }
         {
           nix.channel.enable = false;
-          nix.nixPath = [ "nixpkgs=/etc/nixos/nixpkgs" ];
+          nix.nixPath = ["nixpkgs=/etc/nixos/nixpkgs"];
 
           environment.etc = {
             "nixos/nixpkgs".source = builtins.storePath pkgs.path;
           };
-
         }
       ];
     };
-  hosts = [ "Daffodil" ];
+  hosts = ["Daffodil" "Amaryllis"];
 in
   myLib.genAttrs hosts mkHost
-
-
-
-

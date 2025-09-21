@@ -13,6 +13,7 @@
 
   steam.enable = false;
   vix.enable = true;
+  vsmrf.enable = false;
 
   # environment.variables = {
   #   EDITOR = "nvim";
