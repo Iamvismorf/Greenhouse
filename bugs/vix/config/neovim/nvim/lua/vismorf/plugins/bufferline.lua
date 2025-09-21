@@ -13,14 +13,6 @@ return {
 					-- vim.api.nvim_command("BufDel" .. bufnum)
 					require("snacks").bufdelete.delete(bufnum)
 				end,
-				offsets = {
-					{
-						filetype = "neo-tree",
-						-- text = "Neotree",
-						highlight = "Directory",
-						-- separator = true,
-					},
-				},
 			},
 		})
 		local map = vim.keymap.set

@@ -1,20 +1,14 @@
-#TODO: show cursor position instead of procent on right far right
 return {
 	"lualine.nvim",
 	after = function()
 		require("lualine").setup({
-			options = {
-				disabled_filetypes = {
-					statusline = { "neo-tree" },
-				},
-			},
 			sections = {
 				lualine_a = {
 					{
 						"mode",
 						icons_enabled = true,
-						-- icon = '󰮬 ',
-						icon = " ",
+						-- icon = "󰮬 ",
+						icon = "󱎶 ",
 					},
 				},
 				lualine_b = { { "branch" } },

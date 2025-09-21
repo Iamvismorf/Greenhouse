@@ -18,37 +18,4 @@ return {
 		"promise-async",
 		dep_of = { "nvim-ufo" },
 	},
-	-- {
-	-- 	"statuscol.nvim",
-	-- 	dep_of = { "nvim-ufo" },
-	-- 	after = function()
-	-- 		local builtin = require("statuscol.builtin")
-	-- 		require("statuscol").setup({
-	-- 			ft_ignore = { "neo-tree" },
-	-- 			bt_ignore = { "neo-tree" },
-	-- 			relculright = true,
-	-- 			segments = {
-	-- 				{ text = { "%s" }, click = "v:lua.ScSa" },
-	-- 				{ text = { builtin.lnumfunc, " " }, click = "v:lua.ScLa" },
-	-- 				{ text = { builtin.foldfunc, "  " }, click = "v:lua.ScFa" },
-	-- 			},
-
-	-- 			-- segments = {
-	-- 			-- 	{
-	-- 			-- 		sign = { name = { "Diagnostic" }, maxwidth = 1, colwidth = 2, auto = false, wrap = true },
-	-- 			-- 		click = "v:lua.ScSa",
-	-- 			-- 	},
-	-- 			-- 	{
-	-- 			-- 		sign = { namespace = { "gitsigns" }, name = { ".*" }, maxwidth = 1, colwidth = 1, auto = false },
-	-- 			-- 		click = "v:lua.ScSa",
-	-- 			-- 	},
-	-- 			-- 	{ text = { builtin.lnumfunc, " " }, click = "v:lua.ScLa" },
-	-- 			-- 	{
-	-- 			-- 		text = { builtin.foldfunc, " " },
-	-- 			-- 		click = "v:lua.ScFa",
-	-- 			-- 	},
-	-- 			-- },
-	-- 		})
-	-- 	end,
-	-- },
 }
