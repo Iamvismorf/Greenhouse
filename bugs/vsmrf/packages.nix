@@ -33,6 +33,7 @@ in
       yazi
       resvg
       # gui
+      firefox
       viewnior
       mpv
       fuzzel

@@ -35,6 +35,7 @@ in
       # gui
       viewnior
       mpv
+      firefox
       fuzzel
       #screenshot
       hyprshot
