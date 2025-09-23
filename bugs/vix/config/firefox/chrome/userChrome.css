@@ -1,0 +1,23 @@
+.tab-close-button.close-icon { 
+display: none; 
+}
+
+
+
+/* remove plus button */
+#tabs-newtab-button {
+	display:none !important;
+}
+
+
+#firefox-view-button{
+	display: none !important;
+}
+
+
+#alltabs-button { display: none !important; }
+
+/* remove close button */
+.titlebar-buttonbox-container{ 
+display:none 
+}
