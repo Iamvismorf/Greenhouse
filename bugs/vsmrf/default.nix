@@ -10,9 +10,9 @@
   username = "vsmrf";
 in {
   options = {
-    vsmrf.enable = lib.mkEnableOption "user ${username}";
+    ${username}.enable = lib.mkEnableOption "user ${username}";
   };
-  config = lib.mkIf config.vsmrf.enable {
+  config = lib.mkIf config.${username}.enable {
     # "user" font
     fonts = {
       fontconfig = {

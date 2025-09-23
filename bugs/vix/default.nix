@@ -10,9 +10,9 @@
   username = "vix";
 in {
   options = {
-    vix.enable = lib.mkEnableOption "user vix";
+    ${username}.enable = lib.mkEnableOption "user ${username}";
   };
-  config = lib.mkIf config.vix.enable {
+  config = lib.mkIf config.${username}.enable {
     # "user" font
     fonts = {
       fontconfig = {
