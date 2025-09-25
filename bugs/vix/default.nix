@@ -31,7 +31,6 @@ in {
       shell = pkgs.fish;
     };
     programs.fish.enable = true;
-    hjem.linker = pkgs.smfh;
     hjem.users.${username} = {
       clobberFiles = true;
       xdg.config.files = {
