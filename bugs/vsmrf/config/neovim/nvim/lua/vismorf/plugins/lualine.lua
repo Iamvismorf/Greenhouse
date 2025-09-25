@@ -8,7 +8,7 @@ return {
 						"mode",
 						icons_enabled = true,
 						-- icon = '󰮬 ',
-						icon = " ",
+						icon = "󱎶 ",
 					},
 				},
 				lualine_b = { { "branch" } },

@@ -2,10 +2,9 @@ let
   pkgs = import (import ./npins).nixpkgs {};
 in
   pkgs.mkShell {
-    nativeBuildInputs = with pkgs; [
-      nix
-      git
-      npins
+    nativeBuildInputs = [
+      pkgs.nix
+      pkgs.npins
     ];
 
     shellHook = ''
