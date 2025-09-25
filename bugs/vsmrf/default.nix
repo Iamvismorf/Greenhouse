@@ -13,7 +13,6 @@ in {
     ${username}.enable = lib.mkEnableOption "user ${username}";
   };
   config = lib.mkIf config.${username}.enable {
-    # "user" font
     fonts = {
       fontconfig = {
         enable = true;
@@ -37,7 +36,7 @@ in {
     #   pkgs.papirus-icon-theme
     #   pkgs.adw-gtk3
     # ];
-    programs.dconf.profiles.user.databases = [
+    programs.dconf.profiles.vsmrf.databases = [
       {
         settings = {
           "org/gnome/desktop/interface" = {
@@ -64,17 +63,13 @@ in {
       shell = pkgs.fish;
     };
     programs.fish.enable = true;
-    hjem.linker = pkgs.smfh;
     hjem.users.${username} = {
       clobberFiles = true;
       files = {
-        ".gtkrc-2.0".source = ./config/gtk/.gtkrc-2.0;
         ".icons/default".source = "${pkgs.kdePackages.breeze}/share/icons/Breeze_Light";
       };
       xdg.config.files = {
         "fuzzel/fuzzel.ini".source = ./config/fuzzel/fuzzel.ini;
-        "gtk-3.0/settings.ini".source = ./config/gtk/gtk3/settings.ini;
-        "gtk-4.0/settings.ini".source = ./config/gtk/gtk4/settings.ini;
         "ghostty".source = ./config/ghostty;
         "fastfetch".source = ./config/fastfetch;
         "git".source = ./config/git;
