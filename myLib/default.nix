@@ -1,7 +1,9 @@
+#TODO: add default.nix as default
 let
   sources = import ../npins;
   lib = import "${sources.nixpkgs}/lib";
-  inherit (builtins)
+  inherit
+    (builtins)
     filter
     baseNameOf
     elem
@@ -10,7 +12,8 @@ let
     stringLength
     pathExists
     ;
-  inherit (lib)
+  inherit
+    (lib)
     pipe
     mapAttrsToList
     hasSuffix
@@ -19,14 +22,11 @@ let
     filterAttrs
     ;
   inherit (lib.filesystem) listFilesRecursive;
-
-in
-{
+in {
   # wrapper to lib.genAttrs so I don't need to import lib in the root default.nix
   genAttrs = list: fn: lib.genAttrs list fn;
 
-  mkTrueOption =
-    desc:
+  mkTrueOption = desc:
     lib.mkOption {
       type = lib.types.bool;
       default = true;
@@ -35,11 +35,10 @@ in
 
   # filepaths in eF should be relative to dir
   # imports all files in directory recursively and ignore empty files
-  importDirRecursive =
-    {
-      dir,
-      eF ? [ (dir + "/default.nix") ],
-    }:
+  importDirRecursive = {
+    dir,
+    eF ? [(dir + "/default.nix")],
+  }:
     pipe dir [
       listFilesRecursive
       (filter (i: (hasSuffix ".nix" i) && !(elem i eF)))
@@ -48,29 +47,25 @@ in
 
   # eF list includes file names neither absolute nor relative path
   # imports every .nix file in the directory without importing subdirectories unless subdir=true is passed. Level is 1
-  importDir =
-    {
-      dir,
-      eF ? [ "default.nix" ],
-      subdir ? false,
-    }:
-    # mapAttrsToList (n: _: (dir + "/${n}"))
-    # (
-    #   filterAttrs (n: v: v == "regular" && !(elem n eF) && hasSuffix ".nix" n) (readDir dir)
-    # );
+  importDir = {
+    dir,
+    eF ? [],
+    subdir ? false,
+  }:
+  # mapAttrsToList (n: _: (dir + "/${n}"))
+  # (
+  #   filterAttrs (n: v: v == "regular" && !(elem n eF) && hasSuffix ".nix" n) (readDir dir)
+  # );
     pipe dir [
       readDir
       (mapAttrs' (
         n: v:
-        if (v == "directory" && subdir) then
-          nameValuePair (n + "/default.nix") ("regular")
-        else
-          nameValuePair n v
+          if (v == "directory" && subdir)
+          then nameValuePair (n + "/default.nix") "regular"
+          else nameValuePair n v
       ))
-      (filterAttrs (n: v: v == "regular" && !(elem n eF) && hasSuffix ".nix" n))
+      (filterAttrs (n: v: v == "regular" && !(elem n (eF ++ ["default.nix"])) && hasSuffix ".nix" n))
       (mapAttrsToList (n: _: (dir + "/${n}")))
       (filter (i: (pathExists i) && (stringLength (readFile i)) > 0))
-
     ];
-
 }
