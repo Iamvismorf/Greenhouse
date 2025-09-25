@@ -48,6 +48,7 @@ in {
         "yazi/plugins/git.yazi".source = pkgs.yaziPlugins.git;
         "fish/config.fish".source = ./config/fish/config.fish;
         "fish/functions".source = ./config/fish/functions;
+        "uwsm/env".source = ./config/uwsm/env;
       };
       packages = import ./packages.nix {inherit sources pkgs;};
     };
