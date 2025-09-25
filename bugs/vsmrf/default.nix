@@ -9,29 +9,19 @@
 }: let
   username = "vsmrf";
 in {
+  imports = [
+    ../theme.nix
+  ];
   options = {
     ${username}.enable = lib.mkEnableOption "user ${username}";
   };
   config = lib.mkIf config.${username}.enable {
-    programs.dconf.profiles.vsmrf.databases = [
-      {
-        settings = {
-          "org/gnome/desktop/interface" = {
-            cursor-theme = "Breeze_light";
-            gtk-theme = "adw-gtk3-dark";
-            icon-theme = "Papirus-Dark";
-            color-scheme = "prefer-dark";
-          };
-        };
-      }
-    ];
+    theme = {
+      for = username;
+    };
 
     users.users.${username} = {
       isNormalUser = true;
-      packages = [
-        pkgs.papirus-icon-theme
-        pkgs.adw-gtk3
-      ];
       extraGroups = [
         "networkmanager"
         "input"
@@ -42,9 +32,6 @@ in {
     programs.fish.enable = true;
     hjem.users.${username} = {
       clobberFiles = true;
-      files = {
-        ".icons/default".source = "${pkgs.kdePackages.breeze}/share/icons/Breeze_Light";
-      };
       xdg.config.files = {
         "fuzzel/fuzzel.ini".source = ./config/fuzzel/fuzzel.ini;
         "ghostty".source = ./config/ghostty;
