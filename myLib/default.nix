@@ -1,4 +1,3 @@
-#TODO: add default.nix as default
 let
   sources = import ../npins;
   lib = import "${sources.nixpkgs}/lib";

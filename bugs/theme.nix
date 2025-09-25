@@ -68,6 +68,7 @@ in {
         cfg.gtk.package
       ];
     };
+    # don't forget to set dconf_profile
     programs.dconf.profiles.${cfg.for}.databases = [
       {
         settings = {

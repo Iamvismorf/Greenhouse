@@ -1,5 +1,4 @@
-#todo: obs
-#categorize packages
+#todo: categorize packages
 {
   pkgs,
   sources,

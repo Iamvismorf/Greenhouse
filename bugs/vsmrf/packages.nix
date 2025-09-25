@@ -1,5 +1,4 @@
-#todo: obs
-#categorize packages
+#TODO: categorize packages
 {
   pkgs,
   sources,
@@ -33,6 +32,7 @@ in
       yazi
       resvg
       # gui
+      obs-studio
       firefox
       viewnior
       mpv
