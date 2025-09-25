@@ -13,29 +13,6 @@ in {
     ${username}.enable = lib.mkEnableOption "user ${username}";
   };
   config = lib.mkIf config.${username}.enable {
-    fonts = {
-      fontconfig = {
-        enable = true;
-        defaultFonts = {
-          serif = ["Atkinson Hyperlegible Next"];
-          sansSerif = ["Atkinson Hyperlegible Next"];
-          monospace = ["Atkinson Hyperlegible Next"];
-        };
-      };
-    };
-
-    fonts.packages = [
-      pkgs.nerd-fonts.commit-mono
-
-      pkgs.nerd-fonts.symbols-only
-      pkgs.atkinson-hyperlegible-next
-      pkgs.material-symbols
-      pkgs.font-awesome
-    ];
-    # environment.systemPackages = [
-    #   pkgs.papirus-icon-theme
-    #   pkgs.adw-gtk3
-    # ];
     programs.dconf.profiles.vsmrf.databases = [
       {
         settings = {
