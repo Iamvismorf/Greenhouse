@@ -43,7 +43,7 @@ As of 20/09/2025, to `switch/boot` you launch nix shell. However, in a future re
 ```
 
 ## Appreciation
-This repo is based on work by Rexcrazy[https://github.com/Rexcrazy804] and viperML[https://github.com/viperML]. Special thanks go to Rex, who helped me with the migrating to the npins-based configuration. Additional thanks to end-4[https://github.com/end-4] and sora[https://github.com/soramanew], whose qs code I yoinked for my shell.
+This repo is based on work by Rexcrazy(https://github.com/Rexcrazy804) and viperML(https://github.com/viperML). Special thanks go to Rex, who helped me with the migrating to the npins-based configuration. Additional thanks to end-4(https://github.com/end-4) and sora(https://github.com/soramanew), whose qs code I yoinked for my shell.
 
 ## Resources
 - [caelestia-dots/shell](https://github.com/caelestia-dots/shell)
