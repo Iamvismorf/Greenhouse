@@ -1,0 +1,12 @@
+export NIXOS_OZONE_WL=1
+export XDG_CURRENT_DESKTOP=Hyprland
+export XDG_SESSION_TYPE=wayland
+export XDG_SESSION_DESKTOP=Hyprland
+export QT_QPA_PLATFORM=wayland
+export QT_QPA_PLATFORMTHEME=qt6ct
+export EDITOR=nvim
+export VISUAL=nvim
+export GDK_BACKEND=wayland
+export OZONE_PLATFORM=wayland
+export DCONF_PROFILE=vsmrf
+

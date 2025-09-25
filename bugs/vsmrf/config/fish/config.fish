@@ -41,5 +41,8 @@ end
 # abbr autocd --regex '.*' --function autocd
 
 
+if uwsm check may-start; and uwsm select
+	exec uwsm start default
+end
 
 #direnv hook fish | source
