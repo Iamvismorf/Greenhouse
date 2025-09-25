@@ -51,7 +51,6 @@ in {
         "ghostty".source = ./config/ghostty;
         "fastfetch".source = ./config/fastfetch;
         "git".source = ./config/git;
-        # "yazi".source = ./config/yazi;
         "yazi/flavors".source = ./config/yazi/flavors;
         "yazi/init.lua".source = ./config/yazi/init.lua;
         "yazi/plugins/relative-motions.yazi".source = pkgs.yaziPlugins.relative-motions;

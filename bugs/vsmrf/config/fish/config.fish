@@ -26,7 +26,8 @@ if status is-interactive
    # alias info="btop"
    alias fetch="fastfetch"
    alias slip="systemctl suspend"
-   alias switchpls="sudo nixos-rebuild switch --no-reexec -A"
+   # alias switchpls="sudo nixos-rebuild switch --no-reexec -A"
+   alias switchpls="nh os switch --file ./default.nix"
    alias clean="sudo nix-collect-garbage -d; nh clean all"
    alias nix-shell="nix-shell --command fish"
 end
