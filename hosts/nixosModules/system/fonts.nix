@@ -6,10 +6,10 @@
   ...
 }: {
   options = {
-    fonts.enable = myLib.mkTrueOption "enable fonts module";
+    font.enable = myLib.mkTrueOption "enable font module";
   };
 
-  config = lib.mkIf config.fonts.enable {
+  config = lib.mkIf config.font.enable {
     fonts = {
       fontconfig = {
         enable = true;
@@ -25,7 +25,7 @@
       pkgs.nerd-fonts.commit-mono
       pkgs.nerd-fonts.symbols-only
       pkgs.atkinson-hyperlegible-next
-      pkgs.material-symbols
+      # pkgs.material-symbols
       pkgs.font-awesome
     ];
   };
