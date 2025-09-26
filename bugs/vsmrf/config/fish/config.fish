@@ -42,7 +42,7 @@ end
 
 
 if uwsm check may-start; and uwsm select
-	exec uwsm start default
+	exec uwsm start hyprland-uwsm.desktop
 end
 
 #direnv hook fish | source

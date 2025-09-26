@@ -1,3 +1,5 @@
 todo.txt
 todo.md
 .direnv
+configuration.nix
+hardware-configuration.nix

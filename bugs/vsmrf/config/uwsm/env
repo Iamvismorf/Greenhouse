@@ -9,4 +9,4 @@ export VISUAL=nvim
 export GDK_BACKEND=wayland
 export OZONE_PLATFORM=wayland
 export DCONF_PROFILE=vsmrf
-
+export XCURSOR_SIZE=24
