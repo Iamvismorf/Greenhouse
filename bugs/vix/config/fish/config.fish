@@ -1,7 +1,3 @@
-#todo: history search prefix
-#TODO: history with path
-# fish is impure :(
-#fzf tab
 if status is-interactive
    fzf --fish | source
    set fish_greeting 
@@ -25,7 +21,7 @@ if status is-interactive
 
    alias off="shutdown now"
    alias ls="eza --colour=always --icons=always -la"
-   # alias info="btop"
+   alias info="btm"
    alias fetch="fastfetch"
    alias slip="systemctl suspend"
    # alias switchpls="sudo nixos-rebuild switch --no-reexec -A"
