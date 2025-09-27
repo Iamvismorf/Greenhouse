@@ -1,13 +1,14 @@
 #todo: history search prefix
 #TODO: history with path
 # fish is impure :(
-#fzf tab
 if status is-interactive
+   fzf --fish | source
    set fish_greeting 
    set -g fish_key_bindings fish_vi_key_bindings
    fish_default_key_bindings -M insert
    fish_vi_key_bindings --no-erase insert
 
+   bind -M insert \t 'fzf-complete'
    bind -M insert ctrl-space accept-autosuggestion
    bind -M visual l forward-char-passive
    bind l forward-char-passive
@@ -46,3 +47,46 @@ if uwsm check may-start; and uwsm select
 end
 
 #direnv hook fish | source
+
+function fzf-complete -d 'fzf completion and print selection back to commandline'
+	set -l cmd (commandline -co) (commandline -ct)
+	switch $cmd[1]
+		case env sudo
+			for i in (seq 2 (count $cmd))
+				switch $cmd[$i]
+					case '-*'
+					case '*=*'
+					case '*'
+						set cmd $cmd[$i..-1]
+						break
+				end
+			end
+	end
+	set cmd (string join -- ' ' $cmd)
+
+	set -l complist (complete -C$cmd)
+	set -l result
+	string join -- \n $complist | sort | eval (__fzfcmd) -m --select-1 --exit-0 --header '(commandline)' | cut -f1 | while read -l r; set result $result $r; end
+
+	set prefix (string sub -s 1 -l 1 -- (commandline -t))
+	for i in (seq (count $result))
+		set -l r $result[$i]
+		switch $prefix
+			case "'"
+				commandline -t -- (string escape -- $r)
+			case '"'
+				if string match '*"*' -- $r >/dev/null
+					commandline -t --  (string escape -- $r)
+				else
+					commandline -t -- '"'$r'"'
+				end
+			case '~'
+				commandline -t -- (string sub -s 2 (string escape -n -- $r))
+			case '*'
+				commandline -t -- (string escape -n -- $r)
+		end
+		[ $i -lt (count $result) ]; and commandline -i ' '
+	end
+
+	commandline -f repaint
+end
