@@ -21,7 +21,9 @@ in {
       pkgs.alejandra
       pkgs.nixd
       pkgs.clang-tools
+      pkgs.neocmakelsp
       pkgs.shfmt
+      pkgs.inotify-tools
     ];
   enable = true;
   plugins = {

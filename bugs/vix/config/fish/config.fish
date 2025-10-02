@@ -28,6 +28,7 @@ if status is-interactive
    alias switchpls="nh os switch --file ./default.nix"
    alias clean="sudo nix-collect-garbage -d; nh clean all"
    alias nix-shell="nix-shell --command fish"
+   abbr -a !! --position anywhere --function last_history_item
 end
 # fish_default_key_bindings
 # function autocd
@@ -89,3 +90,7 @@ end
 
 
 #direnv hook fish | source
+
+function last_history_item
+   echo $history[1]
+end

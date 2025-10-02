@@ -28,6 +28,10 @@ if status is-interactive
    alias switchpls="nh os switch --file ./default.nix"
    alias clean="sudo nix-collect-garbage -d; nh clean all"
    alias nix-shell="nix-shell --command fish"
+   abbr -a !! --position anywhere --function last_history_item
+if uwsm check may-start; and uwsm select
+	exec uwsm start hyprland-uwsm.desktop
+end
 end
 # fish_default_key_bindings
 # function autocd
@@ -39,9 +43,6 @@ end
 # abbr autocd --regex '.*' --function autocd
 
 
-if uwsm check may-start; and uwsm select
-	exec uwsm start hyprland-uwsm.desktop
-end
 
 #direnv hook fish | source
 
@@ -86,4 +87,9 @@ function fzf-complete -d 'fzf completion and print selection back to commandline
 	end
 
 	commandline -f repaint
+end
+
+
+function last_history_item
+   echo $history[1]
 end
