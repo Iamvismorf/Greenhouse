@@ -25,9 +25,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "25aaca5a6f5bb951cfbba212d2e06b4ea44d5dcf",
-      "url": "https://github.com/ghostty-org/ghostty/archive/25aaca5a6f5bb951cfbba212d2e06b4ea44d5dcf.tar.gz",
-      "hash": "08rr67ama6zym5dyradab2y1ch03yznygvsq65ncc15avx9a0yry"
+      "revision": "31ba6534cf16a1799b5fdc15641e4efeb483b5f7",
+      "url": "https://github.com/ghostty-org/ghostty/archive/31ba6534cf16a1799b5fdc15641e4efeb483b5f7.tar.gz",
+      "hash": "16c576h71cfjvzhggpnyw6xdhvjqw1il7rkg7n1rb91ld7y0q1zq"
     },
     "hjem": {
       "type": "Git",
@@ -38,9 +38,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "627b34efad55fd42d6dd52c19c796604d2b8e8bd",
-      "url": "https://github.com/feel-co/hjem/archive/627b34efad55fd42d6dd52c19c796604d2b8e8bd.tar.gz",
-      "hash": "1d4h4kj58ibz8jrvis0s2rw2fvvc1z1h8s7b8jsfahnfpk2cp7mb"
+      "revision": "126eb4cf9808af3447241d1c83fa74468950e734",
+      "url": "https://github.com/feel-co/hjem/archive/126eb4cf9808af3447241d1c83fa74468950e734.tar.gz",
+      "hash": "1xbiigcda4glfi5shf7snrbqi8kjwi9d4aip618ry1hgbnyv0mfz"
     },
     "hyprland": {
       "type": "Git",
@@ -51,9 +51,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "26cbc67385d95ba621fe0a125a5b121ffdd09335",
-      "url": "https://github.com/hyprwm/Hyprland/archive/26cbc67385d95ba621fe0a125a5b121ffdd09335.tar.gz",
-      "hash": "0461d9hxgwi6qh71im500w60rvmfbcgqgqdb2r65h8aj42i9ri0a"
+      "revision": "76d998743ac10e712238c1016db4d8e8d16f1049",
+      "url": "https://github.com/hyprwm/Hyprland/archive/76d998743ac10e712238c1016db4d8e8d16f1049.tar.gz",
+      "hash": "159irhpgk2zgbmj2chd5wqajzzwlpiip7hrk36jbf04vk0m1kn7l"
     },
     "mnw": {
       "type": "Git",
@@ -64,9 +64,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "ed6cc3e48557ba18266e598a5ebb6602499ada16",
-      "url": "https://github.com/Gerg-L/mnw/archive/ed6cc3e48557ba18266e598a5ebb6602499ada16.tar.gz",
-      "hash": "0qcw9k6rb94p6spswqwfpz3hhzdjajpr0dnxv36ahi1slkhn395z"
+      "revision": "cfbc7d1cc832e318d0863a5fc91d940a96034001",
+      "url": "https://github.com/Gerg-L/mnw/archive/cfbc7d1cc832e318d0863a5fc91d940a96034001.tar.gz",
+      "hash": "0s369nzhlxnzj82l64nxi711a8kaibzikmlxrbcsigbwh5ijzck3"
     },
     "nixos-hardware": {
       "type": "Git",
@@ -91,9 +91,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "e9ead8a12d017f72a8c6d7bb02d60437cf66affa",
-      "url": "https://github.com/NixOs/nixpkgs/archive/e9ead8a12d017f72a8c6d7bb02d60437cf66affa.tar.gz",
-      "hash": "00w90fa4j2yablygby2g0ikyp3z5qs2y97d7bans2riw1bf24qqw"
+      "revision": "d942241db65d18b1a868c05ebb05b25ee70b8b38",
+      "url": "https://github.com/NixOs/nixpkgs/archive/d942241db65d18b1a868c05ebb05b25ee70b8b38.tar.gz",
+      "hash": "0r0qvz6hh2fkf4i0zldgwcan0v3zm38ns5b23lnvx1a8b88jldp6"
     },
     "quickshell": {
       "type": "Git",
@@ -104,9 +104,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "e9a574d919a89602d2868621576b2ccae54a5cb0",
-      "url": "https://github.com/quickshell-mirror/quickshell/archive/e9a574d919a89602d2868621576b2ccae54a5cb0.tar.gz",
-      "hash": "1r1mym54mif7iv4bkgvi1yzc07sy6qav9knqsk1k3x92wa1gbsy0"
+      "revision": "c5c438f1cd1a76660a8658ef929a3d19e968e2ce",
+      "url": "https://github.com/quickshell-mirror/quickshell/archive/c5c438f1cd1a76660a8658ef929a3d19e968e2ce.tar.gz",
+      "hash": "1g8m33wwbynmz9fl044v3myv42awq94y6cnqd3vjz6brvwahyx9z"
     }
   },
   "version": 5
