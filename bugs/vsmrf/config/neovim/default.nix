@@ -18,6 +18,7 @@ in {
     ++ [
       pkgs.stylua
       pkgs.lua-language-server
+      pkgs.kdePackages.qtdeclarative
       pkgs.alejandra
       pkgs.nixd
       pkgs.clang-tools
@@ -84,6 +85,7 @@ in {
           ;
       }
       ++ [
+        pkgs.vimPlugins.nvim-treesitter
         pkgs.vimPlugins.nvim-treesitter.withAllGrammars
         pkgs.vimPlugins.nvim-treesitter-textobjects
       ];
