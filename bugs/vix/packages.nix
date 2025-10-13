@@ -4,7 +4,7 @@
   sources,
   ...
 }: let
-  ghostty = import sources.ghostty;
+  # ghostty = import sources.ghostty;
   vixvim = (import sources.mnw).lib.wrap pkgs ./config/neovim;
 in
   builtins.attrValues {
@@ -48,10 +48,10 @@ in
       ;
   }
   ++ [
-    (pkgs.callPackage (ghostty + "/nix/package.nix") {
-      optimize = "ReleaseFast";
-      revision = sources.ghostty.revision;
-    })
+    # (pkgs.callPackage (ghostty + "/nix/package.nix") {
+    #   optimize = "ReleaseFast";
+    #   revision = sources.ghostty.revision;
+    # })
     (pkgs.equibop.overrideAttrs (oldAttrs: {
       desktopItems = oldAttrs.desktopItems.override {icon = "discord";};
     }))

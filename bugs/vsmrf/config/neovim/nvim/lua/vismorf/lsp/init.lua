@@ -18,4 +18,5 @@ vim.lsp.enable({
 	"nixd",
 	"clangd",
 	"neocmake",
+	"qmlls",
 })
