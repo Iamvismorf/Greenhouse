@@ -1,0 +1,49 @@
+* {
+  font-family: "Atkinson Hyperlegible Next", "Symbols Nerd Font";
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 0;
+  border: none;
+}
+button {
+  padding: 0;
+}
+.modules-right,
+.modules-left {
+  margin: 0;
+  padding: 0;
+}
+#workspaces button {
+  padding: 0 3px;
+  min-height: 0;
+}
+#workspaces button.active {
+  padding: 0 3px;
+  background-color: #e9643a;
+}
+window#waybar > box {
+  padding: 10px;
+}
+window#waybar {
+  background-color: #000000;
+  color: #fafafa;
+}
+#clock,
+#battery,
+#custom-menu,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#window,
+#workspaces,
+#tray,
+#mode,
+#language,
+#power-profiles-daemon,
+#mpd {
+  margin: 0 10px;
+  color: #fafafa;
+  background-color: transparent;
+}

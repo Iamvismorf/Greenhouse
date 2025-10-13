@@ -14,6 +14,9 @@
   steam.enable = false;
   vix.enable = true;
   vsmrf.enable = false;
+  environment.systemPackages = [
+    pkgs.networkmanagerapplet
+  ];
 
   # environment.variables = {
   #   EDITOR = "nvim";

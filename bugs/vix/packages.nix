@@ -15,6 +15,7 @@ in
       swww
       waypaper
       #terminal
+      waybar
       peaclock
       bottom
       eza
@@ -31,6 +32,7 @@ in
       fastfetch
       yazi
       resvg
+      wpa_supplicant_gui
       # gui
       viewnior
       mpv

@@ -1,0 +1,129 @@
+{
+  "layer": "top",
+  "margin": "10px 10px 5px 10px ",
+  "position": "top",
+  "modules-left": [
+    "custom/menu",
+    "hyprland/workspaces",
+    "hyprland/window",
+    "custom/window-state"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "tray",
+    "hyprland/language",
+    "wireplumber",
+    "backlight",
+    "temperature",
+    "battery"
+  ],
+  "clock": {
+    "locale": "en_GB.utf8",
+    "format": "{:%a %d %b %H:%M}",
+    "tooltip": false
+  },
+  "custom/window-state": {
+    "interval": 1,
+    "format": "{text}",
+    "return-type": "json",
+    "exec": "~/system/home-manager/modules/waybar/scripts/state.sh"
+  },
+  "backlight": {
+    "tooltip": false,
+    "format": "{icon} {percent}%",
+    "format-icons": [
+      "󰃞 ",
+      "󰃟 ",
+      "󰃠 "
+    ]
+  },
+  "battery": {
+    "interval": 3,
+    "states": {
+      "critical": 10,
+      "warning": 40
+    },
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-icons": [
+      " 󰂃 ",
+      " 󰁺 ",
+      " 󰁻 ",
+      " 󰁼 ",
+      " 󰁽 ",
+      " 󰁾 ",
+      " 󰁿 ",
+      " 󰂀 ",
+      " 󰂁 ",
+      " 󰂂 ",
+      " 󰁹 "
+    ],
+    "format": "{icon} {capacity}%"
+  },
+  "hyprland/window": {
+    "tooltip": false,
+    "format": "{title}",
+    "icon": true,
+    "icon-size": 15,
+    "rewrite": {
+      "(.*) — Mozilla Firefox": "Firefox"
+    }
+  },
+  "network": {
+    "format-icons": [
+      "󰤯 ",
+      "󰤟 ",
+      "󰤢 ",
+      "󰤥 ",
+      "󰤨 "
+    ],
+    "format-wifi": "{icon}",
+    "format-ethernet": "󰈀",
+    "format-disconnected": "⚠",
+    "tooltip-format-wifi": "WiFi: {essid} ({signalStrength}%)\n {bandwidthUpBytes}  {bandwidthDownBytes}",
+    "tooltip-format-ethernet": "Ethernet: {ifname}\n {bandwidthUpBytes}  {bandwidthDownBytes}",
+    "tooltip-format-disconnected": "Disconnected",
+    "on-click": "networkmanager_dmenu",
+    "interval": 5
+  },
+  "hyprland/workspaces": {
+    "persistent-workspaces": {
+      "*": 6
+    }
+  },
+  "hyprland/language": {
+    "format": "{short}",
+    "on-click": "hyprctl switchxkblayout all next "
+  },
+  "wireplumber": {
+    "format": "{icon} {volume}%",
+    "format-muted": "  {volume}%",
+    "format-icons": [
+      " ",
+      " ",
+      " "
+    ]
+  },
+  "tray": {
+    "spacing": 10,
+    "show-passive-items": false,
+    "reverse-direction": true
+  },
+  "custom/menu": {
+    "format": "  ",
+    "on-click": "exec wlogout",
+    "tooltip": false
+  },
+  "temperature": {
+    "critical-threshold": 80,
+    "format": "{icon} {temperatureC}°C",
+    "format-icons": [
+      " ",
+      " ",
+      " "
+    ],
+    "tooltip": false
+  }
+}
