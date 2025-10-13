@@ -9,7 +9,7 @@
     ./hostSpecific
   ];
   vsmrf.enable = true;
-  vix.enable = false;
+  # vix.enable = false;
 
   networking.hostName = "Amaryllis"; # Define your hostname.
   system.stateVersion = "25.05";
