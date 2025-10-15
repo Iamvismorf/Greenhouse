@@ -4,6 +4,7 @@ return {
 	keys = {
 		{
 			"<C-n>",
+			mode = { "n", "i" },
 			function()
 				require("yazi").toggle()
 			end,
