@@ -24,6 +24,7 @@ in {
       pkgs.neocmakelsp
       pkgs.shfmt
       pkgs.inotify-tools
+      pkgs.kdePackages.qtdeclarative
     ];
   enable = true;
   plugins = {
