@@ -17,4 +17,6 @@ vim.lsp.enable({
 	"lua_ls",
 	"nixd",
 	"clangd",
+	"javals",
+	"qmlls",
 })

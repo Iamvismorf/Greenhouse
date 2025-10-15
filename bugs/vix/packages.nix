@@ -6,6 +6,7 @@
 }: let
   # ghostty = import sources.ghostty;
   vixvim = (import sources.mnw).lib.wrap pkgs ./config/neovim;
+  quickshell = import sources.quickshell;
 in
   builtins.attrValues {
     inherit
@@ -16,11 +17,13 @@ in
       waypaper
       #terminal
       waybar
+      ghostty
       peaclock
       bottom
       eza
       jq
       fd
+      obs-studio
       bat
       ouch
       tree
@@ -32,7 +35,6 @@ in
       fastfetch
       yazi
       resvg
-      wpa_supplicant_gui
       # gui
       viewnior
       mpv
@@ -54,6 +56,11 @@ in
     #   optimize = "ReleaseFast";
     #   revision = sources.ghostty.revision;
     # })
+    (pkgs.callPackage quickshell {
+      withI3 = false;
+      withX11 = false;
+    })
+
     (pkgs.equibop.overrideAttrs (oldAttrs: {
       desktopItems = oldAttrs.desktopItems.override {icon = "discord";};
     }))

@@ -22,6 +22,7 @@ in {
       pkgs.nixd
       pkgs.clang-tools
       pkgs.shfmt
+      pkgs.kdePackages.qtdeclarative
     ];
   enable = true;
   plugins = {

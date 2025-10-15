@@ -34,6 +34,7 @@ in {
     hjem.users.${username} = {
       clobberFiles = true;
       xdg.config.files = {
+        "waybar".source = ./config/waybar;
         "fuzzel/fuzzel.ini".source = ./config/fuzzel/fuzzel.ini;
         "ghostty".source = ./config/ghostty;
         "fastfetch".source = ./config/fastfetch;
