@@ -5,9 +5,8 @@ return {
 		{
 			"<C-n>",
 			mode = { "n", "i" },
-			function()
-				require("yazi").toggle()
-			end,
+			"<cmd>Yazi<cr>", -- open in current file
+			-- "<cmd>Yazi cwd<cr>", -- -- open in current working directory
 		},
 	},
 	after = function()
