@@ -10,7 +10,7 @@
   ];
 
   networking.hostName = "Daffodil"; # Define your hostname.
-  # imperative dolpin setup run kbuildsycoca6
+  # imperative dolpin setup run rm -f .cache/kcoca* kbuildsycoca6
   environment.etc."xdg/menus/applications.menu".source = "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
 
   steam.enable = false;
