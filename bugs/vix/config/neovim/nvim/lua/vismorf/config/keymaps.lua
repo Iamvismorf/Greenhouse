@@ -10,11 +10,6 @@ map({ "n", "v", "x" }, "<leader>d", '"+d', opts)
 map("n", "<leader>cc", "gcc", { remap = true, silent = true })
 map("v", "<leader>c", "gc", { remap = true, silent = true })
 
-map("n", "J", ":m .+1<CR>==") -- move line up(n)
-map("n", "K", ":m .-2<CR>==") -- move line down(n)
-map("v", "J", ":m '>+1<CR>gv=gv") -- move line up(v)
-map("v", "K", ":m '<-2<CR>gv=gv") -- move line down(v)
-
 -- Navigate between windows using Ctrl + h/j/k/l
 map({ "n", "v", "i" }, "<C-h>", "<esc><C-w>h", opts)
 map({ "n", "v", "i" }, "<C-j>", "<esc><C-w>j", opts)
