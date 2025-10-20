@@ -82,6 +82,7 @@ in {
           nvim-autopairs
           nvim-surround
           yazi-nvim
+          mini-ai
           ;
       }
       ++ [
