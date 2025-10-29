@@ -25,7 +25,6 @@
       pkgs.nerd-fonts.commit-mono
       pkgs.nerd-fonts.symbols-only
       pkgs.atkinson-hyperlegible-next
-      # pkgs.material-symbols
       pkgs.font-awesome
     ];
   };

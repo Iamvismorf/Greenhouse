@@ -22,6 +22,7 @@
         kitty
         nh
         wl-clipboard
+        cliphist # for persistent storage
         brightnessctl
         libnotify
         npins

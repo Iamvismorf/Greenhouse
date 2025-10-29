@@ -12,7 +12,6 @@ in
     inherit
       (pkgs)
       #theme
-      material-symbols
       swww
       waypaper
       #terminal

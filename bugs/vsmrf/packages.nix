@@ -12,10 +12,12 @@ in
     inherit
       (pkgs)
       #theme
-      material-symbols
+      krita
+      inkscape
       swww
       waypaper
       #terminal
+      tokei
       bottom
       eza
       jq
