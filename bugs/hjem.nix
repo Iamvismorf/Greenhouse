@@ -1,5 +1,11 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  sources,
+  ...
+}: let
+  home = import sources.hjem {};
+in {
   hjem = {
-    linker = pkgs.smfh;
+    linker = home.packages.smfh;
   };
 }

@@ -7,10 +7,12 @@ let
   myLib = import ../myLib;
   nixosSystem = import "${sources.nixpkgs}/nixos/lib/eval-config.nix";
 
-  hjem =
-    (fl-compat {
-      src = sources.hjem;
-    }).defaultNix;
+  # hjem =
+  #   (fl-compat {
+  #     src = sources.hjem;
+  #   }).defaultNix;
+  # hjem = import sources.hjem {inherit pkgs;};
+  hjem = import sources.hjem {};
 
   mkHost = hostname:
     nixosSystem {
