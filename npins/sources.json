@@ -25,9 +25,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "25aaca5a6f5bb951cfbba212d2e06b4ea44d5dcf",
-      "url": "https://github.com/ghostty-org/ghostty/archive/25aaca5a6f5bb951cfbba212d2e06b4ea44d5dcf.tar.gz",
-      "hash": "08rr67ama6zym5dyradab2y1ch03yznygvsq65ncc15avx9a0yry"
+      "revision": "5714ed07a1012573261b7b7e3ed2add9c1504496",
+      "url": "https://github.com/ghostty-org/ghostty/archive/5714ed07a1012573261b7b7e3ed2add9c1504496.tar.gz",
+      "hash": "0xd59i0yvb86q2q95vqj3r21pssdawxjlgqmhax9zg37whf0lqk4"
     },
     "hjem": {
       "type": "Git",
@@ -38,9 +38,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "627b34efad55fd42d6dd52c19c796604d2b8e8bd",
-      "url": "https://github.com/feel-co/hjem/archive/627b34efad55fd42d6dd52c19c796604d2b8e8bd.tar.gz",
-      "hash": "1d4h4kj58ibz8jrvis0s2rw2fvvc1z1h8s7b8jsfahnfpk2cp7mb"
+      "revision": "4e9e23500bff48b750793e98afdbceda199a354a",
+      "url": "https://github.com/feel-co/hjem/archive/4e9e23500bff48b750793e98afdbceda199a354a.tar.gz",
+      "hash": "0jhgqxbh501czz89019dmp6sqxyzv1irgqz0kyyp7sk5imaakjlv"
     },
     "hyprland": {
       "type": "Git",
@@ -51,9 +51,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "26cbc67385d95ba621fe0a125a5b121ffdd09335",
-      "url": "https://github.com/hyprwm/Hyprland/archive/26cbc67385d95ba621fe0a125a5b121ffdd09335.tar.gz",
-      "hash": "0461d9hxgwi6qh71im500w60rvmfbcgqgqdb2r65h8aj42i9ri0a"
+      "revision": "f82a8630d7a51dab4cc70924f500bf70e723db12",
+      "url": "https://github.com/hyprwm/Hyprland/archive/f82a8630d7a51dab4cc70924f500bf70e723db12.tar.gz",
+      "hash": "0c6xb1z2nx59x8cyqcaqaz7zxqi8d1g9mj22k88669b1m6diw6yl"
     },
     "mnw": {
       "type": "Git",
@@ -64,9 +64,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "ed6cc3e48557ba18266e598a5ebb6602499ada16",
-      "url": "https://github.com/Gerg-L/mnw/archive/ed6cc3e48557ba18266e598a5ebb6602499ada16.tar.gz",
-      "hash": "0qcw9k6rb94p6spswqwfpz3hhzdjajpr0dnxv36ahi1slkhn395z"
+      "revision": "68a22f62ca7623fcb700d4ebf225bd91125c773e",
+      "url": "https://github.com/Gerg-L/mnw/archive/68a22f62ca7623fcb700d4ebf225bd91125c773e.tar.gz",
+      "hash": "0lcsrd8x3585xsl94mnz3k6s2vhsbwb4fynwawlh6ajp2qh3j3l9"
     },
     "nixos-hardware": {
       "type": "Git",
@@ -86,14 +86,14 @@
       "type": "Git",
       "repository": {
         "type": "GitHub",
-        "owner": "NixOs",
+        "owner": "nixos",
         "repo": "nixpkgs"
       },
       "branch": "master",
       "submodules": false,
-      "revision": "e9ead8a12d017f72a8c6d7bb02d60437cf66affa",
-      "url": "https://github.com/NixOs/nixpkgs/archive/e9ead8a12d017f72a8c6d7bb02d60437cf66affa.tar.gz",
-      "hash": "00w90fa4j2yablygby2g0ikyp3z5qs2y97d7bans2riw1bf24qqw"
+      "revision": "d56b1467f392105bfd6656f3ada09ecf3aa376f6",
+      "url": "https://github.com/nixos/nixpkgs/archive/d56b1467f392105bfd6656f3ada09ecf3aa376f6.tar.gz",
+      "hash": "1anylqficzm2d94hs2ym3swx4pdsfnxpkxy2fyhb0d3i8bxkhg7w"
     },
     "quickshell": {
       "type": "Git",
@@ -104,9 +104,22 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "00858812f25b748d08b075a0d284093685fa3ffd",
-      "url": "https://github.com/quickshell-mirror/quickshell/archive/00858812f25b748d08b075a0d284093685fa3ffd.tar.gz",
-      "hash": "0jpjf5m05x07cpc3rrfkglipb86ymn0jpnmqcyblqpqa5532xy3j"
+      "revision": "26531fc46ef17e9365b03770edd3fb9206fcb460",
+      "url": "https://github.com/quickshell-mirror/quickshell/archive/26531fc46ef17e9365b03770edd3fb9206fcb460.tar.gz",
+      "hash": "0fswqd8hmr48vjlxrgrbzvykacm3h6bwrp4b1g7xs0ihdnd8nymh"
+    },
+    "zenNvim": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "nendix",
+        "repo": "zen.nvim"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "610dd60c948e7300e24092292fa47b9178aca3f5",
+      "url": "https://github.com/nendix/zen.nvim/archive/610dd60c948e7300e24092292fa47b9178aca3f5.tar.gz",
+      "hash": "1r2iq5fr46gkh66345n985c5l163dszbw7zg22yvc5ps44zwh80m"
     }
   },
   "version": 5
