@@ -16,6 +16,7 @@ in
       swww
       waypaper
       #terminal
+      yt-dlp
       bottom
       btop
       sysstat
