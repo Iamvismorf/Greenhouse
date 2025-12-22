@@ -5,21 +5,18 @@
   pkgs,
   ...
 }:
-
 # gamemoderun %command%
 # mangohud %command%
 # gamescope %command%
 # prepend in general launch options
 {
-
   options = {
     steam.enable = myLib.mkTrueOption "enable steam";
   };
   config = lib.mkIf config.steam.enable {
-
     environment.systemPackages = [
       pkgs.mangohud # monitor
-      pkgs.protonup
+      pkgs.protonup-ng
     ];
 
     programs.gamemode.enable = true;

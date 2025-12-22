@@ -4,21 +4,21 @@
   sources,
   ...
 }: let
-  # ghostty = import sources.ghostty;
-  vixvim = (import sources.mnw).lib.wrap pkgs ./config/neovim;
+  ghostty = import sources.ghostty;
+  vixvim = (import sources.mnw).lib.wrap {inherit pkgs sources;} ./config/neovim;
   quickshell = import sources.quickshell;
 in
   builtins.attrValues {
     inherit
       (pkgs)
       #theme
-      krita
       inkscape
       swww
       waypaper
       #terminal
-      tokei
       bottom
+      btop
+      sysstat
       eza
       jq
       fd
@@ -29,7 +29,6 @@ in
       fzf
       git
       wtype
-      ghostty
       socat
       fastfetch
       yazi
@@ -40,6 +39,7 @@ in
       viewnior
       mpv
       fuzzel
+      libreoffice
       #screenshot
       hyprshot
       ;
@@ -47,7 +47,6 @@ in
       (pkgs.kdePackages)
       dolphin
       ark
-      qtsvg
       breeze
       ;
   }
@@ -56,13 +55,15 @@ in
       withI3 = false;
       withX11 = false;
     })
+    ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default
     # (pkgs.callPackage (ghostty + "/nix/package.nix") {
     #   optimize = "ReleaseFast";
-    #   revision = sources.ghostty.revision;
+    #   # revision = sources.ghostty.revision;
     # })
     (pkgs.equibop.overrideAttrs (oldAttrs: {
       desktopItems = oldAttrs.desktopItems.override {icon = "discord";};
     }))
+    (pkgs.callPackage ../../pkgs/derivation.nix {})
     # vixvim
     vixvim.devMode
   ]
