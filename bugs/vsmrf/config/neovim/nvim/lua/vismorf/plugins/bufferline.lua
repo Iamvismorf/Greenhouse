@@ -18,8 +18,10 @@ return {
 		local map = vim.keymap.set
 		local opts = { noremap = true, silent = true }
 
-		map("n", "<Tab>", ":BufferLineCycleNext<cr>", opts)
-		map("n", "<S-Tab>", ":BufferLineCyclePrev<cr>", opts)
+		-- map("n", "<Tab>", ":BufferLineCycleNext<cr>", opts)
+		-- map("n", "<S-Tab>", ":BufferLineCyclePrev<cr>", opts)
+		map("n", "<S-k>", ":BufferLineCycleNext<cr>", opts)
+		map("n", "<S-j>", ":BufferLineCyclePrev<cr>", opts)
 
 		map("n", ">", ":BufferLineMoveNext<cr>", opts)
 		map("n", "<", ":BufferLineMovePrev<cr>", opts)

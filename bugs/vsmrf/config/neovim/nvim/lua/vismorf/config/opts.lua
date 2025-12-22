@@ -55,3 +55,8 @@ vim.api.nvim_create_autocmd("FileType", {
 		vim.opt_local.winbar = nil
 	end,
 })
+vim.api.nvim_create_autocmd("UIEnter", {
+	callback = function()
+		vim.cmd("cle")
+	end,
+})

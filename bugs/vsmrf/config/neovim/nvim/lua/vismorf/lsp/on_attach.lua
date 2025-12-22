@@ -7,7 +7,7 @@ return function(ev)
 	local fzf = require("fzf-lua")
 
 	map("<leader>re", fzf.lsp_references, "show definition, references")
-	map("<leader>De", vim.lsp.buf.declaration, "go to declaration")
+	-- map("<leader>De", vim.lsp.buf.declaration, "go to declaration")
 
 	map("<leader>de", fzf.lsp_definitions, "show lsp definitions")
 
@@ -15,7 +15,7 @@ return function(ev)
 	map("<leader>t", fzf.lsp_typedefs, "show lsp type definitions")
 	map("<leader>rn", vim.lsp.buf.rename, "smart rename")
 
-	map("<leader>Di", fzf.diagnostics_document, "show  diagnostics for file") -- pass 0 as bufnr
+	-- map("<leader>Di", fzf.diagnostics_document, "show  diagnostics for file") -- pass 0 as bufnr
 	map("<leader>di", vim.diagnostic.open_float, "show diagnostics for line")
 
 	-- vim.keymap.set({ "n", "v" }, "<leader>ac", vim.lsp.buf.code_action, opts) -- see available code actions, in visual mode will apply to selection

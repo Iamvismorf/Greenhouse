@@ -4,6 +4,7 @@ require("lze").load({
 	{ import = "vismorf.plugins.autopairs" },
 	-- { import = "vismorf.plugins.comment" },
 	{ import = "vismorf.plugins.bufferline" },
+	{ import = "vismorf.plugins.bufjump" },
 	{ import = "vismorf.plugins.context" },
 	{ import = "vismorf.plugins.statuscol" },
 	{ import = "vismorf.plugins.flash" },
