@@ -1,6 +1,7 @@
 {
   pkgs,
   lib,
+  sources,
   ...
 }: let
   fs = lib.fileset;
@@ -36,6 +37,11 @@ in {
 
       impure = "/home/vsmrf/Greenhouse/bugs/vsmrf/config/neovim/nvim";
     };
+    startAttrs = {
+      nvim-treesitter = null;
+      promise-async = null;
+      nvim-navic = null;
+    };
     start =
       builtins.attrValues {
         inherit
@@ -56,6 +62,15 @@ in {
             repo = "kanso.nvim";
             rev = "748023fd273782e6e056620ce66a176532cdf375";
             hash = "sha256-REpAQJQnYTWrGnqeb5S7jgDjmMvSUE4JqT+BcSonxfw=";
+          };
+        }
+        {
+          name = "zen.nvim";
+          src = pkgs.fetchFromGitHub {
+            owner = "nendix";
+            repo = "zen.nvim";
+            rev = sources.zenNvim.revision;
+            hash = "sha256-FSDIPyH6Fra9EO8fvr5uwwRaWEHJFjKMgfMZkl3BUeQ=";
           };
         }
       ];
@@ -83,6 +98,7 @@ in {
           nvim-surround
           yazi-nvim
           mini-ai
+          bufjump-nvim
           ;
       }
       ++ [
