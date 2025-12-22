@@ -1,0 +1,3 @@
+[Default]
+save_dir=$HOME/Screenshots
+early_exit=true

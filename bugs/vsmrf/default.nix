@@ -26,6 +26,8 @@ in {
         "networkmanager"
         "input"
         "wheel"
+        "video"
+        "render"
       ];
       shell = pkgs.fish;
     };
@@ -34,6 +36,8 @@ in {
       clobberFiles = true;
       xdg.config.files = {
         "fuzzel/fuzzel.ini".source = ./config/fuzzel/fuzzel.ini;
+        "nixpkgs".source = ./config/nixpkgs;
+        "mpv/mpv.conf".source = ./config/mpv/mpv.conf;
         "ghostty".source = ./config/ghostty;
         "fastfetch".source = ./config/fastfetch;
         "git".source = ./config/git;
@@ -48,6 +52,7 @@ in {
         "fish/config.fish".source = ./config/fish/config.fish;
         "fish/functions".source = ./config/fish/functions;
         "uwsm/env".source = ./config/uwsm/env;
+        "swappy/config".source = ./config/swappy/config;
       };
       packages = import ./packages.nix {inherit sources pkgs;};
     };
