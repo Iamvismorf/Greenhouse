@@ -55,6 +55,19 @@
       "url": "https://github.com/hyprwm/Hyprland/archive/f82a8630d7a51dab4cc70924f500bf70e723db12.tar.gz",
       "hash": "0c6xb1z2nx59x8cyqcaqaz7zxqi8d1g9mj22k88669b1m6diw6yl"
     },
+    "mangowc": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "DreamMaoMao",
+        "repo": "mangowc"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "471c71f65c3c15ebe633edf4757361649757f990",
+      "url": "https://github.com/DreamMaoMao/mangowc/archive/471c71f65c3c15ebe633edf4757361649757f990.tar.gz",
+      "hash": "1ld1rdckk94763ymmnhvkxjjgw6vdlqfazhzhraw7kpv6kynlkxw"
+    },
     "mnw": {
       "type": "Git",
       "repository": {
