@@ -13,9 +13,9 @@
     }).defaultNix;
 in {
   options = {
-    hyprWm.enable = myLib.mkTrueOption "enable hyprWm module";
+    hyprland.enable = myLib.mkTrueOption "enable hyprland module";
   };
-  config = lib.mkIf config.hyprWm.enable {
+  config = lib.mkIf config.hyprland.enable {
     programs.uwsm = {
       enable = true;
       waylandCompositors = {
