@@ -3,7 +3,6 @@
   config,
   lib,
   myLib,
-  sources,
   ...
 }: {
   options = {
@@ -22,7 +21,7 @@
         kitty
         nh
         wl-clipboard
-        cliphist # for persistent storage
+        cliphist
         brightnessctl
         libnotify
         npins
