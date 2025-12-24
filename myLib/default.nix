@@ -44,7 +44,7 @@ in {
     ];
 
   # eF list includes file names neither absolute nor relative path
-  # imports every .nix file in the directory without importing subdirectories unless subdir=true is passed. Level is 1
+  # imports every .nix file in the directory without importing subdirectories unless subdir=true is passed. Level is 1. If subdir is true and there is no subdir then it will be ignored
   # to ignore a directory: "dir/default.nix"
   importDir = {
     dir,
