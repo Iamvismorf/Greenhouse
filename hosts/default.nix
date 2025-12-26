@@ -3,7 +3,6 @@ let
   pkgs = import sources.nixpkgs {
     config.allowUnfree = true;
   };
-  fl-compat = import sources.flake-compat;
   myLib = import ../myLib;
   nixosSystem = import "${sources.nixpkgs}/nixos/lib/eval-config.nix";
 
@@ -17,7 +16,7 @@ let
   mkHost = hostname:
     nixosSystem {
       specialArgs = {
-        inherit sources pkgs fl-compat myLib;
+        inherit sources pkgs myLib;
       };
       modules = [
         ./${hostname}/configuration.nix

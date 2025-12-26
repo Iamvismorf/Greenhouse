@@ -1,7 +1,5 @@
 {myLib, ...}: {
   imports = myLib.importDir {
     dir = ./.;
-    eF = ["opentablet.nix" "wm/default.nix"];
-    subdir = true;
   };
 }

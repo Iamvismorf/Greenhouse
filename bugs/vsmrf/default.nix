@@ -1,5 +1,4 @@
 {
-  fl-compat,
   sources,
   pkgs,
   config,

@@ -1,20 +1,16 @@
 {
   "pins": {
     "flake-compat": {
-      "type": "GitRelease",
+      "type": "Git",
       "repository": {
-        "type": "GitHub",
-        "owner": "edolstra",
-        "repo": "flake-compat"
+        "type": "Git",
+        "url": "https://git.lix.systems/lix-project/flake-compat"
       },
-      "pre_releases": false,
-      "version_upper_bound": null,
-      "release_prefix": null,
+      "branch": "main",
       "submodules": false,
-      "version": "v1.1.0",
-      "revision": "ff81ac966bb2cae68946d5ed5fc4994f96d0ffec",
-      "url": "https://api.github.com/repos/edolstra/flake-compat/tarball/v1.1.0",
-      "hash": "19d2z6xsvpxm184m41qrpi1bplilwipgnzv9jy17fgw421785q1m"
+      "revision": "549f2762aebeff29a2e5ece7a7dc0f955281a1d1",
+      "url": null,
+      "hash": "0g4izwn5k7qpavlk3w41a92rhnp4plr928vmrhc75041vzm3vb1l"
     },
     "ghostty": {
       "type": "Git",

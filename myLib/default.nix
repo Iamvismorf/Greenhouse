@@ -1,5 +1,6 @@
 let
   sources = import ../npins;
+  lixFlake-compat = import sources.flake-compat;
   lib = import "${sources.nixpkgs}/lib";
   inherit
     (builtins)
@@ -67,4 +68,12 @@ in {
       (mapAttrsToList (n: _: (dir + "/${n}")))
       (filter (i: (pathExists i) && (stringLength (readFile i)) > 0))
     ];
+  flakeToNix = {
+    src,
+    copySourceTreeToStore ? true,
+    useBuiltinsFetchTree ? false,
+    system ? builtins.currentSystem or "unknown-system",
+  }: (lixFlake-compat {
+    inherit src copySourceTreeToStore useBuiltinsFetchTree system;
+  });
 }

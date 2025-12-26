@@ -2,26 +2,16 @@
   myLib,
   config,
   lib,
-  fl-compat,
   sources,
   pkgs,
   ...
 }: let
-  hyprland = (myLib.flakeToNix {src = sources.hyprland;}).defaultNix;
+  hyprland = myLib.flakeToNix {src = sources.hyprland;}.defaultNix;
 in {
   options = {
     hyprland.enable = myLib.mkTrueOption "enable hyprland module";
   };
   config = lib.mkIf config.hyprland.enable {
-    programs.uwsm = {
-      enable = true;
-      waylandCompositors = {
-        hyprland = {
-          prettyName = "Hyprland";
-          binPath = "/run/current-system/sw/bin/Hyprland";
-        };
-      };
-    };
     programs.hyprland = {
       enable = true;
       withUWSM = true;
@@ -30,14 +20,11 @@ in {
     };
 
     xdg.portal = {
-      enable = true;
-      config = {
-        hyprland = {
-          default = [
-            "hyprland"
-            "kde"
-          ];
-        };
+      config.hyprland = {
+        default = [
+          "hyprland"
+          "kde"
+        ];
       };
       configPackages = [
         pkgs.kdePackages.xdg-desktop-portal-kde

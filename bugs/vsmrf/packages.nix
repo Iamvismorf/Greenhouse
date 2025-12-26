@@ -56,6 +56,7 @@ in
       withI3 = false;
       withX11 = false;
     })
+    # ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default.override
     ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default
     # (pkgs.callPackage (ghostty + "/nix/package.nix") {
     #   optimize = "ReleaseFast";
