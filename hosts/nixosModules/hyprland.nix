@@ -2,7 +2,6 @@
   myLib,
   config,
   lib,
-  fl-compat,
   sources,
   pkgs,
   ...

@@ -1,7 +1,6 @@
 {
   pkgs,
   sources,
-  myLib,
   ...
 }: let
   mango = import "${sources.mangowc}/nix/default.nix";
@@ -9,6 +8,7 @@ in {
   environment.systemPackages =
     [
       (pkgs.callPackage mango {})
+      (pkgs.callPackage (sources.npins + "/npins.nix") {})
     ]
     ++ builtins.attrValues {
       inherit
@@ -24,7 +24,6 @@ in {
         cliphist
         brightnessctl
         libnotify
-        npins
         grim
         slurp
         swappy

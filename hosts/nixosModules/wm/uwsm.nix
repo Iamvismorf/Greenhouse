@@ -8,7 +8,8 @@
     waylandCompositors = {
       hyprland = lib.mkIf config.hyprland.enable {
         prettyName = "Hyprland";
-        binPath = "/run/current-system/sw/bin/Hyprland";
+        # binPath = "/run/current-system/sw/bin/Hyprland";
+        binPath = "/run/current-system/sw/bin/start-hyprland";
       };
     };
   };

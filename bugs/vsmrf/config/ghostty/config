@@ -11,3 +11,14 @@ custom-shader = shaders/cursor_smear.glsl
 confirm-close-surface = false
 keybind = ctrl+i=clear_screen
 shell-integration = fish
+shell-integration-features = sudo
+
+window-padding-x = 16
+
+window-padding-y = 8
+
+window-padding-balance = true 
+
+window-padding-color = background
+
+scrollbar = never

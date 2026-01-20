@@ -1,8 +1,16 @@
 let
   sources = import ../npins;
+  # pkgs =
+  #   import
+  #   (myLib.flakeToNix {
+  #     src = sources.nixpkgs;
+  #     copySourceTreeToStore = false;
+  #   }).defaultNix {config.allowUnfree = true;};
+
   pkgs = import sources.nixpkgs {
     config.allowUnfree = true;
   };
+
   myLib = import ../myLib;
   nixosSystem = import "${sources.nixpkgs}/nixos/lib/eval-config.nix";
 

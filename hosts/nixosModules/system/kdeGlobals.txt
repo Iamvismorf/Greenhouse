@@ -1,0 +1,5 @@
+kdeglobals add 
+
+[General]
+TerminalApplication=ghostty
+

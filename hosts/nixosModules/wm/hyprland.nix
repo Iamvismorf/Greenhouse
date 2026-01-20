@@ -6,7 +6,7 @@
   pkgs,
   ...
 }: let
-  hyprland = myLib.flakeToNix {src = sources.hyprland;}.defaultNix;
+  hyprland = (myLib.flakeToNix {src = sources.hyprland;}).defaultNix;
 in {
   options = {
     hyprland.enable = myLib.mkTrueOption "enable hyprland module";
@@ -23,11 +23,13 @@ in {
       config.hyprland = {
         default = [
           "hyprland"
-          "kde"
+          # "kde"
+          "gtk"
         ];
       };
       configPackages = [
-        pkgs.kdePackages.xdg-desktop-portal-kde
+        # pkgs.kdePackages.xdg-desktop-portal-kde
+        pkgs.xdg-desktop-portal-gtk
       ];
       extraPortals = [
         pkgs.kdePackages.xdg-desktop-portal-kde
@@ -40,7 +42,7 @@ in {
       pkgs.kdePackages.qtwayland
       pkgs.libsForQt5.qt5.qtwayland
       pkgs.hyprpolkitagent
-      pkgs.kdePackages.qt6ct
+      # pkgs.kdePackages.qt6ct
     ];
   };
 }

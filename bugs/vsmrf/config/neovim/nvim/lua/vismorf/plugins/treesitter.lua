@@ -1,15 +1,17 @@
+vim.wo[0][0].foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.wo[0][0].foldmethod = "expr"
+vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = { ".nix", ".lua", ".cpp", ".c", ".qml" },
+	callback = function()
+		vim.treesitter.start()
+	end,
+})
+
 return {
 	"nvim-treesitter",
-	event = "DeferredUIEnter",
-	load = function(name)
-		vim.cmd.packadd(name)
-		vim.cmd.packadd("nvim-treesitter-textobjects")
-	end,
+	lazy = false,
 	after = function()
-		require("nvim-treesitter.configs").setup({
-			highlight = { enable = true },
-			indent = { enable = false },
-			sync_install = false,
-		})
+		require("nvim-treesitter").setup({})
 	end,
 }

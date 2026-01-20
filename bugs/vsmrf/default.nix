@@ -4,6 +4,7 @@
   config,
   options,
   lib,
+  myLib,
   ...
 }: let
   username = "vsmrf";
@@ -53,7 +54,7 @@ in {
         "uwsm/env".source = ./config/uwsm/env;
         "swappy/config".source = ./config/swappy/config;
       };
-      packages = import ./packages.nix {inherit sources pkgs;};
+      packages = import ./packages.nix {inherit sources pkgs myLib;};
     };
   };
 }

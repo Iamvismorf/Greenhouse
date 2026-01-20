@@ -1,5 +1,7 @@
 -- require("vismorf.plugins.devicons")
 require("vismorf.plugins.theme")
+require("vismorf.plugins.ufo")
+
 require("lze").load({
 	{ import = "vismorf.plugins.autopairs" },
 	-- { import = "vismorf.plugins.comment" },
@@ -17,6 +19,6 @@ require("lze").load({
 	-- { import = "vismorf.plugins.telescope" },
 	-- { import = "vismorf.plugins.tree" },
 	{ import = "vismorf.plugins.treesitter" },
-	{ import = "vismorf.plugins.ufo" },
+	-- { import = "vismorf.plugins.ufo" },
 	{ import = "vismorf.plugins.yazi" },
 })

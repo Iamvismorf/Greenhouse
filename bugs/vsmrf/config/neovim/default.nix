@@ -21,7 +21,7 @@ in {
       pkgs.lua-language-server
       pkgs.alejandra
       pkgs.nixd
-      pkgs.clang-tools
+      # pkgs.clang-tools
       pkgs.neocmakelsp
       pkgs.shfmt
       pkgs.inotify-tools
@@ -56,15 +56,6 @@ in {
       }
       ++ [
         {
-          name = "kanso.nvim";
-          src = pkgs.fetchFromGitHub {
-            owner = "webhooked";
-            repo = "kanso.nvim";
-            rev = "748023fd273782e6e056620ce66a176532cdf375";
-            hash = "sha256-REpAQJQnYTWrGnqeb5S7jgDjmMvSUE4JqT+BcSonxfw=";
-          };
-        }
-        {
           name = "zen.nvim";
           src = pkgs.fetchFromGitHub {
             owner = "nendix";
@@ -97,7 +88,6 @@ in {
           nvim-autopairs
           nvim-surround
           yazi-nvim
-          mini-ai
           bufjump-nvim
           ;
       }
