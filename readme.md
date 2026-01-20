@@ -3,8 +3,6 @@ My non-flakes, npins based NixOS/Hyprland configurations. The entry point is `./
 ## Usage
 - Switching to a new generation:\
 Launch nix shell with `nix-shell` and run `sudo nixos-build switch/boot --no-reexec -A nC.<hostName>` or `nh os switch --file ./default.nix nC.<hostName>`. Alternatively there is an alias for the switching command, which is `switchpls nC.<hostname>`
-> [!NOTE]
-As of 20/09/2025, to `switch/boot` you launch nix shell. However, in a future release of `npins`, you will be able to just run the switch command, mentioned above, without needing the nix shell. See [Resources](#resources) for more information. 
 ## Directory Structure
 ```bash
 .
