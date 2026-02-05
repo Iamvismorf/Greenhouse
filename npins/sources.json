@@ -10,7 +10,7 @@
       "submodules": false,
       "revision": "549f2762aebeff29a2e5ece7a7dc0f955281a1d1",
       "url": null,
-      "hash": "0g4izwn5k7qpavlk3w41a92rhnp4plr928vmrhc75041vzm3vb1l"
+      "hash": "sha256-NKw96t+BgHIYzHUjkTK95FqYRVKB8DHpVhefWSz/kTw="
     },
     "ghostty": {
       "type": "Git",
@@ -21,9 +21,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "5714ed07a1012573261b7b7e3ed2add9c1504496",
-      "url": "https://github.com/ghostty-org/ghostty/archive/5714ed07a1012573261b7b7e3ed2add9c1504496.tar.gz",
-      "hash": "0xd59i0yvb86q2q95vqj3r21pssdawxjlgqmhax9zg37whf0lqk4"
+      "revision": "2e1b501d25c62a8f08df99969c6e94c440a75c4c",
+      "url": "https://github.com/ghostty-org/ghostty/archive/2e1b501d25c62a8f08df99969c6e94c440a75c4c.tar.gz",
+      "hash": "sha256-5LN7A7NjZLVY2A6PAeXWd7pVP7S3PsxU0GqNNRdX58I="
     },
     "hjem": {
       "type": "Git",
@@ -36,7 +36,7 @@
       "submodules": false,
       "revision": "4e9e23500bff48b750793e98afdbceda199a354a",
       "url": "https://github.com/feel-co/hjem/archive/4e9e23500bff48b750793e98afdbceda199a354a.tar.gz",
-      "hash": "0jhgqxbh501czz89019dmp6sqxyzv1irgqz0kyyp7sk5imaakjlv"
+      "hash": "sha256-m8qpVI1l6nO9n+Djl2PY33esza0tBZDQ/yyAAlfHD0o="
     },
     "hyprland": {
       "type": "Git",
@@ -47,9 +47,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "f82a8630d7a51dab4cc70924f500bf70e723db12",
-      "url": "https://github.com/hyprwm/Hyprland/archive/f82a8630d7a51dab4cc70924f500bf70e723db12.tar.gz",
-      "hash": "0c6xb1z2nx59x8cyqcaqaz7zxqi8d1g9mj22k88669b1m6diw6yl"
+      "revision": "1bc857b12c434b7255119de009a50237856a90b2",
+      "url": "https://github.com/hyprwm/Hyprland/archive/1bc857b12c434b7255119de009a50237856a90b2.tar.gz",
+      "hash": "sha256-sPyea7oYf5h420tdvkrwn0Z1uxfZdqhpuGrEVcdC7q8="
     },
     "mangowc": {
       "type": "Git",
@@ -62,7 +62,7 @@
       "submodules": false,
       "revision": "471c71f65c3c15ebe633edf4757361649757f990",
       "url": "https://github.com/DreamMaoMao/mangowc/archive/471c71f65c3c15ebe633edf4757361649757f990.tar.gz",
-      "hash": "1ld1rdckk94763ymmnhvkxjjgw6vdlqfazhzhraw7kpv6kynlkxw"
+      "hash": "sha256-vE9q/TT7zsNVhh9+5TBt2/AnZZ8b2lr9MIekOVnLodE="
     },
     "mnw": {
       "type": "Git",
@@ -75,7 +75,7 @@
       "submodules": false,
       "revision": "68a22f62ca7623fcb700d4ebf225bd91125c773e",
       "url": "https://github.com/Gerg-L/mnw/archive/68a22f62ca7623fcb700d4ebf225bd91125c773e.tar.gz",
-      "hash": "0lcsrd8x3585xsl94mnz3k6s2vhsbwb4fynwawlh6ajp2qh3j3l9"
+      "hash": "sha256-iQ45IBZXKgMpV9x6RxZfGm6hzRzfVpKo7gWV0VHLmlE="
     },
     "nixos-hardware": {
       "type": "Git",
@@ -88,7 +88,7 @@
       "submodules": false,
       "revision": "11b2a10c7be726321bb854403fdeec391e798bf0",
       "url": "https://github.com/Nixos/nixos-hardware/archive/11b2a10c7be726321bb854403fdeec391e798bf0.tar.gz",
-      "hash": "0saswrdg59v4xfwfl7q61b47davz6yf58xfj707wzcip3s5zpm1y",
+      "hash": "sha256-PtT7ix43ss8PONJ1VJw3f6t2yAoGH+q462Sn8lrmWmk=",
       "frozen": true
     },
     "nixpkgs": {
@@ -98,11 +98,37 @@
         "owner": "nixos",
         "repo": "nixpkgs"
       },
+      "branch": "nixos-unstable",
+      "submodules": false,
+      "revision": "00c21e4c93d963c50d4c0c89bfa84ed6e0694df2",
+      "url": "https://github.com/nixos/nixpkgs/archive/00c21e4c93d963c50d4c0c89bfa84ed6e0694df2.tar.gz",
+      "hash": "sha256-AYqlWrX09+HvGs8zM6ebZ1pwUqjkfpnv8mewYwAo+iM="
+    },
+    "npins": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "andir",
+        "repo": "npins"
+      },
       "branch": "master",
       "submodules": false,
-      "revision": "d56b1467f392105bfd6656f3ada09ecf3aa376f6",
-      "url": "https://github.com/nixos/nixpkgs/archive/d56b1467f392105bfd6656f3ada09ecf3aa376f6.tar.gz",
-      "hash": "1anylqficzm2d94hs2ym3swx4pdsfnxpkxy2fyhb0d3i8bxkhg7w"
+      "revision": "22e72314632373452cbad9782bab97884a96cf53",
+      "url": "https://github.com/andir/npins/archive/22e72314632373452cbad9782bab97884a96cf53.tar.gz",
+      "hash": "sha256-xy29sL2rfD0Yq9oPcBdSknLtu4CjM8FZKHDlpPvmuGI="
+    },
+    "qtengine": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "kossLAN",
+        "repo": "qtengine"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "10d61da0369c123d8bde94ffc6b60441e5e7c2f3",
+      "url": "https://github.com/kossLAN/qtengine/archive/10d61da0369c123d8bde94ffc6b60441e5e7c2f3.tar.gz",
+      "hash": "sha256-Uvrb9lpTW77sJvsgO7o2U/BmSAbD8IDdUr9bGmIKtt8="
     },
     "quickshell": {
       "type": "Git",
@@ -115,7 +141,7 @@
       "submodules": false,
       "revision": "26531fc46ef17e9365b03770edd3fb9206fcb460",
       "url": "https://github.com/quickshell-mirror/quickshell/archive/26531fc46ef17e9365b03770edd3fb9206fcb460.tar.gz",
-      "hash": "0fswqd8hmr48vjlxrgrbzvykacm3h6bwrp4b1g7xs0ihdnd8nymh"
+      "hash": "sha256-sHqLmm0wAt3PC4vczJeBozI1/f4rv9yp3IjkClHDXDs="
     },
     "zenNvim": {
       "type": "Git",
@@ -128,8 +154,8 @@
       "submodules": false,
       "revision": "610dd60c948e7300e24092292fa47b9178aca3f5",
       "url": "https://github.com/nendix/zen.nvim/archive/610dd60c948e7300e24092292fa47b9178aca3f5.tar.gz",
-      "hash": "1r2iq5fr46gkh66345n985c5l163dszbw7zg22yvc5ps44zwh80m"
+      "hash": "sha256-FSDIPyH6Fra9EO8fvr5uwwRaWEHJFjKMgfMZkl3BUeQ="
     }
   },
-  "version": 5
+  "version": 7
 }
