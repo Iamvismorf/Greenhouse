@@ -64,6 +64,15 @@ in {
             hash = "sha256-FSDIPyH6Fra9EO8fvr5uwwRaWEHJFjKMgfMZkl3BUeQ=";
           };
         }
+        {
+          name = "project.nvim";
+          src = pkgs.fetchFromGitHub {
+            owner = "ahmedkhalf";
+            repo = "project.nvim";
+            rev = "8c6bad7d22eef1b71144b401c9f74ed01526a4fb";
+            hash = "sha256-avV3wMiDbraxW4mqlEsKy0oeewaRj9Q33K8NzWoaptU=";
+          };
+        }
       ];
     opt =
       builtins.attrValues {

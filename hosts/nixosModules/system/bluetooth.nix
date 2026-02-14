@@ -14,10 +14,11 @@
       settings = {
         General = {
           Experimental = true;
-          FastConnectable = true;
+          FastConnectable = false;
+          KernelExperimental = true;
         };
         Policy = {
-          AutoEnable = true;
+          AutoEnable = false;
         };
       };
     };

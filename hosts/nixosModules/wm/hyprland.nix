@@ -14,7 +14,7 @@ in {
   config = lib.mkIf config.hyprland.enable {
     programs.hyprland = {
       enable = true;
-      withUWSM = true;
+      withUWSM = false;
       package = hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
       portalPackage = hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
     };
@@ -23,13 +23,13 @@ in {
       config.hyprland = {
         default = [
           "hyprland"
-          # "kde"
-          "gtk"
+          "kde"
+          # "gtk"
         ];
       };
       configPackages = [
-        # pkgs.kdePackages.xdg-desktop-portal-kde
-        pkgs.xdg-desktop-portal-gtk
+        pkgs.kdePackages.xdg-desktop-portal-kde
+        # pkgs.xdg-desktop-portal-gtk
       ];
       extraPortals = [
         pkgs.kdePackages.xdg-desktop-portal-kde

@@ -3,4 +3,7 @@ function fish_right_prompt
    if set -q IN_NIX_SHELL; and test $SHLVL -gt 1
       echo "[nix-shell] "
    end
+   if set -q DIRENV_DIR
+      echo "[direnv] "
+   end
 end

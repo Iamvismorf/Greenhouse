@@ -1,2 +1,3 @@
 [flavor]
-dark = "kanso-ink"
+# dark = "kanso-ink"
+dark = "zen_dark"

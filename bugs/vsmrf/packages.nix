@@ -18,7 +18,8 @@ in
       swww
       waypaper
       #terminal
-      yt-dlp
+      gpu-screen-recorder
+      yt-dlp #convert youtube to mp3
       bottom
       btop
       sysstat
@@ -77,9 +78,16 @@ in
     #   optimize = "ReleaseFast";
     #   # revision = sources.ghostty.revision;
     # })
-    (pkgs.equibop.overrideAttrs (oldAttrs: {
-      desktopItems = oldAttrs.desktopItems.override {icon = "discord";};
+
+    (pkgs.vesktop.overrideAttrs (oldAttrs: {
+      desktopItems =
+        map (
+          item:
+            item.override {icon = "discord";}
+        )
+        oldAttrs.desktopItems;
     }))
+
     (pkgs.callPackage ../../pkgs/derivation.nix {})
     # vixvim
     vixvim.devMode

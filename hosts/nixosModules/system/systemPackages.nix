@@ -9,6 +9,7 @@ in {
     [
       (pkgs.callPackage mango {})
       (pkgs.callPackage (sources.npins + "/npins.nix") {})
+      pkgs.kdePackages.qtsvg
     ]
     ++ builtins.attrValues {
       inherit

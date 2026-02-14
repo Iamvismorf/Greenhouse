@@ -12,6 +12,7 @@
     # for mounting phone
     services.gvfs.enable = true;
     qt.enable = true;
+    documentation.enable = false; #disable docs for all packages not only nixos
     environment.etc."/xdg/menus/applications.menu".text = builtins.readFile "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
   };
 }

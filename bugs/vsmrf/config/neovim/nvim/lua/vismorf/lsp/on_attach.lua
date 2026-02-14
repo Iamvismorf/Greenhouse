@@ -20,4 +20,5 @@ return function(ev)
 
 	-- vim.keymap.set({ "n", "v" }, "<leader>ac", vim.lsp.buf.code_action, opts) -- see available code actions, in visual mode will apply to selection
 	map("T", vim.lsp.buf.hover, "show documentation for what is under cursor")
+	-- :Lsprestart
 end

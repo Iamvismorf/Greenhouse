@@ -1,3 +1,4 @@
+#todo: remove custom enable because hjem has enable support
 {
   sources,
   pkgs,
@@ -33,6 +34,29 @@ in {
     };
     programs.fish.enable = true;
     hjem.users.${username} = {
+      programs.qtengine = {
+        enable = true;
+        config = {
+          theme = {
+            # colorScheme = "${pkgs.kdePackages.breeze}/share/color-schemes/BreezeDark.colors";
+            colorScheme = ./config/BreezeDark.colors;
+            iconTheme = "breeze-dark";
+            style = "breeze";
+
+            font = {
+              family = "Atkinson Hyperlegible Next Medium";
+              size = 11;
+              weight = -1;
+            };
+
+            fontFixed = {
+              family = "Atkinson Hyperlegible Next Medium";
+              size = 11;
+              weight = -1;
+            };
+          };
+        };
+      };
       clobberFiles = true;
       xdg.config.files = {
         "fuzzel/fuzzel.ini".source = ./config/fuzzel/fuzzel.ini;
@@ -54,7 +78,7 @@ in {
         "uwsm/env".source = ./config/uwsm/env;
         "swappy/config".source = ./config/swappy/config;
       };
-      packages = import ./packages.nix {inherit sources pkgs myLib;};
+      packages = (import ./packages.nix {inherit sources pkgs myLib;}) ++ [pkgs.kdePackages.breeze pkgs.kdePackages.breeze-icons];
     };
   };
 }
