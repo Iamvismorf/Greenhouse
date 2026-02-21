@@ -77,6 +77,19 @@
       "url": "https://github.com/Gerg-L/mnw/archive/68a22f62ca7623fcb700d4ebf225bd91125c773e.tar.gz",
       "hash": "sha256-iQ45IBZXKgMpV9x6RxZfGm6hzRzfVpKo7gWV0VHLmlE="
     },
+    "niri": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "yalter",
+        "repo": "niri"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "a2a52911757cb3b497db9407592f9b4c439571ea",
+      "url": "https://github.com/yalter/niri/archive/a2a52911757cb3b497db9407592f9b4c439571ea.tar.gz",
+      "hash": "sha256-lqweVTwHhYc+9T33cysp38gVwxaibGJHriOPZXWyhCY="
+    },
     "nixos-hardware": {
       "type": "Git",
       "repository": {
