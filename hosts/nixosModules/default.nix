@@ -1,7 +1,7 @@
 {myLib, ...}: {
   imports = myLib.importDir {
     dir = ./.;
-    eF = ["opentablet.nix" "hyprland.nix"];
+    eF = ["opentablet.nix"];
     subdir = true;
   };
 }

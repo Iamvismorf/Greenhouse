@@ -2,12 +2,9 @@
   pkgs,
   sources,
   ...
-}: let
-  mango = import "${sources.mangowc}/nix/default.nix";
-in {
+}: {
   environment.systemPackages =
     [
-      (pkgs.callPackage mango {})
       (pkgs.callPackage (sources.npins + "/npins.nix") {})
       pkgs.kdePackages.qtsvg
     ]

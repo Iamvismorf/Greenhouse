@@ -1,5 +1,9 @@
-{ lib, config, myLib, ... }:
 {
+  lib,
+  config,
+  myLib,
+  ...
+}: {
   options = {
     networking.enable = myLib.mkTrueOption "enable networking module";
   };
