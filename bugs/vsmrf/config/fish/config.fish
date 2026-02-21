@@ -37,7 +37,7 @@ if status is-interactive
    alias switchpls="nh os switch --file ./default.nix"
    alias clean="sudo nix-collect-garbage -d; nh clean all"
    alias nix-shell="nix-shell --command fish"
-   alias grep="grep --exclude-dir={.git,.direnv}"
+   alias grep="grep --exclude-dir={.git,.direnv,build}"
    alias fvim="fzf | xargs vim"
    abbr -a !! --position anywhere --function last_history_item
 if uwsm check may-start; and uwsm select

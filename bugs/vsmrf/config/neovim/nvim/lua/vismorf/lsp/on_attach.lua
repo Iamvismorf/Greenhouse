@@ -18,7 +18,7 @@ return function(ev)
 	-- map("<leader>Di", fzf.diagnostics_document, "show  diagnostics for file") -- pass 0 as bufnr
 	map("<leader>di", vim.diagnostic.open_float, "show diagnostics for line")
 
-	-- vim.keymap.set({ "n", "v" }, "<leader>ac", vim.lsp.buf.code_action, opts) -- see available code actions, in visual mode will apply to selection
+	map("<leader>ca", vim.lsp.buf.code_action) -- see available code actions, in visual mode will apply to selection
 	map("T", vim.lsp.buf.hover, "show documentation for what is under cursor")
 	-- :Lsprestart
 end

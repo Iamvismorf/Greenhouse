@@ -1,3 +1,4 @@
+-- todo: ignore directories for files and live_grep
 return {
 	"fzf-lua",
 	event = { "BufReadPre", "BufNewFile", "LspAttach" },

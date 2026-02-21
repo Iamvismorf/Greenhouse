@@ -1,63 +1,63 @@
 [[mgr.prepend_keymap]]
-on = [ "1" ]
-run = "plugin relative-motions 1"
+on   = [ "1" ]
+run  = "plugin relative-motions 1"
 desc = "Move in relative steps"
 
 [[mgr.prepend_keymap]]
-on = [ "2" ]
-run = "plugin relative-motions 2"
+on   = [ "2" ]
+run  = "plugin relative-motions 2"
 desc = "Move in relative steps"
 
 [[mgr.prepend_keymap]]
-on = [ "3" ]
-run = "plugin relative-motions 3"
+on   = [ "3" ]
+run  = "plugin relative-motions 3"
 desc = "Move in relative steps"
 
 [[mgr.prepend_keymap]]
-on = [ "4" ]
-run = "plugin relative-motions 4"
+on   = [ "4" ]
+run  = "plugin relative-motions 4"
 desc = "Move in relative steps"
 
 [[mgr.prepend_keymap]]
-on = [ "5" ]
-run = "plugin relative-motions 5"
+on   = [ "5" ]
+run  = "plugin relative-motions 5"
 desc = "Move in relative steps"
 
 [[mgr.prepend_keymap]]
-on = [ "6" ]
-run = "plugin relative-motions 6"
+on   = [ "6" ]
+run  = "plugin relative-motions 6"
 desc = "Move in relative steps"
 
 [[mgr.prepend_keymap]]
-on = [ "7" ]
-run = "plugin relative-motions 7"
+on   = [ "7" ]
+run  = "plugin relative-motions 7"
 desc = "Move in relative steps"
 
 [[mgr.prepend_keymap]]
-on = [ "8" ]
-run = "plugin relative-motions 8"
+on   = [ "8" ]
+run  = "plugin relative-motions 8"
 desc = "Move in relative steps"
 
 [[mgr.prepend_keymap]]
-on = [ "9" ]
-run = "plugin relative-motions 9"
+on   = [ "9" ]
+run  = "plugin relative-motions 9"
 desc = "Move in relative steps"
 
 
 
 [[mgr.prepend_keymap]]
-on = ["C"]
-run = "plugin ouch"
+on   = ["C"]
+run  = "plugin ouch"
 desc = "Compress with ouch"
 
 [[mgr.prepend_keymap]]
 #for nvim
-on ="<C-n>"
-run="quit" 
+on   = "<C-n>"
+run  = "quit" 
 
 [[mgr.prepend_keymap]]
-on ="<C-k>"
-run="seek -5" 
+on   = "<C-k>"
+run  = "seek -5" 
 [[mgr.prepend_keymap]]
-on ="<C-j>"
-run="seek 5" 
+on   = "<C-j>"
+run  = "seek 5" 

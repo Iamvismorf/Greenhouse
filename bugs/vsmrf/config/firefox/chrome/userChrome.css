@@ -9,10 +9,20 @@ display: none;
 	display:none !important;
 }
 
+#back-button, #forward-button {
+   visibility: hidden !important
+}
+
+#urlbar-reload-button, #urlbar-stop-button, #urlbar-go-button, #stop-reload-button,
+#urlbar #reload-button, #urlbar #stop-button {
+   visibility: hidden !important
+}
+
 
 #firefox-view-button{
 	display: none !important;
 }
+#navigator-toolbox[tabs-hidden] .titlebar-buttonbox-container { display: none; }
 
 
 #alltabs-button { display: none !important; }
@@ -20,4 +30,9 @@ display: none;
 /* remove close button */
 .titlebar-buttonbox-container{ 
 display:none 
+}
+#tabbrowser-tabs[orient="vertical"] {
+.tab-close-button, #tabs-newtab-button  {
+  display: none !important;
+  }
 }
