@@ -3,13 +3,17 @@
   myLib,
   ...
 }: let
-  home = import sources.hjem {};
-  qtengine = (myLib.flakeToNix {src = sources.qtengine;}).defaultNix;
+  hjemOut = import sources.hjem {};
+  qtengineOut = (myLib.flakeToNix {src = sources.qtengine;}).defaultNix;
 in {
+  imports = [
+    hjemOut.nixosModules.default
+  ];
   hjem = {
-    linker = home.packages.smfh;
+    linker = hjemOut.packages.smfh;
+
     extraModules = [
-      qtengine.hjemModules.default
+      qtengineOut.hjemModules.default
     ];
   };
 }

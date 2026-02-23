@@ -6,7 +6,7 @@
   pkgs,
   ...
 }: let
-  hyprland = (myLib.flakeToNix {src = sources.hyprland;}).defaultNix;
+  hyprlandOut = (myLib.flakeToNix {src = sources.hyprland;}).defaultNix;
 in {
   options = {
     hyprland.enable = myLib.mkEnabledByDefault null;
@@ -19,8 +19,8 @@ in {
         withUWSM = false;
       }
       // lib.optionalAttrs (config.hyprland.buildFromFlakes) {
-        package = hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-        portalPackage = hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+        package = hyprlandOut.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+        portalPackage = hyprlandOut.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
       };
 
     xdg.portal = {

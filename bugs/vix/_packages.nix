@@ -4,7 +4,7 @@
   sources,
   ...
 }: let
-  vixvim = (import sources.mnw).lib.wrap {inherit pkgs sources;} ./config/neovim;
+  vixvim = (import sources.mnw).lib.wrap {inherit pkgs sources;} ./_config/neovim;
 in
   builtins.attrValues {
     inherit
@@ -47,11 +47,6 @@ in
       ;
   }
   ++ [
-    # (pkgs.callPackage (ghostty + "/nix/package.nix") {
-    #   optimize = "ReleaseFast";
-    #   revision = sources.ghostty.revision;
-    # })
-
     (pkgs.vesktop.overrideAttrs (oldAttrs: {
       desktopItems =
         map (

@@ -6,7 +6,7 @@
   lib,
   ...
 }: let
-  niriPkg = (myLib.flakeToNix {src = sources.niri;}).defaultNix;
+  niriOut = (myLib.flakeToNix {src = sources.niri;}).defaultNix;
 in {
   options = {
     niri.enable = myLib.mkEnabledByDefault null;
@@ -19,7 +19,7 @@ in {
         useNautilus = false;
       }
       // lib.optionalAttrs (config.niri.buildFromFlakes) {
-        package = niriPkg.packages.${pkgs.stdenv.hostPlatform.system}.default;
+        package = niriOut.packages.${pkgs.stdenv.hostPlatform.system}.default;
       };
   };
 }

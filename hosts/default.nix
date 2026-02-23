@@ -15,7 +15,9 @@ let
   myLib = import ../myLib;
   nixosSystem = import "${sources.nixpkgs}/nixos/lib/eval-config.nix";
 
-  hjem = import sources.hjem {};
+  modules = {
+    imports = myLib.importRecursive ./nixosModules;
+  };
 
   mkHost = hostname:
     nixosSystem {
@@ -24,8 +26,7 @@ let
       };
       modules = [
         ./${hostname}/configuration.nix
-        ./nixosModules
-        hjem.nixosModules.default
+        modules
         ../bugs
         {
           nix.channel.enable = false;

@@ -2,13 +2,12 @@
 {
   pkgs,
   sources,
-  myLib,
   ...
 }: let
-  ghostty = import sources.ghostty;
-  vixvim = (import sources.mnw).lib.wrap {inherit pkgs sources;} ./config/neovim;
-  quickshell = import sources.quickshell;
-  hyprland = (myLib.flakeToNix {src = sources.hyprland;}).defaultNix;
+  ghosttyOut = import sources.ghostty;
+  quickshellOut = import sources.quickshell;
+
+  vixvim = (import sources.mnw).lib.wrap {inherit pkgs sources;} ./_config/neovim;
 in
   builtins.attrValues {
     inherit
@@ -54,12 +53,6 @@ in
       ;
   }
   ++ [
-    # (
-    #   hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland.override
-    #   {
-    #     debug = true;
-    #   }
-    # )
     (pkgs.mpv.override {
       scripts = [
         pkgs.mpvScripts.mpris
@@ -68,12 +61,12 @@ in
     (pkgs.wrapOBS {
       plugins = [pkgs.obs-studio-plugins.obs-pipewire-audio-capture];
     })
-    (pkgs.callPackage quickshell {
+    (pkgs.callPackage quickshellOut {
       withI3 = false;
       withX11 = false;
     })
     # ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default.override
-    ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default #use this
+    ghosttyOut.packages.${pkgs.stdenv.hostPlatform.system}.default #use this
     # (pkgs.callPackage (ghostty + "/nix/package.nix") {
     #   optimize = "ReleaseFast";
     #   # revision = sources.ghostty.revision;
@@ -89,6 +82,5 @@ in
     }))
 
     # (pkgs.callPackage ../../pkgs/derivation.nix {})
-    # vixvim
     vixvim.devMode
   ]
