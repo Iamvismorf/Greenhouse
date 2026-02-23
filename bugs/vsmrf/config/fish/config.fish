@@ -40,9 +40,6 @@ if status is-interactive
    alias grep="grep --exclude-dir={.git,.direnv,build}"
    alias fvim="fzf | xargs vim"
    abbr -a !! --position anywhere --function last_history_item
-if uwsm check may-start; and uwsm select
-	exec uwsm start default
-end
 end
 # fish_default_key_bindings
 # function autocd

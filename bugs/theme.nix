@@ -1,3 +1,4 @@
+#todo: move qtengine
 {
   pkgs,
   config,
@@ -15,6 +16,7 @@ in {
     for = mkOption {
       type = types.str;
     };
+
     gtk = {
       package = mkOption {
         type = types.package;

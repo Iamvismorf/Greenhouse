@@ -1,9 +1,5 @@
-{
-  myLib,
-  ...
-}:
-{
-    imports = myLib.importDir {
-      dir = ./.;
-    };
+{myLib, ...}: {
+  imports = myLib.importDir {
+    dir = ./.;
+  };
 }

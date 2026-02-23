@@ -16,7 +16,6 @@
         yazi
         neovim
         firefox
-        kitty
         nh
         wl-clipboard
         cliphist
@@ -26,7 +25,6 @@
         slurp
         swappy
         imagemagick
-        # direnv
         ;
     };
 }

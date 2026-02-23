@@ -11,7 +11,7 @@
 # prepend in general launch options
 {
   options = {
-    steam.enable = myLib.mkTrueOption "enable steam";
+    steam.enable = myLib.mkEnabledByDefault "enable steam";
   };
   config = lib.mkIf config.steam.enable {
     environment.systemPackages = [

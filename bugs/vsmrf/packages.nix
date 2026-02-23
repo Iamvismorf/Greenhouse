@@ -88,7 +88,7 @@ in
         oldAttrs.desktopItems;
     }))
 
-    (pkgs.callPackage ../../pkgs/derivation.nix {})
+    # (pkgs.callPackage ../../pkgs/derivation.nix {})
     # vixvim
     vixvim.devMode
   ]

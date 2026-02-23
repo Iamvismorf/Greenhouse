@@ -5,10 +5,10 @@
   ...
 }: {
   options = {
-    settings.enable = myLib.mkTrueOption "enable nix settings module";
+    settings.enable = myLib.mkEnabledByDefault "enable nix settings module";
   };
 
   config = lib.mkIf config.settings.enable {
-    nix.settings.experimental-features = ["nix-command" "flakes"];
+    nix.settings.experimental-features = ["nix-command" "flakes" "pipe-operators"];
   };
 }

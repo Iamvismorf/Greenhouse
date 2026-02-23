@@ -5,7 +5,7 @@
   ...
 }: {
   options = {
-    networking.enable = myLib.mkTrueOption "enable networking module";
+    networking.enable = myLib.mkEnabledByDefault "enable networking module";
   };
   config = lib.mkIf config.networking.enable {
     # Pick only one of the below networking options.

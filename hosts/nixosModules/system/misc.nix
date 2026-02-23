@@ -6,7 +6,7 @@
   ...
 }: {
   options = {
-    misc.enable = myLib.mkTrueOption "enable misc module";
+    misc.enable = myLib.mkEnabledByDefault "enable misc module";
   };
   config = lib.mkIf config.misc.enable {
     # for mounting phone

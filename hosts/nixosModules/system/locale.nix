@@ -1,14 +1,15 @@
-{ lib, myLib, config, ... }:
 {
-
+  lib,
+  myLib,
+  config,
+  ...
+}: {
   options = {
-    locale.enable = myLib.mkTrueOption "enable locale module";
+    locale.enable = myLib.mkEnabledByDefault "enable locale module";
   };
   config = lib.mkIf config.locale.enable {
-    # Set your time zone.
     time.timeZone = "Europe/Berlin";
 
-    # Select internationalisation properties.
     i18n.defaultLocale = "en_GB.UTF-8";
 
     i18n.extraLocaleSettings = {

@@ -1,6 +1,7 @@
 {
   pkgs,
   lib,
+  sources,
   ...
 }: let
   fs = lib.fileset;
@@ -20,8 +21,10 @@ in {
       pkgs.lua-language-server
       pkgs.alejandra
       pkgs.nixd
-      pkgs.clang-tools
+      # pkgs.clang-tools
+      pkgs.neocmakelsp
       pkgs.shfmt
+      pkgs.inotify-tools
       pkgs.kdePackages.qtdeclarative
     ];
   enable = true;
@@ -32,7 +35,12 @@ in {
         fileset = fs.fromSource (lib.sources.cleanSource ./nvim);
       };
 
-      impure = "/home/vix/Greenhouse/bugs/vix/config/neovim/nvim";
+      impure = "/home/vix/Greenhouse/bugs/vsmrf/config/neovim/nvim";
+    };
+    startAttrs = {
+      nvim-treesitter = null;
+      promise-async = null;
+      nvim-navic = null;
     };
     start =
       builtins.attrValues {
@@ -48,12 +56,21 @@ in {
       }
       ++ [
         {
-          name = "kanso.nvim";
+          name = "zen.nvim";
           src = pkgs.fetchFromGitHub {
-            owner = "webhooked";
-            repo = "kanso.nvim";
-            rev = "748023fd273782e6e056620ce66a176532cdf375";
-            hash = "sha256-REpAQJQnYTWrGnqeb5S7jgDjmMvSUE4JqT+BcSonxfw=";
+            owner = "nendix";
+            repo = "zen.nvim";
+            rev = sources.zenNvim.revision;
+            hash = "sha256-FSDIPyH6Fra9EO8fvr5uwwRaWEHJFjKMgfMZkl3BUeQ=";
+          };
+        }
+        {
+          name = "project.nvim";
+          src = pkgs.fetchFromGitHub {
+            owner = "ahmedkhalf";
+            repo = "project.nvim";
+            rev = "8c6bad7d22eef1b71144b401c9f74ed01526a4fb";
+            hash = "sha256-avV3wMiDbraxW4mqlEsKy0oeewaRj9Q33K8NzWoaptU=";
           };
         }
       ];
@@ -80,7 +97,7 @@ in {
           nvim-autopairs
           nvim-surround
           yazi-nvim
-          mini-ai
+          bufjump-nvim
           ;
       }
       ++ [

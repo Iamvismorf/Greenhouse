@@ -4,10 +4,9 @@
   lib,
   myLib,
   ...
-}:
-{
+}: {
   options = {
-    audio.enable = myLib.mkTrueOption "enable audio module";
+    audio.enable = myLib.mkEnabledByDefault "enable audio module";
   };
   config = lib.mkIf config.audio.enable {
     services.playerctld.enable = true;

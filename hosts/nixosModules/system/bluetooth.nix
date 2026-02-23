@@ -5,7 +5,7 @@
   ...
 }: {
   options = {
-    bluetooth.enable = myLib.mkTrueOption "enable bluetooth module";
+    bluetooth.enable = myLib.mkEnabledByDefault "enable bluetooth module";
   };
   config = lib.mkIf config.bluetooth.enable {
     hardware.bluetooth = {

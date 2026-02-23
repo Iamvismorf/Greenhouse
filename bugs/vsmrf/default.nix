@@ -1,9 +1,7 @@
-#todo: remove custom enable because hjem has enable support
 {
   sources,
   pkgs,
   config,
-  options,
   lib,
   myLib,
   ...
@@ -36,6 +34,7 @@ in {
     hjem.users.${username} = {
       programs.qtengine = {
         enable = true;
+
         config = {
           theme = {
             # colorScheme = "${pkgs.kdePackages.breeze}/share/color-schemes/BreezeDark.colors";
@@ -54,6 +53,11 @@ in {
               size = 11;
               weight = -1;
             };
+          };
+          misc = {
+            singleClickActivate = false;
+            menusHaveIcons = true;
+            shortcutsForContextMenus = true;
           };
         };
       };
