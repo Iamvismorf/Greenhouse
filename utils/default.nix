@@ -20,9 +20,6 @@ let
     filterAttrs
     ;
 in rec {
-  # wrapper around lib.genAttrs so I don't need to import lib in the root default.nix
-  genAttrs = list: pred: lib.genAttrs list pred;
-
   flakeToNix = {
     src,
     copySourceTreeToStore ? true,

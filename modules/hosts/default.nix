@@ -2,6 +2,7 @@
   self,
   sources,
   utils,
+  lib,
   ...
 }: let
   nixosSystem = import "${sources.nixpkgs}/nixos/lib/eval-config.nix";
@@ -13,5 +14,6 @@
 
   hosts = builtins.attrNames self.modules.hosts;
 in {
-  nC = utils.genAttrs hosts mkHost;
+  # nC = utils.genAttrs hosts mkHost;
+  nC = lib.genAttrs hosts mkHost;
 }
