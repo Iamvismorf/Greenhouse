@@ -129,17 +129,14 @@
           '';
         };
 
-        #todo: this is bad. see envvars.conf
-        xdg.config.files."environment.d/envvars.conf".text = lib.generators.toINI {} {
-          "" = {
-            XCURSOR_SIZE = cfg.cursor.size;
-            XCURSOR_THEME = cfg.cursor.name;
-            HYPRCURSOR_SIZE = cfg.cursor.size;
-            HYPRCURSOR_THEME = cfg.cursor.name;
-            QT_QPA_PLATFORMTHEME = "qtengine";
-            DCONF_PROFILE = cfg.username;
-          };
-        };
+        xdg.config.files."environment.d/envvars.conf".text = ''
+          XCURSOR_SIZE=${toString cfg.cursor.size}
+          XCURSOR_THEME=${cfg.cursor.name}
+          HYPRCURSOR_SIZE=${toString cfg.cursor.size}
+          HYPRCURSOR_THEME=${cfg.cursor.name}
+          QT_QPA_PLATFORMTHEME=qtengine
+          DCONF_PROFILE=${cfg.username}
+        '';
 
         packages =
           [
