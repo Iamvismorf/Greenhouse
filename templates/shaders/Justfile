@@ -1,3 +1,0 @@
-init:
-   npins init --bare; npins add github nixos nixpkgs -b nixos-unstable; direnv allow
-
