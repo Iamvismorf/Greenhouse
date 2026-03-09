@@ -2,14 +2,14 @@
   sources,
   pkgs,
   config,
-  options,
   lib,
+  myLib,
   ...
 }: let
   username = "vix";
 in {
   imports = [
-    ../theme.nix
+    ../_theme.nix
   ];
 
   options = {
@@ -29,28 +29,60 @@ in {
       ];
       shell = pkgs.fish;
     };
+
     programs.fish.enable = true;
+    #todo: move to theme
     hjem.users.${username} = {
+      programs.qtengine = {
+        enable = true;
+
+        config = {
+          theme = {
+            colorScheme = ./_config/BreezeDark.colors;
+            iconTheme = "breeze-dark";
+            style = "breeze";
+
+            font = {
+              family = "Atkinson Hyperlegible Next Medium";
+              size = 11;
+              weight = -1;
+            };
+
+            fontFixed = {
+              family = "Atkinson Hyperlegible Next Medium";
+              size = 11;
+              weight = -1;
+            };
+          };
+
+          misc = {
+            singleClickActivate = false;
+            menusHaveIcons = true;
+            shortcutsForContextMenus = true;
+          };
+        };
+      };
+
       clobberFiles = true;
       xdg.config.files = {
-        "waybar".source = ./config/waybar;
-        "fuzzel/fuzzel.ini".source = ./config/fuzzel/fuzzel.ini;
-        "ghostty".source = ./config/ghostty;
-        "fastfetch".source = ./config/fastfetch;
-        "git".source = ./config/git;
-        "yazi/flavors".source = ./config/yazi/flavors;
-        "yazi/init.lua".source = ./config/yazi/init.lua;
+        "waybar".source = ./_config/waybar;
+        "fastfetch".source = ./_config/fastfetch;
+        "yazi/flavors".source = ./_config/yazi/flavors;
+        "yazi/init.lua".source = ./_config/yazi/init.lua;
         "yazi/plugins/relative-motions.yazi".source = pkgs.yaziPlugins.relative-motions;
         "yazi/plugins/ouch.yazi".source = pkgs.yaziPlugins.ouch;
-        "yazi/keymap.toml".source = ./config/yazi/keymap.toml;
-        "yazi/theme.toml".source = ./config/yazi/theme.toml;
-        "yazi/yazi.toml".source = ./config/yazi/yazi.toml;
+        "yazi/keymap.toml".source = ./_config/yazi/keymap.toml;
+        "yazi/theme.toml".source = ./_config/yazi/theme.toml;
+        "yazi/yazi.toml".source = ./_config/yazi/yazi.toml;
         "yazi/plugins/git.yazi".source = pkgs.yaziPlugins.git;
-        "fish/config.fish".source = ./config/fish/config.fish;
-        "fish/functions".source = ./config/fish/functions;
-        "uwsm/env".source = ./config/uwsm/env;
+
+        "fuzzel/fuzzel.ini".source = ../vsmrf/_config/fuzzel/fuzzel.ini;
+        "fish/config.fish".source = ../vsmrf/_config/fish/config.fish;
+        "ghostty".source = ../vsmrf/_config/ghostty;
+        "git".source = ../vsmrf/_config/git;
+        "fish/functions".source = ../vsmrf/_config/fish/functions;
       };
-      packages = import ./packages.nix {inherit sources pkgs;};
+      packages = (import ./_packages.nix {inherit sources pkgs myLib;}) ++ [pkgs.kdePackages.breeze pkgs.kdePackages.breeze-icons];
     };
   };
 }

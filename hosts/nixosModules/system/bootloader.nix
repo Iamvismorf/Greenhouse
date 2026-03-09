@@ -6,7 +6,7 @@
   ...
 }: {
   options = {
-    bootloader.enable = myLib.mkTrueOption "enable bootloader module";
+    bootloader.enable = myLib.mkEnabledByDefault "enable bootloader module";
   };
 
   config = lib.mkIf config.bootloader.enable {

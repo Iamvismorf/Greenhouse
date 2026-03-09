@@ -1,5 +1,6 @@
 let
   sources = import ../npins;
+
   # pkgs =
   #   import
   #   (myLib.flakeToNix {
@@ -14,12 +15,9 @@ let
   myLib = import ../myLib;
   nixosSystem = import "${sources.nixpkgs}/nixos/lib/eval-config.nix";
 
-  # hjem =
-  #   (fl-compat {
-  #     src = sources.hjem;
-  #   }).defaultNix;
-  # hjem = import sources.hjem {inherit pkgs;};
-  hjem = import sources.hjem {};
+  modules = {
+    imports = myLib.importRecursive ./nixosModules;
+  };
 
   mkHost = hostname:
     nixosSystem {
@@ -28,12 +26,8 @@ let
       };
       modules = [
         ./${hostname}/configuration.nix
-        ./nixosModules
-        hjem.nixosModules.default
+        modules
         ../bugs
-        # {
-        #   config.nixpkgs.pkgs = pkgs;
-        # }
         {
           nix.channel.enable = false;
           nix.nixPath = ["nixpkgs=/etc/nixos/nixpkgs"];

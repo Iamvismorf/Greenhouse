@@ -4,15 +4,17 @@
   pkgs,
   ...
 }: let
-  qtengine = (myLib.flakeToNix {src = sources.qtengine;}).defaultNix;
+  qtengineOut = (myLib.flakeToNix {src = sources.qtengine;}).defaultNix;
   hjemOut = (myLib.flakeToNix {src = sources.hjem;}).defaultNix;
 in {
   imports = [
+    hjemOut.nixosModules.default
   ];
   hjem = {
     linker = hjemOut.packages.${pkgs.stdenv.hostPlatform.system}.smfh;
+
     extraModules = [
-      qtengine.hjemModules.default
+      qtengineOut.hjemModules.default
     ];
   };
 }

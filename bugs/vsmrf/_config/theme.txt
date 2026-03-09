@@ -1,0 +1,2 @@
+current accent color is 212,106,106
+foreground 240,240,240

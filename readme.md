@@ -1,5 +1,5 @@
 ## About
-My classic nixos configurations. The entry point is `./hosts/default.nix`.
+My classic nixos configuration. The entry point is `./hosts/default.nix`.
 
 ## Usage
 - Switching to a new generation:\
@@ -10,36 +10,37 @@ My classic nixos configurations. The entry point is `./hosts/default.nix`.
 .
 ├── bugs
 │   ├── default.nix
-│   ├── vix
-│   │   ├── config
-│   │   │   ├── fastfetch/
-│   │   │   ├── fish/
-│   │   │   ├── fuzzel/
-│   │   │   ├── ghostty/
-│   │   │   ├── git/
-│   │   │   ├── gtk/
-│   │   │   ├── neovim/
-│   │   │   ├── wm/                     # for now there are only wallpapers without wm configs
-│   │   │   └── yazi/
-│   │   ├── default.nix
-│   │   └── packages.nix
-│   └── vsmrf/
+│   ├── hjem.nix
+│   ├── theme.nix
+│   ├── vix/
+│   └── vsmrf
+│       ├── config
+│       │   ├── BreezeDark.colors/
+│       │   ├── fastfetch/
+│       │   ├── firefox/
+│       │   ├── fish/
+│       │   ├── fuzzel/
+│       │   ├── ghostty/
+│       │   ├── git/
+│       │   ├── gtk/
+│       │   ├── mpv/
+│       │   ├── neovim/
+│       │   ├── nixpkgs/
+│       │   ├── swappy/
+│       │   ├── theme.txt/
+│       │   ├── wm/
+│       │   └── yazi/
+│       ├── default.nix
+│       └── packages.nix
 ├── default.nix
 ├── hosts
-│   ├── Amaryllis                       # main pc
-│   │   └── hostSpecific/
-│   ├── Daffodil                        # laptop
-│   │   ├── configuration.nix
-│   │   ├── hardware-configuration.nix
-│   │   └── hostSpecific/
+│   ├── Amaryllis/
+│   ├── Daffodil/
 │   ├── default.nix
-│   └── nixosModules                    # shared modules
-│       ├── default.nix
-│       └── system
-│           └── default.nix
+│   └── nixosModules
 ├── myLib/
 ├── npins/
-└── shell.nix
+└── readme.md 
 ```
 
 ## Special Thanks
