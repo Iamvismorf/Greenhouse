@@ -1,4 +1,3 @@
---TODO: customize cmp menu
 local load_w_after = function(name)
 	vim.cmd.packadd(name)
 	vim.cmd.packadd(name .. "/after")
