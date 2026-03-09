@@ -1,4 +1,4 @@
-#todo: normal mode f/t not working
+#todo: f/t in normal mode not working
 if status is-interactive
    function y
       set tmp (mktemp -t "yazi-cwd.XXXXXX")
@@ -40,9 +40,6 @@ if status is-interactive
    alias grep="grep --exclude-dir={.git,.direnv,build}"
    alias fvim="fzf | xargs vim"
    abbr -a !! --position anywhere --function last_history_item
-if uwsm check may-start; and uwsm select
-	exec uwsm start default
-end
 end
 # fish_default_key_bindings
 # function autocd

@@ -40,7 +40,7 @@ in {
     "${installedSessions}/share"
   ];
   programs.uwsm = {
-    enable = true;
+    enable = false;
     waylandCompositors = {
       hyprland = lib.mkIf config.hyprland.enable {
         prettyName = "Landhypr";

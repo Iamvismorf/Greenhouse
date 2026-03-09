@@ -14,6 +14,17 @@ display: none;
 	display: none !important;
 }
 
+#back-button, #forward-button {
+	display:none !important;
+}
+
+
+#urlbar-reload-button, #urlbar-stop-button, #urlbar-go-button, #stop-reload-button,
+#urlbar #reload-button, #urlbar #stop-button {
+	display:none !important;
+}
+
+
 
 #alltabs-button { display: none !important; }
 
@@ -21,3 +32,10 @@ display: none;
 .titlebar-buttonbox-container{ 
 display:none 
 }
+
+#tabbrowser-tabs[orient="vertical"] {
+.tab-close-button, #tabs-newtab-button  {
+  display: none !important;
+  }
+}
+

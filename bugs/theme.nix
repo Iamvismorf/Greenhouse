@@ -73,7 +73,7 @@ in {
       {
         settings = {
           "org/gnome/desktop/interface" = {
-            cursor-theme = "${cfg.cursor.name}";
+            # cursor-theme = "${cfg.cursor.name}";
             gtk-theme = "${cfg.gtk.name}";
             icon-theme = "${cfg.icons.name}";
             color-scheme = "prefer-dark";

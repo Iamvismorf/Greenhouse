@@ -34,9 +34,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "4e9e23500bff48b750793e98afdbceda199a354a",
-      "url": "https://github.com/feel-co/hjem/archive/4e9e23500bff48b750793e98afdbceda199a354a.tar.gz",
-      "hash": "sha256-m8qpVI1l6nO9n+Djl2PY33esza0tBZDQ/yyAAlfHD0o="
+      "revision": "63661135b11cf9461683fa1f65208263b545f5e0",
+      "url": "https://github.com/feel-co/hjem/archive/63661135b11cf9461683fa1f65208263b545f5e0.tar.gz",
+      "hash": "sha256-ffHf1XwyaEUfd49i2hDdhkjJcZzBJ36e2Qiex0UVgV8="
     },
     "hyprland": {
       "type": "Git",

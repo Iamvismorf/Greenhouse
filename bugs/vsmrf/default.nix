@@ -1,4 +1,3 @@
-#todo: remove custom enable because hjem has enable support
 {
   sources,
   pkgs,
@@ -6,6 +5,7 @@
   options,
   lib,
   myLib,
+  osConfig,
   ...
 }: let
   username = "vsmrf";
@@ -55,6 +55,7 @@ in {
               weight = -1;
             };
           };
+          misc.singleClickActivate = false;
         };
       };
       clobberFiles = true;
@@ -75,7 +76,6 @@ in {
         "yazi/plugins/git.yazi".source = pkgs.yaziPlugins.git;
         "fish/config.fish".source = ./config/fish/config.fish;
         "fish/functions".source = ./config/fish/functions;
-        "uwsm/env".source = ./config/uwsm/env;
         "swappy/config".source = ./config/swappy/config;
       };
       packages = (import ./packages.nix {inherit sources pkgs myLib;}) ++ [pkgs.kdePackages.breeze pkgs.kdePackages.breeze-icons];

@@ -1,13 +1,16 @@
 {
   sources,
   myLib,
+  pkgs,
   ...
 }: let
-  home = import sources.hjem {};
   qtengine = (myLib.flakeToNix {src = sources.qtengine;}).defaultNix;
+  hjemOut = (myLib.flakeToNix {src = sources.hjem;}).defaultNix;
 in {
+  imports = [
+  ];
   hjem = {
-    linker = home.packages.smfh;
+    linker = hjemOut.packages.${pkgs.stdenv.hostPlatform.system}.smfh;
     extraModules = [
       qtengine.hjemModules.default
     ];
