@@ -10,7 +10,9 @@ if status is-interactive
    end
    fzf --fish | source
    set fish_greeting 
-   set -g fish_key_bindings vi-mode
+   set -g fish_key_bindings fish_vi_key_bindings
+   fish_vi_key_bindings --no-erase insert
+   fish_default_key_bindings -M insert
 
    bind -M insert \t 'fzf-complete'
    bind -M insert ctrl-space accept-autosuggestion
@@ -49,10 +51,6 @@ end
 
 #direnv hook fish | source
 
-function vi-mode 
-   fish_vi_key_bindings --no-erase insert
-   fish_default_key_bindings -M insert
-end
 
 function fzf-complete -d 'fzf completion and print selection back to commandline'
 	set -l cmd (commandline -co) (commandline -ct)
