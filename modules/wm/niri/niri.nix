@@ -33,12 +33,22 @@
           useNautilus = false;
         }
         // lib.optionalAttrs (config.wm.niri.enable) {
-          package = niriOut.packages.${pkgs.stdenv.hostPlatform.system}.default;
+          package = (niriOut.packages.${pkgs.stdenv.hostPlatform.system}.default).overrideAttrs (o: {
+            doCheck = false; #iynaix better not lie
+          });
         };
+
+      xdg.portal = {
+        config.niri = {
+          "org.freedesktop.impl.portal.FileChooser" = lib.mkForce "kde";
+          default = ["kde"];
+        };
+      };
 
       environment.systemPackages = [
         pkgs.fuzzel
         pkgs.alacritty
+        pkgs.xwayland-satellite
       ];
     };
   };

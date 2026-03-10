@@ -86,9 +86,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "a2a52911757cb3b497db9407592f9b4c439571ea",
-      "url": "https://github.com/yalter/niri/archive/a2a52911757cb3b497db9407592f9b4c439571ea.tar.gz",
-      "hash": "sha256-lqweVTwHhYc+9T33cysp38gVwxaibGJHriOPZXWyhCY="
+      "revision": "bf142e0b48d9ffc9a776a82585ee37ac35f07f0c",
+      "url": "https://github.com/yalter/niri/archive/bf142e0b48d9ffc9a776a82585ee37ac35f07f0c.tar.gz",
+      "hash": "sha256-36/JS195C94HUdTWfwYb1mYsorJZ8lj37qXUPcSvRkc="
     },
     "nixos-hardware": {
       "type": "Git",

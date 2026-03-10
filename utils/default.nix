@@ -30,7 +30,6 @@ in rec {
   });
 
   # files/directories starting with _ and empty files will be ignored. Idea stolen from github.com/vic/import-tree
-  # only imports non-empty .nix files
   # fn: -> []
   recursiveImport = {
     dir,
