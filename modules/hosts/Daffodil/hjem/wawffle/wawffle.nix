@@ -1,7 +1,19 @@
-{sources, ...}: let
+{
+  self,
+  sources,
+  ...
+}: let
   username = "wawffle";
 in {
   modules.hjem.${username} = {pkgs, ...}: {
+    imports = [
+      self.modules.hjem.theming
+    ];
+    theming = {
+      inherit username;
+      enable = true;
+      qt.colorScheme = ./_config/theme/BreezeDark.colors;
+    };
     users.users.${username} = {
       isNormalUser = true;
       extraGroups = [
