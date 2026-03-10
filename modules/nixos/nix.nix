@@ -12,6 +12,9 @@
         experimental-features = ["nix-command" "flakes" "pipe-operators"];
         auto-optimise-store = true;
         allowed-users = ["@wheel"];
+
+        extra-substituters = ["https://amaryllis.cachix.org"];
+        extra-trusted-public-keys = ["amaryllis.cachix.org-1:1bo3DgfwQc7xEL13v65yxt/4/zVcPRj0U5VLM0JHJts="];
       };
 
       optimise = {
