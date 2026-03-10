@@ -10,6 +10,10 @@ in {
         "wheel"
       ];
       shell = pkgs.fish;
+
+      openssh.authorizedKeys.keys = [
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFdestaaKngezOmIGRUVpc6KcaZ2A4CKD/paK2vfB47d vsmrf@Amaryllis"
+      ];
     };
     programs.fish.enable = true;
 
