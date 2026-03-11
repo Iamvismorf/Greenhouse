@@ -20,7 +20,7 @@ in {
       self.modules.wm.niri
 
       self.modules.hjem._
-      self.modules.hjem.wawffle
+      self.modules.hjem.vix
 
       ./+hardware.nix
     ];

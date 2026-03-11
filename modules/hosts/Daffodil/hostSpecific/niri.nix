@@ -1,7 +1,7 @@
 {
   modules.hosts.Daffodil = {
     wm.niri = {
-      enable = false;
+      enable = true;
       buildFromSrc = false;
     };
   };

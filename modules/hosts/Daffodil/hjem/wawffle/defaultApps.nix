@@ -1,8 +1,8 @@
 {
-  modules.hjem.wawffle = {
+  modules.hjem.vix = {
     xdg.menus.enable = true;
 
-    hjem.users.wawffle = {
+    hjem.users.vix = {
       xdg.config.files = {
         "xdg-terminals.list".text = "com.mitchellh.ghostty.desktop";
       };

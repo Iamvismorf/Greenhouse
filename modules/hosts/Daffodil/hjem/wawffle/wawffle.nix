@@ -3,7 +3,7 @@
   sources,
   ...
 }: let
-  username = "wawffle";
+  username = "vix";
 in {
   modules.hjem.${username} = {pkgs, ...}: {
     imports = [

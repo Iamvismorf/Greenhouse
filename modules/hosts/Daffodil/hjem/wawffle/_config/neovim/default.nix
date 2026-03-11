@@ -35,7 +35,7 @@ in {
         fileset = fs.fromSource (lib.sources.cleanSource ./nvim);
       };
 
-      impure = "/home/vix/Greenhouse/bugs/vsmrf/_config/neovim/nvim";
+      impure = "/home/vix/Greenhouse/modules/hosts/Daffodil/hjem/wawffle/_config/neovim/nvim";
     };
     startAttrs = {
       nvim-treesitter = null;
