@@ -40,6 +40,7 @@ in {
         "fish/config.fish".source = ./_config/fish/config.fish;
         "fish/functions".source = ./_config/fish/functions;
         "swappy/config".source = ./_config/swappy/config;
+        "bottom".source = ./_config/bottom;
       };
       packages = import ./_packages.nix {inherit sources pkgs;};
     };

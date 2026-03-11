@@ -1,4 +1,3 @@
-#todo: implement this
 {
   self,
   sources,
@@ -32,7 +31,7 @@
           enable = true;
           useNautilus = false;
         }
-        // lib.optionalAttrs (config.wm.niri.enable) {
+        // lib.optionalAttrs (config.wm.niri.buildFromSrc) {
           package = (niriOut.packages.${pkgs.stdenv.hostPlatform.system}.default).overrideAttrs (o: {
             doCheck = false; #iynaix better not lie
           });
