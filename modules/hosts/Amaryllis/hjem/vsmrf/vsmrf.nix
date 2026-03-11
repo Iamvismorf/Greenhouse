@@ -1,6 +1,7 @@
 {
   self,
   sources,
+  utils,
   ...
 }: let
   username = "vsmrf";
@@ -33,7 +34,7 @@ in {
 
     hjem.users.${username} = {
       clobberFiles = true;
-      packages = import ./_packages.nix {inherit sources pkgs;};
+      packages = import ./_packages.nix {inherit sources pkgs utils;};
       xdg.config.files = {
         "fuzzel/fuzzel.ini".source = ./_config/fuzzel/fuzzel.ini;
         "nixpkgs".source = ./_config/nixpkgs;

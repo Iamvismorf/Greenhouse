@@ -4,7 +4,4 @@ let
 in
   pkgs.mkShell {
     NPINS_DIRECTORY = "+npins";
-    packages = [
-      pkgs.cachix
-    ];
   }

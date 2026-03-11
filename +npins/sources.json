@@ -21,9 +21,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "2e1b501d25c62a8f08df99969c6e94c440a75c4c",
-      "url": "https://github.com/ghostty-org/ghostty/archive/2e1b501d25c62a8f08df99969c6e94c440a75c4c.tar.gz",
-      "hash": "sha256-5LN7A7NjZLVY2A6PAeXWd7pVP7S3PsxU0GqNNRdX58I="
+      "revision": "f8a0a45963010e5cb3baa8069dbcc07a60c5d26d",
+      "url": "https://github.com/ghostty-org/ghostty/archive/f8a0a45963010e5cb3baa8069dbcc07a60c5d26d.tar.gz",
+      "hash": "sha256-JmIVbdjtMFcGEJ7H883zvMs/TxNVyi7zFWc0cbB3q3M="
     },
     "hjem": {
       "type": "Git",
@@ -86,9 +86,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "bf142e0b48d9ffc9a776a82585ee37ac35f07f0c",
-      "url": "https://github.com/yalter/niri/archive/bf142e0b48d9ffc9a776a82585ee37ac35f07f0c.tar.gz",
-      "hash": "sha256-36/JS195C94HUdTWfwYb1mYsorJZ8lj37qXUPcSvRkc="
+      "revision": "b07bde3ee82dd73115e6b949e4f3f63695da35ea",
+      "url": "https://github.com/yalter/niri/archive/b07bde3ee82dd73115e6b949e4f3f63695da35ea.tar.gz",
+      "hash": "sha256-3bwx4WqCB06yfQIGB+OgIckOkEDyKxiTD5pOo4Xz2rI="
     },
     "nixos-hardware": {
       "type": "Git",
@@ -126,9 +126,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "22e72314632373452cbad9782bab97884a96cf53",
-      "url": "https://github.com/andir/npins/archive/22e72314632373452cbad9782bab97884a96cf53.tar.gz",
-      "hash": "sha256-xy29sL2rfD0Yq9oPcBdSknLtu4CjM8FZKHDlpPvmuGI="
+      "revision": "c664916b48964bdb442f8a1529d3a10c168ab195",
+      "url": "https://github.com/andir/npins/archive/c664916b48964bdb442f8a1529d3a10c168ab195.tar.gz",
+      "hash": "sha256-qoVRA4osHAXC+g+C3h/OjEm9ODRwCR4w9xOgjASjwOM="
     },
     "qtengine": {
       "type": "Git",
@@ -139,9 +139,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "10d61da0369c123d8bde94ffc6b60441e5e7c2f3",
-      "url": "https://github.com/kossLAN/qtengine/archive/10d61da0369c123d8bde94ffc6b60441e5e7c2f3.tar.gz",
-      "hash": "sha256-Uvrb9lpTW77sJvsgO7o2U/BmSAbD8IDdUr9bGmIKtt8="
+      "revision": "abf8c1d3068dd10739b0671fa62f96c5347f276f",
+      "url": "https://github.com/kossLAN/qtengine/archive/abf8c1d3068dd10739b0671fa62f96c5347f276f.tar.gz",
+      "hash": "sha256-aJ5ZdIX10nmhzMLjP6QMuFJHvljJD+xcojuKZjPkr70="
     },
     "quickshell": {
       "type": "Git",
@@ -152,9 +152,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "26531fc46ef17e9365b03770edd3fb9206fcb460",
-      "url": "https://github.com/quickshell-mirror/quickshell/archive/26531fc46ef17e9365b03770edd3fb9206fcb460.tar.gz",
-      "hash": "sha256-sHqLmm0wAt3PC4vczJeBozI1/f4rv9yp3IjkClHDXDs="
+      "revision": "bd6217927739a79c1c4ff279051f9625cd4b2b5e",
+      "url": "https://github.com/quickshell-mirror/quickshell/archive/bd6217927739a79c1c4ff279051f9625cd4b2b5e.tar.gz",
+      "hash": "sha256-7G6x33z271v/jhBC5Le7NPOZhv9902+MfCkC9poMwf0="
     },
     "zenNvim": {
       "type": "Git",

@@ -40,6 +40,7 @@
             cliphist
             libnotify
             firefox
+            cachix
             ;
         };
     };
