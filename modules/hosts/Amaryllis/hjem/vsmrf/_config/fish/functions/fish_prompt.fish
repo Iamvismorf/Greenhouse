@@ -25,6 +25,12 @@ function fish_prompt
   if not test -w .
      set readOnly (set_color --bold red) '  '
   end
+
+  set -l ssh
+  if set -q SSH_CONNECTION
+     set ssh (set_color blue) '$hostname'
+  end
+
   set gitBranch (set_color magenta)" "(git branch --show-current 2>/dev/null)
   string join '' -- ' '$varMode (set_color normal) ' on '$gitBranch $readOnly ' ' (set_color yellow)(prompt_pwd -d 0) ' ' $stat (set_color normal) ' '
 end
