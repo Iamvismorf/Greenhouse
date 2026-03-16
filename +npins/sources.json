@@ -152,9 +152,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "bd6217927739a79c1c4ff279051f9625cd4b2b5e",
-      "url": "https://github.com/quickshell-mirror/quickshell/archive/bd6217927739a79c1c4ff279051f9625cd4b2b5e.tar.gz",
-      "hash": "sha256-7G6x33z271v/jhBC5Le7NPOZhv9902+MfCkC9poMwf0="
+      "revision": "4b77936c8019e0f51e0e62414c6de3556d5f8870",
+      "url": "https://github.com/quickshell-mirror/quickshell/archive/4b77936c8019e0f51e0e62414c6de3556d5f8870.tar.gz",
+      "hash": "sha256-Qu768qE1C6nMpWYi+83AZt3jEwXE+NQKsgZ3fz3+vLE="
     },
     "zenNvim": {
       "type": "Git",
