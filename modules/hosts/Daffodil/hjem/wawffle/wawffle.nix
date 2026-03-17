@@ -12,7 +12,10 @@ in {
     theming = {
       inherit username;
       enable = true;
-      qt.colorScheme = ./_config/theme/BreezeDark.colors;
+      qt = {
+        colorScheme = ./_config/theme/BreezeDark.colors;
+        iconTheme = "Papirus-Dark";
+      };
     };
     users.users.${username} = {
       isNormalUser = true;
