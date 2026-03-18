@@ -20,6 +20,7 @@ let
       modules = [modules];
       specialArgs = {
         inherit self sources utils;
+        pkgs = nixpkgs;
       };
     }).config;
 in
