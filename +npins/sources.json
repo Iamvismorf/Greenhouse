@@ -12,6 +12,22 @@
       "url": null,
       "hash": "sha256-NKw96t+BgHIYzHUjkTK95FqYRVKB8DHpVhefWSz/kTw="
     },
+    "flake-inputs": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "GitHub",
+        "owner": "fricklerhandwerk",
+        "repo": "flake-inputs"
+      },
+      "pre_releases": false,
+      "version_upper_bound": null,
+      "release_prefix": null,
+      "submodules": false,
+      "version": "4.1.0",
+      "revision": "ad02792f7543754569fe2fd3d5787ee00ef40be2",
+      "url": "https://api.github.com/repos/fricklerhandwerk/flake-inputs/tarball/refs/tags/4.1.0",
+      "hash": "sha256-dSECtDeIOGKGsbEOOcOHbZ2NYDy0D/x0hlbiKvpWp8g="
+    },
     "ghostty": {
       "type": "Git",
       "repository": {

@@ -2,6 +2,7 @@ let
   sources = import ../+npins;
   lixFlake-compat = import sources.flake-compat;
   lib = import "${sources.nixpkgs}/lib";
+  flake-inputs = import sources.flake-inputs;
   inherit
     (builtins)
     filter
@@ -28,6 +29,12 @@ in rec {
   }: (lixFlake-compat {
     inherit src copySourceTreeToStore useBuiltinsFetchTree system;
   });
+
+  _flakeToNix = {
+    src,
+    overrides ? {},
+  }:
+    (flake-inputs.import-flake {inherit src overrides;}).self.outputs;
 
   # files/directories starting with _ and empty files will be ignored. Idea stolen from github.com/vic/import-tree
   # fn: -> []
