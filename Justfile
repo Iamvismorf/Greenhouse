@@ -3,6 +3,9 @@ root := justfile_dir()
 switch Host=`hostname`:
    nh os switch --file {{root}}/default.nix nC.{{Host}}
 
+test Host=`hostname`:
+   nh os test --file {{root}}/default.nix nC.{{Host}}
+
 clean:
    sudo nix-collect-garbage -d; nh clean all
 
