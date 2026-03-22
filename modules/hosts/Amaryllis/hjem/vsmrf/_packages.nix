@@ -15,7 +15,7 @@ in
     inherit (pkgs) swww waypaper;
     inherit (pkgs) inkscape firefox fuzzel swappy viewnior libreoffice git;
     inherit (pkgs) btop bottom sysstat eza tree fastfetch bat hyprshot;
-    inherit (pkgs) gpu-screen-recorder yt-dlp jq fd ripgrep fzf ouch;
+    inherit (pkgs) gpu-screen-recorder-gtk wf-recorder yt-dlp jq fd ripgrep fzf ouch;
     inherit (pkgs) wtype socat grim slurp imagemagick resvg;
 
     inherit (pkgs.kdePackages) dolphin ark breeze qtsvg;

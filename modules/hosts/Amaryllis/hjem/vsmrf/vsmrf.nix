@@ -34,6 +34,7 @@ in {
       ];
     };
     programs.fish.enable = true;
+    programs.gpu-screen-recorder.enable = true;
 
     hjem.users.${username} = {
       clobberFiles = true;
