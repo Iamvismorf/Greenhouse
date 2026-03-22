@@ -1,4 +1,5 @@
 keybind                    = ctrl+i=clear_screen
+keybind                    = ctrl+enter=unbind
 
 font-family                = "Commit Mono Nerd Font Mono"
 font-style                 = "bold"

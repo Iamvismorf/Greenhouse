@@ -1,4 +1,5 @@
 keybind                    = ctrl+i=clear_screen
+keybind                    = ctrl+enter=unbind
 
 font-family                = "Commit Mono Nerd Font Mono"
 font-style                 = "bold"
@@ -10,7 +11,7 @@ theme                      = "zen"
 custom-shader              = shaders/cursor_smear.glsl
 
 gtk-single-instance        = true
-confirm-close-surface      = false
+confirm-close-surface      = true
 link-url                   = false
 shell-integration          = fish
 shell-integration-features = sudo
