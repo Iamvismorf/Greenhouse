@@ -1,3 +1,4 @@
+-- todo: actual toggle
 local load_w_after = function(name)
 	vim.cmd.packadd(name)
 	vim.cmd.packadd(name .. "/after")
@@ -18,15 +19,22 @@ return {
 		after = function()
 			require("blink.cmp").setup({
 				keymap = {
-					preset = "enter",
-					["<C-p>"] = {},
-					["<C-n>"] = {},
-					-- ["<cr>"] = { "select_and_accept" },
+					preset = "none",
 
-					["<C-k>"] = { "select_prev" },
-					["<C-j>"] = { "select_next" },
+					["<C-space>"] = { "accept" },
+					["<C-b>"] = { "scroll_documentation_up", "fallback" },
+					["<C-f>"] = { "scroll_documentation_down", "fallback" },
+
+					["<C-k>"] = { "select_prev", "fallback" },
+					["<C-j>"] = { "select_next", "fallback" },
 				},
 				cmdline = {
+					keymap = {
+						preset = "none",
+
+						["<C-k>"] = { "select_prev", "fallback" },
+						["<C-j>"] = { "select_next", "fallback" },
+					},
 					completion = {
 						menu = {
 							auto_show = true,
@@ -41,7 +49,7 @@ return {
 				completion = {
 					list = {
 						selection = {
-							preselect = false,
+							preselect = true,
 						},
 					},
 					documentation = { auto_show = true },
