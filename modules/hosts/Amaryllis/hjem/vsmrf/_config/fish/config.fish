@@ -12,6 +12,9 @@ if status is-interactive
    set -g fish_key_bindings fish_vi_key_bindings
    fish_vi_key_bindings --no-erase insert
    fish_default_key_bindings -M insert
+   fzf --fish | source
+   bind shift-tab complete-and-search
+   bind -M insert shift-tab complete-and-search
 
    # bind -M insert \t 'fzf-complete'
    bind -M insert ctrl-space accept-autosuggestion
@@ -37,7 +40,6 @@ if status is-interactive
    alias fvim="fzf | xargs vim"
    abbr -a !! --position anywhere --function last_history_item
 end
-# fish_default_key_bindings
 # function autocd
 #    command -q $argv[1]; and return 1
 #    test -d "$argv[1]"; and echo cd $argv[1]; and return 0
