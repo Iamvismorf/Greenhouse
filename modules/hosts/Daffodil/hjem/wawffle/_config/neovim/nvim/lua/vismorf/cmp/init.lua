@@ -2,6 +2,11 @@ local load_w_after = function(name)
 	vim.cmd.packadd(name)
 	vim.cmd.packadd(name .. "/after")
 end
+vim.api.nvim_create_autocmd("InsertEnter", {
+	callback = function()
+		vim.g.showMenu = true
+	end,
+})
 return {
 	{
 		"friendly-snippets",
@@ -14,19 +19,42 @@ return {
 	},
 	{
 		"blink.cmp",
+		keys = {
+			{
+				"<C-e>",
+				function()
+					if vim.g.showMenu then
+						require("blink.cmp").hide()
+					end
+					vim.g.showMenu = not vim.g.showMenu
+				end,
+				mode = { "i" },
+				desc = "Toggle completions",
+			},
+		},
 		event = { "InsertEnter", "DeferredUIEnter" },
 		after = function()
 			require("blink.cmp").setup({
+				enabled = function()
+					return vim.g.showMenu
+				end,
 				keymap = {
-					preset = "enter",
-					["<C-p>"] = {},
-					["<C-n>"] = {},
-					-- ["<cr>"] = { "select_and_accept" },
+					preset = "none",
 
-					["<C-k>"] = { "select_prev" },
-					["<C-j>"] = { "select_next" },
+					["<C-space>"] = { "accept" },
+					["<C-b>"] = { "scroll_documentation_up", "fallback" },
+					["<C-f>"] = { "scroll_documentation_down", "fallback" },
+
+					["<C-k>"] = { "select_prev", "fallback" },
+					["<C-j>"] = { "select_next", "fallback" },
 				},
 				cmdline = {
+					keymap = {
+						preset = "none",
+
+						["<C-k>"] = { "select_prev", "fallback" },
+						["<C-j>"] = { "select_next", "fallback" },
+					},
 					completion = {
 						menu = {
 							auto_show = true,

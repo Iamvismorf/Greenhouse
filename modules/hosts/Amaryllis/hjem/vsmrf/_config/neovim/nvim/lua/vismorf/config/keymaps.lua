@@ -16,6 +16,9 @@ map("n", "<leader>cc", "gcc", { remap = true, silent = true })
 map("v", "<leader>c", "gc", { remap = true, silent = true })
 
 map("n", "ZZ", "<nop>")
+map("n", "<C-e>", "<nop>")
+map("n", "<C-y>", "<nop>")
+map("n", "<C-z>", "<nop>")
 
 vim.keymap.set("n", "j", function()
 	return vim.v.count1 > 1 and ("m`" .. vim.v.count1 .. "j") or "j"
