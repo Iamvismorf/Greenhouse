@@ -9,4 +9,9 @@ require("zen").setup({
 			fg = "#D1CFCF",
 		},
 	},
+	overrides = function(colors)
+		return {
+			WinSeparator = { fg = colors.palette.rose },
+		}
+	end,
 })
