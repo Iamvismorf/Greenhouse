@@ -26,6 +26,7 @@ in {
         "wheel"
         "video"
         "render"
+        "libvrtd"
       ];
       shell = pkgs.fish;
 
