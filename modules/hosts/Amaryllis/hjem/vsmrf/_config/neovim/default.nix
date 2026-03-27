@@ -90,7 +90,6 @@ in {
           nvim-navic
           bufferline-nvim
           indent-blankline-nvim
-          lualine-nvim
           fzf-lua
           nvim-window-picker
           flash-nvim

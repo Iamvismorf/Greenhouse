@@ -1,8 +1,6 @@
 require("lze").load({
 	{ import = "vismorf.cmp" },
 	{ import = "vismorf.format" },
-	-- { import = "vismorf.lsp" },
-	-- { import = "vismorf.lint" },
 })
 require("vismorf.config")
 require("vismorf.plugins")
