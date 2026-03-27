@@ -14,6 +14,7 @@ end
 
 vim.o.laststatus = 3
 vim.o.cmdheight = 0
+vim.o.showcmdloc = "statusline"
 
 -- Thank you Maria
 vim.o.showmode = false
@@ -74,7 +75,7 @@ function StatusLine.file_name()
 	local parent_dir = vim.fn.expand("%:p:h:t")
 
 	-- return table.concat({ parent_dir, "/", file_name })
-	return string.format(" %%#StatusLineFileName#%s/%s%%#StatusLine# ", parent_dir, file_name)
+	return string.format(" %%#StatusLineFileName#%s/%s%%* ", parent_dir, file_name)
 end
 
 function StatusLine.diagnostics_error()
@@ -82,7 +83,7 @@ function StatusLine.diagnostics_error()
 	if not errorCount[vim.diagnostic.severity.ERROR] then
 		return ""
 	end
-	return string.format(" %%#StatusLineError#%s%%#StatusLine# ", (errorCount[vim.diagnostic.severity.ERROR] .. ""))
+	return string.format(" %%#StatusLineError#%s%%* ", (errorCount[vim.diagnostic.severity.ERROR] .. ""))
 end
 
 function StatusLine.search_info()
@@ -130,7 +131,7 @@ function StatusLine.lsp_status()
 	else
 		str = " %%#StatusLineOk#%s "
 	end
-	return string.format(str .. "%%#StatusLine# ", client_info.name)
+	return string.format(str .. "%%* ", client_info.name)
 end
 
 function StatusLine.render()
@@ -147,7 +148,7 @@ function StatusLine.render()
 		StatusLine.git(),
 		StatusLine.file_name(),
 		" %h%r",
-		" %m%=",
+		" %m%=%S%=",
 
 		StatusLine.diagnostics_error(),
 		StatusLine.lsp_status(),
