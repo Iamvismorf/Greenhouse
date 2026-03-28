@@ -107,7 +107,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
 			name = vim.lsp.get_client_by_id(id).name,
 			status = vim.lsp.get_client_by_id(id).is_stopped(),
 		}
-		vim.cmd.redrawstatus()
+		vim.defer_fn(function()
+			vim.cmd.redrawstatus()
+		end, 300)
 	end,
 })
 vim.api.nvim_create_autocmd("LspDetach", {
@@ -118,7 +120,9 @@ vim.api.nvim_create_autocmd("LspDetach", {
 			name = vim.lsp.get_client_by_id(id).name,
 			is_stopped = vim.lsp.get_client_by_id(id).is_stopped(),
 		}
-		vim.cmd.redrawstatus()
+		vim.defer_fn(function()
+			vim.cmd.redrawstatus()
+		end, 300)
 	end,
 })
 function StatusLine.lsp_status()
@@ -163,6 +167,8 @@ vim.api.nvim_create_autocmd("User", {
 	group = group,
 	pattern = "GitSignsUpdate",
 	callback = function()
-		vim.cmd.redrawstatus()
+		vim.defer_fn(function()
+			vim.cmd.redrawstatus()
+		end, 300)
 	end,
 })
