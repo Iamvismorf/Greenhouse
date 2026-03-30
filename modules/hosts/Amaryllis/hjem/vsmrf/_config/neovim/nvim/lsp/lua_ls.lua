@@ -1,4 +1,6 @@
 return {
+	cmd = { "lua-language-server" },
+	filetypes = { "lua" },
 	root_markers = {
 		"lazy-lock.json",
 		".luarc.json",
@@ -13,6 +15,7 @@ return {
 	},
 	settings = {
 		Lua = {
+			codeLens = { enable = true },
 			diagnostics = {
 				globals = { "vim" },
 			},

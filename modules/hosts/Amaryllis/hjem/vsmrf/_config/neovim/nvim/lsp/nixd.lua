@@ -1,5 +1,6 @@
 return {
 	cmd = { "nixd" },
+	filetypes = { "nix" },
 	settings = {
 		nixd = {
 			nixpkgs = {
@@ -10,7 +11,7 @@ return {
 			},
 			options = {
 				nixos = {
-					expr = "(import ~/Greenhouse/default.nix).nC.Daffodil.options",
+					expr = "(import ~/Greenhouse/default.nix).nC.Amaryllis.options",
 				},
 			},
 		},

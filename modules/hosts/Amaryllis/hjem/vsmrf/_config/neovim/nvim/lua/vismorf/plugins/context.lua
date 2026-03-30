@@ -1,3 +1,4 @@
+--todo: potentially replaceble with winbar/ another plugin
 return {
 	{
 		"barbecue.nvim",

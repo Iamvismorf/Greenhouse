@@ -5,7 +5,8 @@ return {
 		require("statuscol").setup({
 			segments = {
 				{
-					sign = { namespace = { "diagnostic" }, maxwidth = 1, colwidth = 2 },
+					-- sign = { namespace = { "diagnostic" }, maxwidth = 1, colwidth = 2 },
+					sign = { maxwidth = 1, colwidth = 2 },
 				},
 				{ text = { builtin.lnumfunc, " " } },
 				{

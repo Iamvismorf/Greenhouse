@@ -33,4 +33,3 @@ vim.opt.shiftwidth = 3
 
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.o.winbar = " "

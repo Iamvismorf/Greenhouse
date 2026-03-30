@@ -10,7 +10,6 @@ return {
 				},
 				right_mouse_command = nil,
 				close_command = function(bufnum)
-					-- vim.api.nvim_command("BufDel" .. bufnum)
 					require("snacks").bufdelete.delete(bufnum)
 				end,
 			},
@@ -18,15 +17,11 @@ return {
 		local map = vim.keymap.set
 		local opts = { noremap = true, silent = true }
 
-		-- map("n", "<Tab>", ":BufferLineCycleNext<cr>", opts)
-		-- map("n", "<S-Tab>", ":BufferLineCyclePrev<cr>", opts)
 		map("n", "<S-k>", ":BufferLineCycleNext<cr>", opts)
 		map("n", "<S-j>", ":BufferLineCyclePrev<cr>", opts)
 
 		map("n", ">", ":BufferLineMoveNext<cr>", opts)
 		map("n", "<", ":BufferLineMovePrev<cr>", opts)
-
-		-- map("n", "<leader>x", ":BufDel<cr>", opts)
 
 		map("n", "<leader>x", function()
 			require("snacks").bufdelete.delete()

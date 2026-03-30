@@ -74,8 +74,8 @@ function StatusLine.file_name()
 	local file_name = vim.fn.expand("%:t")
 	local parent_dir = vim.fn.expand("%:p:h:t")
 
-	-- return table.concat({ parent_dir, "/", file_name })
-	return string.format(" %%#StatusLineFileName#%s/%s%%* ", parent_dir, file_name)
+	--fixme: vim folder results in folder/folder but vim folder/ returns desired result. Assuming folder exists
+	return string.format(" %%#StatusLineFileName#%s/%s%%*", parent_dir, file_name)
 end
 
 function StatusLine.diagnostics_error()
@@ -86,6 +86,7 @@ function StatusLine.diagnostics_error()
 	return string.format(" %%#StatusLineError#%s%%* ", (errorCount[vim.diagnostic.severity.ERROR] .. ""))
 end
 
+-- fixme: count is not correct for large numbers
 function StatusLine.search_info()
 	local search_result = vim.fn.searchcount()
 	if search_result.total == 0 or vim.v.hlsearch == 0 then -- works meh
@@ -143,6 +144,7 @@ function StatusLine.render()
 		return table.concat({
 			" %h",
 			" %m%=",
+			StatusLine.search_info(),
 			" %l:%c",
 			" ",
 		})

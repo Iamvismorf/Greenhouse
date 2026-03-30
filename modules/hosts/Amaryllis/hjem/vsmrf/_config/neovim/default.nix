@@ -17,15 +17,15 @@ in {
       pkgs.fd
     ]
     ++ [
-      pkgs.stylua
-      pkgs.lua-language-server
       pkgs.alejandra
       pkgs.nixd
-      # pkgs.clang-tools
-      pkgs.neocmakelsp
+      pkgs.stylua
+      pkgs.lua-language-server
       pkgs.shfmt
       pkgs.inotify-tools
       pkgs.kdePackages.qtdeclarative
+      pkgs.llvmPackages.clang-tools
+      pkgs.neocmakelsp
     ];
   enable = true;
   plugins = {
@@ -37,17 +37,16 @@ in {
 
       impure = "/home/vsmrf/Greenhouse/modules/hosts/Amaryllis/hjem/vsmrf/_config/neovim/nvim";
     };
+    #todo: no idea what this is
     startAttrs = {
       nvim-treesitter = null;
       promise-async = null;
-      nvim-navic = null;
     };
     start =
       builtins.attrValues {
+        inherit (pkgs.vimPlugins) lze lzextras;
         inherit
           (pkgs.vimPlugins)
-          lze
-          lzextras
           nvim-web-devicons
           plenary-nvim
           snacks-nvim # replace scroll with neoscroll
@@ -64,34 +63,19 @@ in {
             hash = "sha256-FSDIPyH6Fra9EO8fvr5uwwRaWEHJFjKMgfMZkl3BUeQ=";
           };
         }
-        {
-          name = "project.nvim";
-          src = pkgs.fetchFromGitHub {
-            owner = "ahmedkhalf";
-            repo = "project.nvim";
-            rev = "8c6bad7d22eef1b71144b401c9f74ed01526a4fb";
-            hash = "sha256-avV3wMiDbraxW4mqlEsKy0oeewaRj9Q33K8NzWoaptU=";
-          };
-        }
       ];
     opt =
       builtins.attrValues {
+        inherit (pkgs.vimPlugins) conform-nvim;
+        inherit (pkgs.vimPlugins) blink-cmp friendly-snippets lspkind-nvim;
+        inherit (pkgs.vimPlugins) nvim-ufo promise-async;
+
         inherit
           (pkgs.vimPlugins)
-          # nvim-lint
-          conform-nvim
-          friendly-snippets
-          lspkind-nvim
-          nvim-ufo
           gitsigns-nvim
-          blink-cmp
-          promise-async
-          barbecue-nvim
-          nvim-navic
           bufferline-nvim
           indent-blankline-nvim
           fzf-lua
-          nvim-window-picker
           flash-nvim
           nvim-autopairs
           nvim-surround
