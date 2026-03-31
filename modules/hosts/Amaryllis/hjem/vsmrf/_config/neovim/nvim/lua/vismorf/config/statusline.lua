@@ -1,3 +1,4 @@
+--todo: bug: lsp should display current client of the current buffer. when split for example
 local group = vim.api.nvim_create_augroup("vismorf/statusline", { clear = true })
 StatusLine = {}
 
@@ -100,20 +101,7 @@ local client_info = {
 	name = nil,
 	is_stopped = nil,
 }
-vim.api.nvim_create_autocmd("LspAttach", {
-	group = group,
-	callback = function(args)
-		local id = args.data.client_id
-		client_info = {
-			name = vim.lsp.get_client_by_id(id).name,
-			status = vim.lsp.get_client_by_id(id).is_stopped(),
-		}
-		vim.defer_fn(function()
-			vim.cmd.redrawstatus()
-		end, 300)
-	end,
-})
-vim.api.nvim_create_autocmd("LspDetach", {
+vim.api.nvim_create_autocmd({ "LspAttach", "LspDetach" }, {
 	group = group,
 	callback = function(args)
 		local id = args.data.client_id
