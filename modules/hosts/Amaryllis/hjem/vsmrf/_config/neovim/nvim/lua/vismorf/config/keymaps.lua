@@ -18,6 +18,10 @@ map("n", "<C-e>", "<nop>")
 map("n", "<C-y>", "<nop>")
 map("n", "<C-z>", "<nop>")
 
+map("n", "<leader>x", function()
+	require("snacks").bufdelete.delete()
+end, opts)
+
 vim.keymap.set("n", "j", function()
 	return vim.v.count1 > 1 and ("m`" .. vim.v.count1 .. "j") or "j"
 end, { expr = true, desc = "set context mark before moving more than one line down" })

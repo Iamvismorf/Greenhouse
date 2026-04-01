@@ -1,4 +1,3 @@
---todo: bug: lsp should display current client of the current buffer. when split for example
 local group = vim.api.nvim_create_augroup("vismorf/statusline", { clear = true })
 StatusLine = {}
 
@@ -97,34 +96,19 @@ function StatusLine.search_info()
 	return string.format(" [%s/%s] ", search_result.current, search_result.total)
 end
 
-local client_info = {
-	name = nil,
-	is_stopped = nil,
-}
-vim.api.nvim_create_autocmd({ "LspAttach", "LspDetach" }, {
-	group = group,
-	callback = function(args)
-		local id = args.data.client_id
-		client_info = {
-			name = vim.lsp.get_client_by_id(id).name,
-			is_stopped = vim.lsp.get_client_by_id(id).is_stopped(),
-		}
-		vim.defer_fn(function()
-			vim.cmd.redrawstatus()
-		end, 300)
-	end,
-})
 function StatusLine.lsp_status()
-	local str
-	if client_info.is_stopped == nil and client_info.name == nil then
-		return " no lsp :( "
+	local clients = vim.lsp.get_clients({ bufnr = 0 })
+
+	if clients[1] == nil then
+		return " %#StatusLineError#no lsp :( %*"
 	end
-	if client_info.is_stopped then
-		str = " %%#StatusLineError#%s "
-	else
-		str = " %%#StatusLineOk#%s "
+
+	local client_name = clients[1].name
+
+	if clients[1]:is_stopped() then
+		return string.format("%%#StatusLineError#%s %%* ", client_name)
 	end
-	return string.format(str .. "%%* ", client_info.name)
+	return string.format("%%#StatusLineOk#%s %%* ", client_name)
 end
 
 function StatusLine.render()
@@ -151,7 +135,19 @@ function StatusLine.render()
 	})
 end
 
-vim.o.statusline = "%!v:lua.StatusLine.render()"
+vim.api.nvim_create_autocmd({ "UiEnter", "WinEnter" }, {
+	group = group,
+	callback = function()
+		local win = vim.api.nvim_get_current_win()
+
+		if vim.api.nvim_win_get_config(win).relative ~= "" then
+			vim.o.statusline = " "
+			return
+		end
+
+		vim.o.statusline = "%!v:lua.StatusLine.render()"
+	end,
+})
 
 vim.api.nvim_create_autocmd("User", {
 	group = group,

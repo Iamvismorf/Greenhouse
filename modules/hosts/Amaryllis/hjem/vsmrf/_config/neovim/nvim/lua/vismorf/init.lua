@@ -5,8 +5,6 @@ require("lze").load({
 require("vismorf.config")
 require("vismorf.plugins")
 require("vismorf.lsp")
-vim.cmd.colorscheme("zen")
-
 -- local file = vim.api.nvim_buf_get_name(0)
 -- local is_dir = vim.fn.isdirectory(file) == 1
 --

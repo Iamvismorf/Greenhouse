@@ -1,30 +1,97 @@
+vim.o.showtabline = 2
+
 return {
-	"bufferline.nvim",
+	"nvim-cokeline",
+	event = "DeferredUIEnter",
+
+	--todo: add shift-t like in browser???
+	keys = {
+		{
+			"<S-k>",
+			mode = "n",
+			function()
+				require("cokeline.mappings").by_step("focus", 1)
+			end,
+		},
+		{
+			"<S-j>",
+			mode = "n",
+			function()
+				require("cokeline.mappings").by_step("focus", -1)
+			end,
+		},
+		{
+			">",
+			mode = "n",
+			function()
+				require("cokeline.mappings").by_step("switch", 1)
+			end,
+		},
+		{
+			"<",
+			mode = "n",
+			function()
+				require("cokeline.mappings").by_step("switch", -1)
+			end,
+		},
+	},
+
 	after = function()
-		require("bufferline").setup({
-			options = {
-				separator_style = "slope",
-				enforce_regular_tabs = true,
-				indicator = {
-					style = "underline",
-				},
-				right_mouse_command = nil,
-				close_command = function(bufnum)
-					require("snacks").bufdelete.delete(bufnum)
+		local colors = require("zen.colors").get()
+		local theme = colors.theme
+		local palette = colors.palette
+		require("cokeline").setup({
+			default_hl = {
+				bg = function(b)
+					if b.is_focused then
+						return palette.bg3
+					end
 				end,
 			},
+			buffers = {
+				focus_on_delete = "prev",
+				new_buffers_position = "next",
+				delete_on_right_click = false,
+			},
+			components = {
+				{
+					text = "  ",
+				},
+				{
+					text = function(b)
+						return b.devicon.icon
+					end,
+					fg = function(b)
+						return b.devicon.color
+					end,
+				},
+				{
+					text = function(b)
+						return b.unique_prefix .. b.filename
+					end,
+					fg = function(b)
+						if b.is_focused then
+							return palette.rose
+						end
+					end,
+					truncation = {
+						direction = "left",
+					},
+				},
+				{
+					text = function(b)
+						if b.is_modified then
+							return " ●"
+						else
+							return "  "
+						end
+					end,
+					fg = theme.vcs.changed,
+				},
+				{
+					text = " ",
+				},
+			},
 		})
-		local map = vim.keymap.set
-		local opts = { noremap = true, silent = true }
-
-		map("n", "<S-k>", ":BufferLineCycleNext<cr>", opts)
-		map("n", "<S-j>", ":BufferLineCyclePrev<cr>", opts)
-
-		map("n", ">", ":BufferLineMoveNext<cr>", opts)
-		map("n", "<", ":BufferLineMovePrev<cr>", opts)
-
-		map("n", "<leader>x", function()
-			require("snacks").bufdelete.delete()
-		end, opts)
 	end,
 }

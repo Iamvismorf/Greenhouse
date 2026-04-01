@@ -2,6 +2,7 @@ vim.g.indent_blankline_use_treesitter = false
 
 return {
 	"indent-blankline.nvim",
+	event = "DeferredUIEnter",
 	after = function()
 		require("ibl").setup({
 			indent = {

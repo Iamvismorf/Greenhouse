@@ -1,6 +1,5 @@
 return {
 	"flash.nvim",
-	on_require = { "flash" },
 	event = "DeferredUIEnter",
 
 	keys = {

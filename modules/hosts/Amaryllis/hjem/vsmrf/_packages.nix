@@ -8,7 +8,7 @@
   ghosttyOut = (utils.flakeToNix {src = sources.ghostty;}).defaultNix;
   quickshellOut = import sources.quickshell;
 
-  vixvim = (import sources.mnw).lib.wrap {inherit pkgs sources;} ./_config/neovim;
+  vixvim = (import sources.mnw).lib.wrap {inherit pkgs sources utils;} ./_config/neovim;
   yazi = pkgs.callPackage ./_config/yazi {};
 in
   builtins.attrValues {

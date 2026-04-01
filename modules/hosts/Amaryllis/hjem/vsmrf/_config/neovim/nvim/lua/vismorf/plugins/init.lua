@@ -1,16 +1,15 @@
--- require("vismorf.plugins.devicons")
-require("vismorf.plugins.theme")
 require("vismorf.plugins.rootf").setup({
 	rootmarkers = { ".envrc", "flake.nix", "shell.nix", ".gitignore" },
 	ignoreDirs = { "%.git*", ".direnv", "build" },
 })
 
 require("lze").load({
+	{ import = "vismorf.plugins.theme" },
 	{ import = "vismorf.plugins.gitsigns" },
 	{ import = "vismorf.plugins.autopairs" },
 	{ import = "vismorf.plugins.bufferline" },
 	{ import = "vismorf.plugins.bufjump" },
-	-- { import = "vismorf.plugins.context" },
+	{ import = "vismorf.plugins.context" },
 	{ import = "vismorf.plugins.statuscol" },
 	{ import = "vismorf.plugins.flash" },
 	{ import = "vismorf.plugins.fzf-lua" },

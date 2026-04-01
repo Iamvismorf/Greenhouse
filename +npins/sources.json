@@ -93,6 +93,32 @@
       "url": "https://github.com/Gerg-L/mnw/archive/68a22f62ca7623fcb700d4ebf225bd91125c773e.tar.gz",
       "hash": "sha256-iQ45IBZXKgMpV9x6RxZfGm6hzRzfVpKo7gWV0VHLmlE="
     },
+    "neovim-nightly": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "nix-community",
+        "repo": "neovim-nightly-overlay"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "9001416dc5d0ca24c8e4b5a44bfe7cd6fbeb1dd1",
+      "url": "https://github.com/nix-community/neovim-nightly-overlay/archive/9001416dc5d0ca24c8e4b5a44bfe7cd6fbeb1dd1.tar.gz",
+      "hash": "sha256-LocQzkSjVS4G0AKMBiEIVdBKCNTMZXQFjQMWFId4Jpg="
+    },
+    "neovim-nightly-overlay": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "nix-community",
+        "repo": "neovim-nightly-overlay"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "9001416dc5d0ca24c8e4b5a44bfe7cd6fbeb1dd1",
+      "url": "https://github.com/nix-community/neovim-nightly-overlay/archive/9001416dc5d0ca24c8e4b5a44bfe7cd6fbeb1dd1.tar.gz",
+      "hash": "sha256-LocQzkSjVS4G0AKMBiEIVdBKCNTMZXQFjQMWFId4Jpg="
+    },
     "niri": {
       "type": "Git",
       "repository": {
@@ -127,11 +153,11 @@
         "owner": "nixos",
         "repo": "nixpkgs"
       },
-      "branch": "nixos-unstable",
+      "branch": "nixpkgs-unstable",
       "submodules": false,
-      "revision": "8110df5ad7abf5d4c0f6fb0f8f978390e77f9685",
-      "url": "https://github.com/nixos/nixpkgs/archive/8110df5ad7abf5d4c0f6fb0f8f978390e77f9685.tar.gz",
-      "hash": "sha256-D3Q07BbIA2KnTcSXIqqu9P586uWxN74zNoCH3h2ESHg="
+      "revision": "15c6719d8c604779cf59e03c245ea61d3d7ab69b",
+      "url": "https://github.com/nixos/nixpkgs/archive/15c6719d8c604779cf59e03c245ea61d3d7ab69b.tar.gz",
+      "hash": "sha256-YkreHeMgTCYvJ5fESV0YyqQK49bHGe2B51tH6claUh4="
     },
     "npins": {
       "type": "Git",
@@ -168,9 +194,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "4b77936c8019e0f51e0e62414c6de3556d5f8870",
-      "url": "https://github.com/quickshell-mirror/quickshell/archive/4b77936c8019e0f51e0e62414c6de3556d5f8870.tar.gz",
-      "hash": "sha256-Qu768qE1C6nMpWYi+83AZt3jEwXE+NQKsgZ3fz3+vLE="
+      "revision": "d6122277409783377059be6399004eb090a6008e",
+      "url": "https://github.com/quickshell-mirror/quickshell/archive/d6122277409783377059be6399004eb090a6008e.tar.gz",
+      "hash": "sha256-KWU38p8zEtgFOL5KZoWeqWVv27uBFLX3N+Ih+TFs9/0="
     },
     "zenNvim": {
       "type": "Git",

@@ -2,14 +2,17 @@
   pkgs,
   lib,
   sources,
+  utils,
   ...
 }: let
   fs = lib.fileset;
+  neovimNightlyOut = (utils.flakeToNix {src = sources.neovim-nightly;}).defaultNix;
 in {
   aliases = ["vim" "vi"];
   initLua = ''
     require("vismorf")
   '';
+  neovim = neovimNightlyOut.packages.${pkgs.stdenv.hostPlatform.system}.default;
   extraBinPath =
     [
       pkgs.fzf
@@ -60,7 +63,7 @@ in {
             owner = "nendix";
             repo = "zen.nvim";
             rev = sources.zenNvim.revision;
-            hash = "sha256-FSDIPyH6Fra9EO8fvr5uwwRaWEHJFjKMgfMZkl3BUeQ=";
+            hash = sources.zenNvim.hash;
           };
         }
       ];
@@ -74,6 +77,7 @@ in {
           (pkgs.vimPlugins)
           gitsigns-nvim
           bufferline-nvim
+          nvim-cokeline
           indent-blankline-nvim
           fzf-lua
           flash-nvim
@@ -86,6 +90,7 @@ in {
       ++ [
         pkgs.vimPlugins.nvim-treesitter.withAllGrammars
         pkgs.vimPlugins.nvim-treesitter-textobjects
+        pkgs.vimPlugins.nvim-treesitter-context
       ];
   };
 }

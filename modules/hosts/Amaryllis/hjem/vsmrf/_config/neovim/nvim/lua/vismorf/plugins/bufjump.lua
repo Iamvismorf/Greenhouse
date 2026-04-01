@@ -1,5 +1,6 @@
 return {
 	"bufjump.nvim",
+	event = "DeferredUIEnter",
 	after = function()
 		require("bufjump").setup({
 			forward_key = false,
