@@ -34,29 +34,13 @@ map({ "n", "v", "i" }, "<C-j>", "<esc><C-w>j", opts)
 map({ "n", "v", "i" }, "<C-k>", "<esc><C-w>k", opts)
 map({ "n", "v", "i" }, "<C-l>", "<esc><C-w>l", opts)
 
-map("n", "H", "Hzz", opts)
-map("n", "L", "Lzz", opts)
+-- map("n", "H", "Hzz", opts)
+-- map("n", "L", "Lzz", opts)
+
+map("n", "H", ':lua MiniAnimate.execute_after("scroll", "normal! Hzz")<CR>', opts)
+map("n", "L", ':lua MiniAnimate.execute_after("scroll", "normal! Lzz")<CR>', opts)
 
 vim.cmd("cnoremap <c-k> <c-p>")
 vim.cmd("cnoremap <c-j> <c-n>")
 
 map({ "n", "v" }, "<leader>w", "<esc>:FlipVirtualText<cr>", {})
-
-vim.api.nvim_create_user_command("FlipVirtualText", function(_)
-	if
-		vim.diagnostic.config().virtual_text --[[ and vim.diagnostic.config().underline  ]]
-	then
-		vim.diagnostic.config({
-			-- virtual_lines = false,
-			virtual_text = false,
-			-- underline = false,
-		})
-	else
-		vim.diagnostic.config({
-			-- virtual_text = { source = "if_many" },
-			virtual_text = true,
-			-- virtual_lines = true,
-			-- underline = true,
-		})
-	end
-end, { desc = "Toggle virtual text diagnostics" })

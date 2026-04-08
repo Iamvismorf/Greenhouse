@@ -7,7 +7,7 @@
   yazi = pkgs.callPackage ./_config/yazi {};
 in
   builtins.attrValues {
-    inherit (pkgs) swww waypaper waybar;
+    inherit (pkgs) awww waypaper waybar;
     inherit (pkgs) ghostty viewnior mpv firefox fuzzel git;
     inherit (pkgs) bottom fastfetch eza bat tree;
     inherit (pkgs) jq fd fzf ripgrep ouch wtype socat resvg hyprshot;

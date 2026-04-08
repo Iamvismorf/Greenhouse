@@ -13,7 +13,7 @@ for h, o in pairs(highlights) do
 end
 
 vim.o.laststatus = 3
-vim.o.cmdheight = 0
+vim.o.cmdheight = 1
 vim.o.showcmdloc = "statusline"
 
 -- Thank you Maria
@@ -86,16 +86,6 @@ function StatusLine.diagnostics_error()
 	return string.format(" %%#StatusLineError#%s%%* ", (errorCount[vim.diagnostic.severity.ERROR] .. ""))
 end
 
--- fixme: count is not correct for large numbers
-function StatusLine.search_info()
-	local search_result = vim.fn.searchcount()
-	if search_result.total == 0 or vim.v.hlsearch == 0 then -- works meh
-		return ""
-	end
-
-	return string.format(" [%s/%s] ", search_result.current, search_result.total)
-end
-
 function StatusLine.lsp_status()
 	local clients = vim.lsp.get_clients({ bufnr = 0 })
 
@@ -116,7 +106,6 @@ function StatusLine.render()
 		return table.concat({
 			" %h",
 			" %m%=",
-			StatusLine.search_info(),
 			" %l:%c",
 			" ",
 		})
@@ -130,7 +119,6 @@ function StatusLine.render()
 
 		StatusLine.diagnostics_error(),
 		StatusLine.lsp_status(),
-		StatusLine.search_info(),
 		" %l:%c ",
 	})
 end

@@ -155,9 +155,9 @@
       },
       "branch": "nixpkgs-unstable",
       "submodules": false,
-      "revision": "15c6719d8c604779cf59e03c245ea61d3d7ab69b",
-      "url": "https://github.com/nixos/nixpkgs/archive/15c6719d8c604779cf59e03c245ea61d3d7ab69b.tar.gz",
-      "hash": "sha256-YkreHeMgTCYvJ5fESV0YyqQK49bHGe2B51tH6claUh4="
+      "revision": "106eb93cbb9d4e4726bf6bc367a3114f7ed6b32f",
+      "url": "https://github.com/nixos/nixpkgs/archive/106eb93cbb9d4e4726bf6bc367a3114f7ed6b32f.tar.gz",
+      "hash": "sha256-CsqRiYbgQyv01LS0NlC7shwzhDhjNDQSrhBX8VuD3nM="
     },
     "npins": {
       "type": "Git",
@@ -194,9 +194,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "d6122277409783377059be6399004eb090a6008e",
-      "url": "https://github.com/quickshell-mirror/quickshell/archive/d6122277409783377059be6399004eb090a6008e.tar.gz",
-      "hash": "sha256-KWU38p8zEtgFOL5KZoWeqWVv27uBFLX3N+Ih+TFs9/0="
+      "revision": "50cdf9886803c0279aafa43d0b590abdc34f5766",
+      "url": "https://github.com/quickshell-mirror/quickshell/archive/50cdf9886803c0279aafa43d0b590abdc34f5766.tar.gz",
+      "hash": "sha256-yTjyHtMpJiB9fAcPAtvROn5tFAwSqCTnfG7w+LtmpMM="
     },
     "zenNvim": {
       "type": "Git",

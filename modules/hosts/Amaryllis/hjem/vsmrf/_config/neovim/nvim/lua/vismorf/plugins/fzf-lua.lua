@@ -1,7 +1,6 @@
 return {
 	"fzf-lua",
-	event = "DeferredUIEnter",
-	-- event = { "BufReadPre", "BufNewFile", "LspAttach" },
+	event = { "DeferredUIEnter", "LspAttach" },
 	keys = {
 		{
 			"<leader>ff",

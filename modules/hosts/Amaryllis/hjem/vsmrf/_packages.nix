@@ -12,7 +12,7 @@
   yazi = pkgs.callPackage ./_config/yazi {};
 in
   builtins.attrValues {
-    inherit (pkgs) swww waypaper;
+    inherit (pkgs) awww waypaper;
     inherit (pkgs) inkscape firefox fuzzel swappy viewnior libreoffice git;
     inherit (pkgs) btop bottom sysstat eza tree fastfetch bat hyprshot;
     inherit (pkgs) gpu-screen-recorder-gtk wf-recorder yt-dlp jq fd ripgrep fzf ouch;

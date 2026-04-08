@@ -40,13 +40,13 @@ if status is-interactive
    alias fvim="fzf | xargs vim"
    abbr -a !! --position anywhere --function last_history_item
 end
-# function autocd
-#    command -q $argv[1]; and return 1
-#    test -d "$argv[1]"; and echo cd $argv[1]; and return 0
-#    return 1
-# end
-#
-# abbr autocd --regex '.*' --function autocd
+function autocd
+   command -q $argv[1]; and return 1
+   test -d "$argv[1]"; and echo cd $argv[1]; and return 0
+   return 1
+end
+
+abbr autocd --regex '.*' --function autocd
 
 
 

@@ -19,6 +19,5 @@ return function(ev)
 	-- map("<leader>di", vim.diagnostic.open_float, "show diagnostics for line")
 
 	map("<leader>ca", vim.lsp.buf.code_action)
-	-- map("T", vim.lsp.buf.hover, "show documentation for what is under cursor")
-	-- :Lsprestart
+	-- vim.lsp.document_color.enable(false)
 end

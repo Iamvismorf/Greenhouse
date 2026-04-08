@@ -1,7 +1,7 @@
 return {
 	single_file_support = true,
-	cmd = { "neocmakelsp", "--stdio" },
-	filetypes = { "cmake" },
+	cmd = { "neocmakelsp", "stdio" },
+	filetypes = { "cmake", ".txt" },
 	root_markers = { ".git", "shell.nix" },
 	init_options = {
 		format = {

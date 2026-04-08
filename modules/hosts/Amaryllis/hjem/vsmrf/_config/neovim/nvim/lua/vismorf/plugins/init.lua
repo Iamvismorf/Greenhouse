@@ -4,6 +4,7 @@ require("vismorf.plugins.rootf").setup({
 })
 
 require("lze").load({
+	{ import = "vismorf.plugins.animate" },
 	{ import = "vismorf.plugins.theme" },
 	{ import = "vismorf.plugins.gitsigns" },
 	{ import = "vismorf.plugins.autopairs" },

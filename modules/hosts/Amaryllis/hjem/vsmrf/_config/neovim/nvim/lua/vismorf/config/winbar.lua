@@ -46,7 +46,7 @@ vim.api.nvim_create_autocmd("WinEnter", {
 		end, wins)
 
 		if #wins <= 1 then
-			vim.o.winbar = " "
+			vim.o.winbar = ""
 			return
 		end
 

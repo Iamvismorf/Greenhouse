@@ -6,16 +6,17 @@ return {
 			bufdelete = { enabled = true },
 			picker = { enabled = true },
 
-			scroll = {
-				enabled = true,
-				animate = {
-					duration = { step = 30, total = 250 },
-					easing = "linear",
-				},
-				animate_repeat = {
-					duration = { step = 0, total = 2 },
-				},
-			},
+			-- scroll = {
+			-- 	enabled = true,
+			-- 	animate = {
+			-- 		duration = { step = 30, total = 250 },
+			-- 		easing = "linear",
+			-- 	},
+			-- 	animate_repeat = {
+			-- 		duration = { step = 30, total = 250 },
+			-- 		easing = "linear",
+			-- 	},
+			-- },
 		})
 	end,
 }

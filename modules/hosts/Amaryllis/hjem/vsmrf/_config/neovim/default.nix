@@ -12,7 +12,7 @@ in {
   initLua = ''
     require("vismorf")
   '';
-  neovim = neovimNightlyOut.packages.${pkgs.stdenv.hostPlatform.system}.default;
+  # neovim = neovimNightlyOut.packages.${pkgs.stdenv.hostPlatform.system}.default;
   extraBinPath =
     [
       pkgs.fzf
@@ -52,7 +52,7 @@ in {
           (pkgs.vimPlugins)
           nvim-web-devicons
           plenary-nvim
-          snacks-nvim # replace scroll with neoscroll
+          snacks-nvim
           statuscol-nvim
           ;
       }
@@ -79,6 +79,7 @@ in {
           bufferline-nvim
           nvim-cokeline
           indent-blankline-nvim
+          mini-animate
           fzf-lua
           flash-nvim
           nvim-autopairs
