@@ -100,3 +100,4 @@ abbr autocd --regex '.*' --function autocd
 function last_history_item
    echo $history[1]
 end
+zoxide init --cmd cd fish | source
