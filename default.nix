@@ -5,14 +5,10 @@ let
   utils = import ./utils;
 
   modules = {
-    imports =
-      utils.recursiveImport {
-        dir = ./modules;
-        excludePrefixedWith = ["_" "+"];
-      }
-      ++ (utils.recursiveImport {
-        dir = ./options;
-      });
+    imports = utils.recursiveImport {
+      dirs = [./modules ./options];
+      excludePrefixedWith = ["_" "+"];
+    };
   };
 
   self =
