@@ -1,6 +1,6 @@
 return {
 	cmd = { "glsl_analyzer" },
-	filetypes = { "glsl", "vert", "tesc", "tese", "frag", "geom", "comp" },
+	filetypes = { "glsl" },
 	root_markers = { ".git", "shell.nix" },
 	capabilities = {},
 }

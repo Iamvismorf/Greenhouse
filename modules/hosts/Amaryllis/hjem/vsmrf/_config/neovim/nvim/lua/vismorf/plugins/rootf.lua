@@ -13,7 +13,7 @@ local last_root = nil
 function M.setup(opts)
 	M.config = vim.tbl_deep_extend("force", M.defaults, opts or {})
 
-	vim.api.nvim_create_autocmd("BufEnter", {
+	vim.api.nvim_create_autocmd({ "BufEnter" }, {
 		callback = function(ev)
 			local buf = vim.bo[ev.buf]
 			local current_file = ev.file

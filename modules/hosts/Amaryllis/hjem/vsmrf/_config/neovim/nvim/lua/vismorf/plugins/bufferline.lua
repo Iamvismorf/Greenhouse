@@ -8,28 +8,28 @@ return {
 	keys = {
 		{
 			"<S-k>",
-			mode = "n",
+			mode = { "n", "v" },
 			function()
 				require("cokeline.mappings").by_step("focus", 1)
 			end,
 		},
 		{
 			"<S-j>",
-			mode = "n",
+			mode = { "n", "v" },
 			function()
 				require("cokeline.mappings").by_step("focus", -1)
 			end,
 		},
 		{
 			">",
-			mode = "n",
+			mode = { "n", "v" },
 			function()
 				require("cokeline.mappings").by_step("switch", 1)
 			end,
 		},
 		{
 			"<",
-			mode = "n",
+			mode = { "n", "v" },
 			function()
 				require("cokeline.mappings").by_step("switch", -1)
 			end,
@@ -52,6 +52,11 @@ return {
 				focus_on_delete = "prev",
 				new_buffers_position = "next",
 				delete_on_right_click = false,
+
+				filter_valid = function(b)
+					return b.type ~= "nofile" and b.filetype ~= "vim" and b.filename ~= "[No Name]"
+					-- return b.type .. " " .. b.filetype .. " " .. b.filename
+				end,
 			},
 			components = {
 				{

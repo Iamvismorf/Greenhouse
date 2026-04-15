@@ -9,6 +9,9 @@ local highlights = {
 	StatusLineOk = { fg = palette.diag_ok },
 }
 for h, o in pairs(highlights) do
+	if type(o.fg) == "number" then
+		print(string.format("#%06x", o.fg))
+	end
 	vim.api.nvim_set_hl(0, h, o)
 end
 
@@ -80,10 +83,11 @@ end
 
 function StatusLine.diagnostics_error()
 	local errorCount = vim.diagnostic.count(0)
+	local icon = vim.diagnostic.config().signs.text[vim.diagnostic.severity.ERROR]
 	if not errorCount[vim.diagnostic.severity.ERROR] then
 		return ""
 	end
-	return string.format(" %%#StatusLineError#%s%%* ", (errorCount[vim.diagnostic.severity.ERROR] .. ""))
+	return string.format(" %%#StatusLineError#%s%%* ", (errorCount[vim.diagnostic.severity.ERROR] .. icon))
 end
 
 function StatusLine.lsp_status()

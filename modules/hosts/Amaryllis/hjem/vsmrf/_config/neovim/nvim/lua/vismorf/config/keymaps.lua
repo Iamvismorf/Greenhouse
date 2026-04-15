@@ -2,7 +2,27 @@
 local opts = { noremap = true, silent = true }
 local map = vim.keymap.set
 
-map("n", "<esc>", ":noh<cr>", opts)
+--todo: https://github.com/saghen/blink.cmp/commit/37c96dc06032b3f128b230b5fb193706535b3811
+map("n", ":", "q:i")
+map("n", "<esc>", function()
+	if vim.fn.getcmdwintype() ~= "" then
+		vim.cmd.close()
+	else
+		vim.cmd.noh()
+	end
+end, opts)
+vim.api.nvim_create_autocmd("CmdwinEnter", {
+	callback = function()
+		vim.api.nvim_win_set_config(0, {
+			relative = "laststatus",
+			width = vim.o.columns,
+			height = vim.o.cmdwinheight,
+			col = 0,
+			row = 0,
+		})
+	end,
+})
+
 map("n", "<leader>o", "]<space>", { remap = true })
 map("n", "<leader>O", "[<space>", { remap = true })
 
@@ -43,4 +63,21 @@ map("n", "L", ':lua MiniAnimate.execute_after("scroll", "normal! Lzz")<CR>', opt
 vim.cmd("cnoremap <c-k> <c-p>")
 vim.cmd("cnoremap <c-j> <c-n>")
 
-map({ "n", "v" }, "<leader>w", "<esc>:FlipVirtualText<cr>", {})
+map({ "n", "v" }, "<leader>w", function()
+	if
+		vim.diagnostic.config().virtual_text --[[ and vim.diagnostic.config().underline  ]]
+	then
+		vim.diagnostic.config({
+			-- virtual_lines = false,
+			virtual_text = false,
+			-- underline = false,
+		})
+	else
+		vim.diagnostic.config({
+			-- virtual_text = { source = "if_many" },
+			virtual_text = true,
+			-- virtual_lines = true,
+			-- underline = true,
+		})
+	end
+end)

@@ -20,4 +20,5 @@ vim.lsp.enable({
 	"neocmake",
 	"qmlls",
 	"glsl_analyzer",
+	"glslls",
 })

@@ -25,6 +25,9 @@ return {
 				function()
 					if vim.g.showMenu then
 						require("blink.cmp").hide()
+						vim.api.nvim_echo({ { "cmp menu hidden", "DiagnosticInfo" } }, false, {})
+					else
+						vim.api.nvim_echo({ { "cmp menu on", "DiagnosticInfo" } }, false, {})
 					end
 					vim.g.showMenu = not vim.g.showMenu
 				end,

@@ -6,11 +6,13 @@ return {
 	after = function()
 		require("ibl").setup({
 			indent = {
-				char = "│",
+				-- char = "│",
+				char = "╏",
+				-- char = "┇",
 			},
 			scope = {
 				show_start = false,
-				-- show_end = false,
+				show_end = false,
 				include = {
 					node_type = {
 						["*"] = { "*" },

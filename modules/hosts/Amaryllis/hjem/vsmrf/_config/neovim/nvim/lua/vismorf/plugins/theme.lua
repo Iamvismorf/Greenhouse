@@ -19,6 +19,9 @@ return {
 				return {
 					WinSeparator = { fg = colors.palette.rose },
 					TreesitterContextSeparator = { fg = colors.palette.rose },
+					IblIndent = { fg = colors.palette.bg4, nocombine = true },
+					IblScope = { fg = colors.palette.sage, nocombine = true },
+					MatchParen = { fg = colors.theme.diag.warning, underdouble = true },
 				}
 			end,
 		})

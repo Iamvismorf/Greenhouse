@@ -106,19 +106,6 @@
       "url": "https://github.com/nix-community/neovim-nightly-overlay/archive/9001416dc5d0ca24c8e4b5a44bfe7cd6fbeb1dd1.tar.gz",
       "hash": "sha256-LocQzkSjVS4G0AKMBiEIVdBKCNTMZXQFjQMWFId4Jpg="
     },
-    "neovim-nightly-overlay": {
-      "type": "Git",
-      "repository": {
-        "type": "GitHub",
-        "owner": "nix-community",
-        "repo": "neovim-nightly-overlay"
-      },
-      "branch": "master",
-      "submodules": false,
-      "revision": "9001416dc5d0ca24c8e4b5a44bfe7cd6fbeb1dd1",
-      "url": "https://github.com/nix-community/neovim-nightly-overlay/archive/9001416dc5d0ca24c8e4b5a44bfe7cd6fbeb1dd1.tar.gz",
-      "hash": "sha256-LocQzkSjVS4G0AKMBiEIVdBKCNTMZXQFjQMWFId4Jpg="
-    },
     "niri": {
       "type": "Git",
       "repository": {
@@ -155,9 +142,9 @@
       },
       "branch": "nixpkgs-unstable",
       "submodules": false,
-      "revision": "106eb93cbb9d4e4726bf6bc367a3114f7ed6b32f",
-      "url": "https://github.com/nixos/nixpkgs/archive/106eb93cbb9d4e4726bf6bc367a3114f7ed6b32f.tar.gz",
-      "hash": "sha256-CsqRiYbgQyv01LS0NlC7shwzhDhjNDQSrhBX8VuD3nM="
+      "revision": "13043924aaa7375ce482ebe2494338e058282925",
+      "url": "https://github.com/nixos/nixpkgs/archive/13043924aaa7375ce482ebe2494338e058282925.tar.gz",
+      "hash": "sha256-nwASzrRDD1JBEu/o8ekKYEXm/oJW6EMCzCRdrwcLe90="
     },
     "npins": {
       "type": "Git",

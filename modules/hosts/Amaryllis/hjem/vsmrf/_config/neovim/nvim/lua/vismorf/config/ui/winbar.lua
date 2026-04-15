@@ -38,11 +38,12 @@ function Winbar.render()
 	})
 end
 
-vim.api.nvim_create_autocmd("WinEnter", {
+vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
 	callback = function()
+		-- vim.print(vim.api.nvim_win_get_config(0))
 		local wins = vim.api.nvim_tabpage_list_wins(0)
 		wins = vim.tbl_filter(function(win)
-			return vim.api.nvim_win_get_config(win).relative == ""
+			return vim.api.nvim_win_get_config(win).relative == "" and vim.fn.win_gettype(win) ~= "command"
 		end, wins)
 
 		if #wins <= 1 then
