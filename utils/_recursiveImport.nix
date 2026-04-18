@@ -1,4 +1,4 @@
-# files/directories starting with _ and empty files will be ignored. Idea stolen from github.com/vic/import-tree
+# files/directories starting with _(by default) and empty files will be ignored. Idea stolen from github.com/vic/import-tree
 # supports multiple directory
 #
 # [] []?: -> []
