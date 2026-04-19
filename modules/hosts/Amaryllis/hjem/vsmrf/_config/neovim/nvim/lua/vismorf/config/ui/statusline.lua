@@ -1,4 +1,4 @@
-local group = vim.api.nvim_create_augroup("vismorf/statusline", { clear = true })
+local group = vim.api.nvim_create_augroup("vismorf/statusline", {})
 StatusLine = {}
 
 local colors = require("zen.colors").get()

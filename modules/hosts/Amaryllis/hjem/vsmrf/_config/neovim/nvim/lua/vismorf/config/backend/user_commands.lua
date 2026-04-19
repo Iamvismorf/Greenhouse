@@ -3,7 +3,7 @@
 -- g - global
 -- c - confirm
 
-vim.api.nvim_create_user_command("Rls", function()
+vim.api.nvim_create_user_command("RestroreLastSession", function()
 	local last_session = vim.fn.stdpath("state") .. "/sessions/" .. vim.fn.getcwd():gsub("/", "%%") .. ".vim"
 	if vim.fn.filereadable(last_session) == 1 then
 		vim.cmd.source(vim.fn.fnameescape(last_session))

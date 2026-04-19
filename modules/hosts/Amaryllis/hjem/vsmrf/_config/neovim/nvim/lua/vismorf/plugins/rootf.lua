@@ -1,5 +1,3 @@
---todo: add keybind to disable this and change to the directory of the current file and add keybind to reactivate??
---feat: cache init directory so when disable cd into it
 local M = {}
 
 M.defaults = {
@@ -7,13 +5,12 @@ M.defaults = {
 	ignoreDirs = { "%.git*", ".direnv" }, -- don't find root for files that are in these directories
 }
 local cached_roots = {}
-local last_dir = nil
+local augroup = vim.api.nvim_create_augroup("vismorf/rootf", {})
 local last_root = nil
 
-function M.setup(opts)
-	M.config = vim.tbl_deep_extend("force", M.defaults, opts or {})
-	local augroup = vim.api.nvim_create_augroup("vismorf/rootf", {})
-
+function M._enable()
+	local last_dir = nil
+	vim.o.autochdir = false
 	vim.api.nvim_create_autocmd({ "BufEnter" }, {
 		group = augroup,
 		callback = function(ev)
@@ -62,6 +59,21 @@ function M.setup(opts)
 			vim.fn.chdir(root)
 		end,
 	})
+end
+
+function M.setup(opts)
+	M.config = vim.tbl_deep_extend("force", M.defaults, opts or {})
+	M._enable()
+
+	vim.api.nvim_create_user_command("DisableRootf", function()
+		vim.api.nvim_clear_autocmds({ group = augroup })
+		vim.o.autochdir = true
+	end, {})
+
+	vim.api.nvim_create_user_command("EnableRootf", function()
+		M._enable()
+		vim.api.nvim_exec_autocmds("BufEnter", { group = augroup })
+	end, {})
 end
 
 return M

@@ -6,6 +6,7 @@ vim.o.foldenable = true
 return {
 	{
 		"nvim-ufo",
+		event = "DeferredUIEnter",
 		after = function()
 			require("ufo").setup({
 				provider_selector = function(bufnr, filetype, buftype)

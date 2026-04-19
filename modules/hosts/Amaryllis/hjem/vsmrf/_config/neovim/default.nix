@@ -70,7 +70,7 @@ in {
     opt =
       builtins.attrValues {
         inherit (pkgs.vimPlugins) conform-nvim;
-        inherit (pkgs.vimPlugins) blink-cmp friendly-snippets lspkind-nvim;
+        inherit (pkgs.vimPlugins) friendly-snippets lspkind-nvim;
         inherit (pkgs.vimPlugins) nvim-ufo promise-async;
 
         inherit
@@ -92,6 +92,19 @@ in {
         pkgs.vimPlugins.nvim-treesitter.withAllGrammars
         pkgs.vimPlugins.nvim-treesitter-textobjects
         pkgs.vimPlugins.nvim-treesitter-context
+
+        #todo: remove this after upstream is merged
+        (
+          pkgs.vimPlugins.blink-cmp.overrideAttrs
+          (_: _: {
+            src = pkgs.fetchFromGitHub {
+              owner = "Saghen";
+              repo = "blink.cmp";
+              rev = sources.blink-cmp.revision;
+              hash = sources.blink-cmp.hash;
+            };
+          })
+        )
       ];
   };
 }

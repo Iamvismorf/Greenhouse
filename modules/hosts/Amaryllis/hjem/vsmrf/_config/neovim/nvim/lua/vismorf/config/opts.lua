@@ -22,4 +22,8 @@ vim.opt.shiftwidth = 3
 
 vim.opt.swapfile = false
 vim.opt.backup = false
+vim.o.writebackup = false
+
 vim.o.nrformats = "unsigned"
+
+vim.o.shada = "'0,<0,@0,/0,:5,h"
