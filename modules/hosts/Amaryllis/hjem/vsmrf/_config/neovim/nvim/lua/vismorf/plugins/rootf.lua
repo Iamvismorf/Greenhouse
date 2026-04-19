@@ -12,16 +12,23 @@ local last_root = nil
 
 function M.setup(opts)
 	M.config = vim.tbl_deep_extend("force", M.defaults, opts or {})
+	local augroup = vim.api.nvim_create_augroup("vismorf/rootf", {})
 
 	vim.api.nvim_create_autocmd({ "BufEnter" }, {
+		group = augroup,
 		callback = function(ev)
 			local buf = vim.bo[ev.buf]
-			local current_file = ev.file
-			local parent_dir = vim.fs.dirname(current_file)
-
-			if buf.buftype ~= "" then
+			if buf.buftype ~= "" or vim.fn.win_gettype() ~= "" then
 				return
 			end
+
+			local current_file = ev.file
+			if current_file == "" then
+				vim.cmd.edit(vim.fn.getcwd())
+				current_file = vim.fn.getcwd()
+			end
+			local parent_dir = vim.fs.dirname(current_file)
+
 			if last_dir == parent_dir then
 				cached_roots[current_file] = last_root
 				return
