@@ -4,4 +4,5 @@ let
 in
   pkgs.mkShell {
     NPINS_DIRECTORY = "+npins";
+    IMPURE = "true";
   }
