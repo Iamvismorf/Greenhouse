@@ -1,3 +1,4 @@
+# wrapper around lix's flake-comap
 let
   sources = import ../+npins;
   lixFlake-compat = import sources.flake-compat;

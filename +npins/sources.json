@@ -80,6 +80,19 @@
       "url": "https://github.com/hyprwm/Hyprland/archive/1bc857b12c434b7255119de009a50237856a90b2.tar.gz",
       "hash": "sha256-sPyea7oYf5h420tdvkrwn0Z1uxfZdqhpuGrEVcdC7q8="
     },
+    "impurity.nix": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "outfoxxed",
+        "repo": "impurity.nix"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "bbc41b69ab5485cd55aa315d08cff865781d3913",
+      "url": "https://github.com/outfoxxed/impurity.nix/archive/bbc41b69ab5485cd55aa315d08cff865781d3913.tar.gz",
+      "hash": "sha256-82KeRg2sAqDXCdzVs8P8GoqVaPsZjkWgrfsj6kgOLTY="
+    },
     "mangowc": {
       "type": "Git",
       "repository": {
