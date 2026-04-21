@@ -1,25 +1,9 @@
 local group = vim.api.nvim_create_augroup("vismorf/statusline", {})
 StatusLine = {}
 
-local colors = require("zen.colors").get()
-local palette = colors.palette
-local highlights = {
-	StatusLineFileName = { fg = palette.rose },
-	StatusLineError = { fg = palette.diag_error },
-	StatusLineOk = { fg = palette.diag_ok },
-}
-for h, o in pairs(highlights) do
-	if type(o.fg) == "number" then
-		print(string.format("#%06x", o.fg))
-	end
-	vim.api.nvim_set_hl(0, h, o)
-end
-
 vim.o.laststatus = 3
-vim.o.cmdheight = 1
 vim.o.showcmdloc = "statusline"
 
--- Thank you Maria
 vim.o.showmode = false
 function StatusLine.mode()
 	local mode_to_str = {

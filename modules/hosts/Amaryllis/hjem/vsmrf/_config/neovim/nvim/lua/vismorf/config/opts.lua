@@ -26,4 +26,5 @@ vim.o.writebackup = false
 
 vim.o.nrformats = "unsigned"
 
-vim.o.shada = "'0,<0,@0,/0,:5,h"
+--todo: fucking dogshit fix this
+-- vim.o.shada = "'0,<0,@0,/0,:5,h"

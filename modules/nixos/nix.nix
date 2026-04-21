@@ -11,6 +11,8 @@
       settings = {
         experimental-features = ["nix-command" "flakes" "pipe-operators"];
         auto-optimise-store = true;
+        download-attempts = 3;
+        show-trace = true;
         allowed-users = ["@wheel"];
         substituters = [
           "https://amaryllis.cachix.org"

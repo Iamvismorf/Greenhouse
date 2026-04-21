@@ -44,11 +44,11 @@ in {
         "fuzzel/fuzzel.ini".source = ./_config/fuzzel/fuzzel.ini;
         "nixpkgs".source = ./_config/nixpkgs;
         "mpv/mpv.conf".source = ./_config/mpv/mpv.conf;
-        "ghostty".source = utils.mkImpure ./_config/ghostty;
+        "ghostty".source = utils.mkStoreSymlink ./_config/ghostty;
         "fastfetch".source = ./_config/fastfetch;
         "git".source = ./_config/git;
-        "fish/config.fish".source = utils.mkImpure ./_config/fish/config.fish;
-        "fish/functions".source = utils.mkImpure ./_config/fish/functions;
+        "fish/config.fish".source = utils.mkStoreSymlink ./_config/fish/config.fish;
+        "fish/functions".source = utils.mkStoreSymlink ./_config/fish/functions;
         "swappy/config".source = ./_config/swappy/config;
         "bottom".source = ./_config/bottom;
       };

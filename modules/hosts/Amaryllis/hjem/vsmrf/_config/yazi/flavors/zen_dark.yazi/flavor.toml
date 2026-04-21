@@ -21,9 +21,9 @@ marker_marked   = { fg = "#a0b0b0", bg = "#a0b0b0" }
 marker_selected = { fg = "#b0a0b9", bg = "#b0a0b9" }
 
 # Count
-count_copied   = { fg = "#1c1d1f", bg = "#a0b9a0" }
-count_cut      = { fg = "#1c1d1f", bg = "#b9a0a0" }
-count_selected = { fg = "#1c1d1f", bg = "#b0a0b9" }
+count_copied   = { fg = "#0c0b0f", bg = "#a0b9a0" }
+count_cut      = { fg = "#0c0b0f", bg = "#b9a0a0" }
+count_selected = { fg = "#0c0b0f", bg = "#b0a0b9" }
 
 # Border
 border_symbol = "│"
@@ -37,13 +37,13 @@ sep_inner = { open = "", close = "" }
 sep_outer = { open = "", close = "" }
 
 [mode]
-normal_main = { fg = "#1c1d1f", bg = "#c5cddb", bold = true }
+normal_main = { fg = "#0c0b0f", bg = "#c5cddb", bold = true }
 normal_alt  = { fg = "#2e3133", bg = "#6d717a" }
 
-select_main = { fg = "#1c1d1f", bg = "#b0a0b9", bold = true }
+select_main = { fg = "#0c0b0f", bg = "#b0a0b9", bold = true }
 select_alt  = { fg = "#b0a0b9", bg = "#6d717a" }
 
-unset_main = { fg = "#1c1d1f", bg = "#b9a0a0", bold = true }
+unset_main = { fg = "#0c0b0f", bg = "#b9a0a0", bold = true }
 unset_alt  = { fg = "#b9a0a0", bg = "#6d717a" }
 
 [status]
@@ -52,12 +52,12 @@ sep_left  = { open = "", close = "" }
 sep_right = { open = "", close = "" }
 
 [app]
-overall = {bg = "#1c1d1f"}
+overall = {bg = "#0c0b0f"}
 
 [indicator]
 padding = {open = "", close = ""}
-current = {bg = "#c5cddb", fg = "#1C1D1F"}
-parent = {bg = "#c5cddb", fg = "#1C1D1F"}
+current = {bg = "#c5cddb", fg = "#0c0b0f"}
+parent = {bg = "#c5cddb", fg = "#0c0b0f"}
 
 # Permissions
 perm_sep   = { fg = "#767676" }
@@ -85,15 +85,15 @@ border     = { fg = "#6d717a" }
 title      = { fg = "#c5cddb" }
 content    = { fg = "#c5cddb" }
 list       = { fg = "#6d717a" }
-btn_yes    = { fg = "#1c1d1f", bg = "#a0b9a0" }
-btn_no     = { fg = "#1c1d1f", bg = "#b9a0a0" }
+btn_yes    = { fg = "#0c0b0f", bg = "#a0b9a0" }
+btn_no     = { fg = "#0c0b0f", bg = "#b9a0a0" }
 btn_labels = [ "  [Y]es  ", "  (N)o  " ]
 
 [spot]
 border   = { fg = "#6d717a" }
 title    = { fg = "#c5cddb" }
 tbl_col  = { fg = "#c5cddb"}
-tbl_cell = { fg = "#c5cddb", bg = "#1c1d1f", reversed = true }
+tbl_cell = { fg = "#c5cddb", bg = "#0c0b0f", reversed = true }
 
 [notify]
 title_info  = { fg = "#6090a0" }

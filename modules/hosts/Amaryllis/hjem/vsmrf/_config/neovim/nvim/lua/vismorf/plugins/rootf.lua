@@ -21,7 +21,7 @@ function M._enable()
 
 			local current_file = ev.file
 			if current_file == "" then
-				vim.cmd.edit(vim.fn.getcwd())
+				vim.cmd.edit(vim.fn.getcwd()) -- without this yazi opens in the root instead of the directory.
 				current_file = vim.fn.getcwd()
 			end
 			local parent_dir = vim.fs.dirname(current_file)

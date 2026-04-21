@@ -1,3 +1,4 @@
+--todo: move highlights to theme
 vim.o.showtabline = 2
 
 return {
@@ -76,7 +77,7 @@ return {
 					end,
 					fg = function(b)
 						if b.is_focused then
-							return palette.rose
+							return palette.fg
 						end
 					end,
 					truncation = {

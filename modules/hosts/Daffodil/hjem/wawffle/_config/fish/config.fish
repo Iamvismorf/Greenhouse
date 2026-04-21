@@ -1,4 +1,3 @@
-#todo: normal mode f/t not working
 if status is-interactive
    function yazi
 	   set tmp (mktemp -t "yazi-cwd.XXXXXX")

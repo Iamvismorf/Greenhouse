@@ -1,12 +1,3 @@
-local colors = require("zen.colors").get()
-local palette = colors.palette
-local highlights = {
-	WinbarFileName = { fg = palette.rose },
-}
-for h, o in pairs(highlights) do
-	vim.api.nvim_set_hl(0, h, o)
-end
-
 Winbar = {}
 
 function Winbar.file_name()
@@ -51,6 +42,6 @@ vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
 			return
 		end
 
-		vim.o.winbar = "%=%m %{%v:lua.Winbar.file_name()%} "
+		vim.o.winbar = "%=%m %{%v:lua.Winbar.file_name()%}%="
 	end,
 })

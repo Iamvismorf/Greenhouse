@@ -1,3 +1,5 @@
+--todo: create replace all user command using vimgrep and cdo
+
 --usefull flags:
 -- I - don't ignore case
 -- g - global

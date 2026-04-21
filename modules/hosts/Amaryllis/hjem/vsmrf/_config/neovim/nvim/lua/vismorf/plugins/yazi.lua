@@ -7,7 +7,7 @@ return {
 			function()
 				require("yazi").yazi()
 			end,
-			-- "<cmd>Yazi cwd<cr>", -- -- open in current working directory
+			desc = "Open yazi at the current file",
 		},
 	},
 	after = function()
