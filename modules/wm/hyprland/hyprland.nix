@@ -50,6 +50,7 @@ in {
         pkgs.kdePackages.qtwayland
         pkgs.libsForQt5.qt5.qtwayland
         pkgs.hyprpolkitagent
+        pkgs.hyprshutdown
 
         pkgs.kitty
       ];

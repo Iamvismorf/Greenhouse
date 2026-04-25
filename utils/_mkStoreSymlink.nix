@@ -1,5 +1,6 @@
 # based on outfoxxed/impurity.nix
-# "mkImpure". Non flake configs are impure
+# Non flake configs are impure
+# apparently this is home manager's mkOutOfStoreSymlink implementation. I did not know that at the time of writing this
 #
 # _path -> path in nix store that is a symlink to _path
 let
