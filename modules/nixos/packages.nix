@@ -1,4 +1,4 @@
-{sources, ...}: {
+{inputs, ...}: {
   modules.nixos.packages = {
     pkgs,
     lib,
@@ -7,7 +7,7 @@
   }: let
     npins =
       if (config.nixos.packages.npins.buildFromSrc)
-      then (pkgs.callPackage (sources.npins + "/npins.nix") {})
+      then (pkgs.callPackage (inputs.npins + "/npins.nix") {})
       else pkgs.npins;
   in {
     options = {

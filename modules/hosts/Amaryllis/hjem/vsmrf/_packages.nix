@@ -1,14 +1,8 @@
 {
   pkgs,
-  sources,
-  utils,
-  ...
+  inputs,
 }: let
-  # ghosttyOut = import sources.ghostty;
-  ghosttyOut = (utils.flakeToNix {src = sources.ghostty;}).defaultNix;
-  quickshellOut = import sources.quickshell;
-
-  vixvim = (import sources.mnw).lib.wrap {inherit pkgs sources utils;} ./_config/neovim;
+  vixvim = inputs.mnw.lib.wrap {inherit pkgs inputs;} ./_config/neovim;
   yazi = pkgs.callPackage ./_config/yazi {};
 in
   builtins.attrValues {
@@ -29,16 +23,12 @@ in
     (pkgs.wrapOBS {
       plugins = [pkgs.obs-studio-plugins.obs-pipewire-audio-capture];
     })
-    (pkgs.callPackage quickshellOut {
+    #surely this can be improved
+    (pkgs.callPackage (import inputs.quickshell.cleanSrc) {
       withI3 = false;
       withX11 = false;
     })
-    # ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default.override
-    ghosttyOut.packages.${pkgs.stdenv.hostPlatform.system}.default #use this
-    # (pkgs.callPackage (ghostty + "/nix/package.nix") {
-    #   optimize = "ReleaseFast";
-    #   # revision = sources.ghostty.revision;
-    # })
+    inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default #use this
 
     (pkgs.vesktop.overrideAttrs (oldAttrs: {
       desktopItems =

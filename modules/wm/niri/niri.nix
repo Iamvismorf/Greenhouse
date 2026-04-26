@@ -1,7 +1,6 @@
 {
   self,
-  sources,
-  utils,
+  inputs,
   ...
 }: {
   modules.wm.niri = {
@@ -9,9 +8,7 @@
     pkgs,
     config,
     ...
-  }: let
-    niriOut = (utils.flakeToNix {src = sources.niri;}).defaultNix;
-  in {
+  }: {
     imports = [self.modules.wm._];
 
     options = {
@@ -32,7 +29,7 @@
           useNautilus = false;
         }
         // lib.optionalAttrs (config.wm.niri.buildFromSrc) {
-          package = (niriOut.packages.${pkgs.stdenv.hostPlatform.system}.default).overrideAttrs (o: {
+          package = (inputs.niri.packages.${pkgs.stdenv.hostPlatform.system}.default).overrideAttrs (o: {
             doCheck = false; #iynaix better not lie
           });
         };

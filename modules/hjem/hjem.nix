@@ -1,25 +1,21 @@
 {
-  sources,
+  inputs,
   utils,
-  pkgs,
   ...
 }: let
-  hjemOut = import sources.hjem {};
-  # qtengineOut = (utils.flakeToNix {src = sources.qtengine;}).defaultNix;
-  hjemFlake = (utils.flakeToNix {src = sources.hjem;}).defaultNix;
-  qtengineOut = utils._flakeToNix {
-    src = sources.qtengine;
-    overrides = {
-      nixpkgs = pkgs.path; # all qt apps need "follows"
-    };
-  };
 in {
-  modules.hjem._ = {pkgs, ...}: {
-    imports = [hjemOut.nixosModules.default];
+  modules.hjem._ = {pkgs, ...}: let
+    qtengineOut = utils._flakeToNix {
+      src = inputs.qtengine;
+      overrides = {
+        nixpkgs = pkgs.path; # all qt apps need "follows"
+      };
+    };
+  in {
+    imports = [inputs.hjem.nixosModules.default];
 
     hjem = {
-      # linker = hjemOut.packages.smfh;
-      linker = hjemFlake.packages.${pkgs.stdenv.hostPlatform.system}.smfh;
+      linker = inputs.hjem.packages.${pkgs.stdenv.hostPlatform.system}.smfh;
 
       extraModules = [
         qtengineOut.hjemModules.default

@@ -1,9 +1,8 @@
 {
   pkgs,
-  sources,
-  ...
+  inputs,
 }: let
-  vixvim = (import sources.mnw).lib.wrap {inherit pkgs sources;} ./_config/neovim;
+  vixvim = inputs.mnw.lib.wrap {inherit pkgs inputs;} ./_config/neovim;
   yazi = pkgs.callPackage ./_config/yazi {};
 in
   builtins.attrValues {

@@ -1,10 +1,10 @@
 {
   self,
-  sources,
+  inputs,
   lib,
   ...
 }: let
-  nixosSystem = import "${sources.nixpkgs}/nixos/lib/eval-config.nix";
+  nixosSystem = import "${inputs.nixpkgs.cleanSrc}/nixos/lib/eval-config.nix";
 
   mkHost = hostname:
     nixosSystem {

@@ -1,7 +1,7 @@
 {
   pkgs,
   lib,
-  sources,
+  inputs,
   ...
 }: let
   fs = lib.fileset;
@@ -60,7 +60,7 @@ in {
           src = pkgs.fetchFromGitHub {
             owner = "nendix";
             repo = "zen.nvim";
-            rev = sources.zenNvim.revision;
+            rev = inputs.zenNvim.revision;
             hash = "sha256-FSDIPyH6Fra9EO8fvr5uwwRaWEHJFjKMgfMZkl3BUeQ=";
           };
         }

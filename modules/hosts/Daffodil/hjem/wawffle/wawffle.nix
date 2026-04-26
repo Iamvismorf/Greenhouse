@@ -1,6 +1,6 @@
 {
   self,
-  sources,
+  inputs,
   ...
 }: let
   username = "vix";
@@ -45,7 +45,7 @@ in {
         "swappy/config".source = ./_config/swappy/config;
         "bottom".source = ./_config/bottom;
       };
-      packages = import ./_packages.nix {inherit sources pkgs;};
+      packages = import ./_packages.nix {inherit inputs pkgs;};
     };
   };
 }

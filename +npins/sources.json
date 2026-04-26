@@ -16,14 +16,15 @@
     "flake-compat": {
       "type": "Git",
       "repository": {
-        "type": "Git",
-        "url": "https://git.lix.systems/lix-project/flake-compat"
+        "type": "GitHub",
+        "owner": "nixos",
+        "repo": "flake-compat"
       },
-      "branch": "main",
+      "branch": "master",
       "submodules": false,
-      "revision": "549f2762aebeff29a2e5ece7a7dc0f955281a1d1",
-      "url": null,
-      "hash": "sha256-NKw96t+BgHIYzHUjkTK95FqYRVKB8DHpVhefWSz/kTw="
+      "revision": "5edf11c44bc78a0d334f6334cdaf7d60d732daab",
+      "url": "https://github.com/nixos/flake-compat/archive/5edf11c44bc78a0d334f6334cdaf7d60d732daab.tar.gz",
+      "hash": "sha256-vNpUSpF5Nuw8xvDLj2KCwwksIbjua2LZCqhV1LNRDns="
     },
     "flake-inputs": {
       "type": "GitRelease",
@@ -79,6 +80,20 @@
       "revision": "73f48077965d5b895a731c34ab648f73fdb7b2ce",
       "url": "https://github.com/hyprwm/Hyprland/archive/73f48077965d5b895a731c34ab648f73fdb7b2ce.tar.gz",
       "hash": "sha256-r3wsMIWSPbT6EEReEyVJ7sULgddOTitn8O0w7mGCjVk="
+    },
+    "lix-compat": {
+      "type": "Git",
+      "repository": {
+        "type": "Forgejo",
+        "server": "https://git.lix.systems/",
+        "owner": "lix-project",
+        "repo": "flake-compat"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "549f2762aebeff29a2e5ece7a7dc0f955281a1d1",
+      "url": "https://git.lix.systems/lix-project/flake-compat/archive/549f2762aebeff29a2e5ece7a7dc0f955281a1d1.tar.gz",
+      "hash": "sha256-NKw96t+BgHIYzHUjkTK95FqYRVKB8DHpVhefWSz/kTw="
     },
     "mnw": {
       "type": "Git",

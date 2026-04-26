@@ -1,7 +1,8 @@
-{sources, ...}: {
+{inputs, ...}: {
   modules.hosts.Daffodil = {
     imports = [
-      (sources.nixos-hardware + "/lenovo/thinkpad/x260")
+      # (sources.nixos-hardware + "/lenovo/thinkpad/x260")
+      "${inputs.nixos-hardware}/lenovo/thinkpad/x260"
     ];
     # Better scheduling for CPU cycles - thanks System76!!!
     services.system76-scheduler.settings.cfsProfiles.enable = true;

@@ -1,18 +1,16 @@
 {
   pkgs,
   lib,
-  sources,
-  utils,
+  inputs,
   ...
 }: let
   fs = lib.fileset;
-  neovimNightlyOut = (utils.flakeToNix {src = sources.neovim-nightly;}).defaultNix;
 in {
   aliases = ["vim" "vi"];
   initLua = ''
     require("vismorf")
   '';
-  # neovim = neovimNightlyOut.packages.${pkgs.stdenv.hostPlatform.system}.default;
+  # neovim = inputs.neovimNightlyOut.packages.${pkgs.stdenv.hostPlatform.system}.default;
   extraBinPath =
     [
       pkgs.fzf
@@ -62,8 +60,8 @@ in {
           src = pkgs.fetchFromGitHub {
             owner = "nendix";
             repo = "zen.nvim";
-            rev = sources.zenNvim.revision;
-            hash = sources.zenNvim.hash;
+            rev = inputs.zenNvim.revision;
+            hash = inputs.zenNvim.hash;
           };
         }
       ];
@@ -100,8 +98,8 @@ in {
             src = pkgs.fetchFromGitHub {
               owner = "Saghen";
               repo = "blink.cmp";
-              rev = sources.blink-cmp.revision;
-              hash = sources.blink-cmp.hash;
+              rev = inputs.blink-cmp.revision;
+              hash = inputs.blink-cmp.hash;
             };
           })
         )

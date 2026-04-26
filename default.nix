@@ -3,6 +3,7 @@ let
 
   nixpkgs = import sources.nixpkgs {};
   utils = import ./utils;
+  inputs = import ./inputs.nix;
 
   modules = {
     imports = utils.recursiveImport {
@@ -15,7 +16,7 @@ let
     (nixpkgs.lib.evalModules {
       modules = [modules];
       specialArgs = {
-        inherit self sources utils;
+        inherit self utils inputs;
         pkgs = nixpkgs;
       };
     }).config;

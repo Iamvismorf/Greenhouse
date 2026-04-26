@@ -1,11 +1,8 @@
 {
   self,
-  sources,
-  utils,
+  inputs,
   ...
-}: let
-  hyprlandOut = (utils.flakeToNix {src = sources.hyprland;}).defaultNix;
-in {
+}: {
   modules.wm.hyprland = {
     pkgs,
     lib,
@@ -32,8 +29,8 @@ in {
           withUWSM = false;
         }
         // lib.optionalAttrs (config.wm.hyprland.buildFromSrc) {
-          package = hyprlandOut.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-          portalPackage = hyprlandOut.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+          package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+          portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
         };
 
       xdg.portal = {
