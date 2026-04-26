@@ -80,32 +80,6 @@
       "url": "https://github.com/hyprwm/Hyprland/archive/73f48077965d5b895a731c34ab648f73fdb7b2ce.tar.gz",
       "hash": "sha256-r3wsMIWSPbT6EEReEyVJ7sULgddOTitn8O0w7mGCjVk="
     },
-    "impurity.nix": {
-      "type": "Git",
-      "repository": {
-        "type": "GitHub",
-        "owner": "outfoxxed",
-        "repo": "impurity.nix"
-      },
-      "branch": "master",
-      "submodules": false,
-      "revision": "bbc41b69ab5485cd55aa315d08cff865781d3913",
-      "url": "https://github.com/outfoxxed/impurity.nix/archive/bbc41b69ab5485cd55aa315d08cff865781d3913.tar.gz",
-      "hash": "sha256-82KeRg2sAqDXCdzVs8P8GoqVaPsZjkWgrfsj6kgOLTY="
-    },
-    "mangowc": {
-      "type": "Git",
-      "repository": {
-        "type": "GitHub",
-        "owner": "DreamMaoMao",
-        "repo": "mangowc"
-      },
-      "branch": "main",
-      "submodules": false,
-      "revision": "471c71f65c3c15ebe633edf4757361649757f990",
-      "url": "https://github.com/DreamMaoMao/mangowc/archive/471c71f65c3c15ebe633edf4757361649757f990.tar.gz",
-      "hash": "sha256-vE9q/TT7zsNVhh9+5TBt2/AnZZ8b2lr9MIekOVnLodE="
-    },
     "mnw": {
       "type": "Git",
       "repository": {
