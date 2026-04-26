@@ -5,4 +5,8 @@ in
   pkgs.mkShell {
     NPINS_DIRECTORY = "+npins";
     IMPURE = "true";
+
+    shellHook = ''
+      export NIX_PATH="nixpkgs=$(npins get-path nixpkgs)"
+    '';
   }
