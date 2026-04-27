@@ -5,11 +5,16 @@
 
 <br>
 
+![](assets/image.png)
+
+<br>
+
 > [!WARNING]
 > Very cursed config. Studying or yoinking from it is not recommended
 
 <br>
 
+#### You have been warned
 The entry point is [./modules/hosts](modules/hosts)
 
 <br>
