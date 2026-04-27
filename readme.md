@@ -1,8 +1,10 @@
 <div align="center">
-## Greenhouse
+<h2>Greenhouse</h2>
 <p>My Nixos configuration<br>(npins + dendritic pattern)</p>
 </div>
+
 <br>
+
 > [!WARNING]
 > Very cursed config. Studying or yoinking from it is not recommended
 
