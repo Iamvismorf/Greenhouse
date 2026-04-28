@@ -1,27 +1,38 @@
+# let
+#   sources = removeAttrs (import ./+npins) ["__functor"];
+#   unflake = import sources.flake-compat;
+#
+#   outputs = sources:
+#     builtins.mapAttrs (
+#       _: input:
+#         if builtins.pathExists "${input}/flake.nix" && !(input ? raw)
+#         then (unflake {src = input;}).outputs
+#         else input
+#     )
+#     sources;
+# in
+#   #
+#   (outputs sources
+#     //
+#     #
+#     {
+#       qtengine = sources.qtengine // {raw = true;}; # why tf do i need to declare as raw
+#     })
 let
   sources = removeAttrs (import ./+npins) ["__functor"];
-  unflake = import sources.flake-compat;
-  lib = import "${sources.nixpkgs}/lib";
-
-  notFlakes = ["zenNvim" "npins" "flake-inputs" "flake-compat" "qtengine" "blink-cmp"];
+  unflake = (import sources.flake-inputs).import-flake;
 
   outputs = sources:
     builtins.mapAttrs (
       _: input:
-        if input.flake or false
-        then (unflake {src = input.source;}).outputs // {cleanSrc = input.source;}
-        # then (builtins.getFlake input.source.url) // {cleanSrc = input.source;}
-        else input.source
+        if builtins.pathExists "${input}/flake.nix" && !(input ? raw)
+        then
+          (unflake {
+            src = input;
+            overrides = {nixpkgs = sources.nixpkgs.outPath;};
+          })
+        else input
     )
     sources;
 in
-  #
-  outputs ((builtins.mapAttrs (_: source: {
-        source = source;
-        flake = true;
-      })
-      sources)
-    // lib.genAttrs notFlakes (k: {
-      flake = false;
-      source = sources.${k};
-    }))
+  outputs sources

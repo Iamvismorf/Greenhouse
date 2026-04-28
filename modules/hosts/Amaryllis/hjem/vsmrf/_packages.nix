@@ -24,7 +24,7 @@ in
       plugins = [pkgs.obs-studio-plugins.obs-pipewire-audio-capture];
     })
     #surely this can be improved
-    (pkgs.callPackage (import inputs.quickshell.cleanSrc) {
+    (pkgs.callPackage (import inputs.quickshell) {
       withI3 = false;
       withX11 = false;
     })

@@ -18,7 +18,7 @@ in {
       linker = inputs.hjem.packages.${pkgs.stdenv.hostPlatform.system}.smfh;
 
       extraModules = [
-        qtengineOut.hjemModules.default
+        inputs.qtengine.hjemModules.default
       ];
     };
   };

@@ -28,7 +28,7 @@ The entry point is [./modules/hosts](modules/hosts)
 + [inputs.nix](inputs.nix) Automatic inputs creation
 + [Nvim config](/modules/hosts/Amaryllis/hjem/vsmrf/_config/neovim/nvim/lua/vismorf/config)
     + [root finder](modules/hosts/Amaryllis/hjem/vsmrf/_config/neovim/nvim/lua/vismorf/plugins/rootf.lua)
-    + [vim mode in cmdline](modules/hosts/Amaryllis/hjem/vsmrf/_config/neovim/nvim/lua/vismorf/config/keymaps.lua)
+    + [vim mode in cmdline with some qol features](modules/hosts/Amaryllis/hjem/vsmrf/_config/neovim/nvim/lua/vismorf/config/keymaps.lua)
     + [restore last session](modules/hosts/Amaryllis/hjem/vsmrf/_config/neovim/nvim/lua/vismorf/config/backend)
 + [Just recipes](Justfile)
 

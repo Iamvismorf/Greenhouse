@@ -4,7 +4,7 @@
   lib,
   ...
 }: let
-  nixosSystem = import "${inputs.nixpkgs.cleanSrc}/nixos/lib/eval-config.nix";
+  nixosSystem = import "${inputs.nixpkgs}/nixos/lib/eval-config.nix";
 
   mkHost = hostname:
     nixosSystem {
