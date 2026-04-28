@@ -29,10 +29,12 @@ let
         then
           (unflake {
             src = input;
-            overrides = {nixpkgs = sources.nixpkgs.outPath;};
+            overrides = {nixpkgs = sources.nixpkgs.outPath;} // (input.overrides or {});
           })
         else input
     )
     sources;
 in
-  outputs sources
+  outputs (sources
+    // {
+    })
