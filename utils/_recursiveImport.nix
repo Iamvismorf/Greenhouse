@@ -32,14 +32,14 @@ let
       filteredAttrs =
         readDir dir
         |> (filterAttrs (n: v: !(any (prefix: hasPrefix prefix n) excludePrefixedWith) && (v == "directory" || hasSuffix ".nix" n)));
-      pred = i: type:
+      fn = i: type:
         if type == "directory"
         then importDir (dir + "/${i}")
         else if type == "regular"
         then [(dir + "/${i}")]
         else [];
     in
-      concatLists (mapAttrsToList pred filteredAttrs)
+      concatLists (mapAttrsToList fn filteredAttrs)
       |> (filter (e: (pathExists e) && (stringLength (readFile e)) > 0));
   in
     concatMap importDir dirs;
