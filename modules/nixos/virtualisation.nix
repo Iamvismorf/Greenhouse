@@ -1,12 +1,12 @@
 {
-  modules.nixos.virtualization = {pkgs, ...}: {
+  modules.nixos.virtualisation = {pkgs, ...}: {
     programs.virt-manager.enable = true;
+    virtualisation.spiceUSBRedirection.enable = true;
     virtualisation.libvirtd = {
       enable = true;
-      spiceUSBRedirection.enable = true;
       qemu = {
         runAsRoot = true;
-        swtpm = true;
+        swtpm.enable = true;
         vhostUserPackages = [pkgs.virtiofsd]; # access to host folders
       };
     };

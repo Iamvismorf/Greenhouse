@@ -6,7 +6,7 @@
 }: let
   fs = lib.fileset;
 in {
-  aliases = ["vim" "vi"];
+  aliases = ["vim"];
   initLua = ''
     require("vismorf")
   '';
