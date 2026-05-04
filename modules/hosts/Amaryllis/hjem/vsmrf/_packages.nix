@@ -2,7 +2,7 @@
   pkgs,
   inputs,
 }: let
-  vixvim = inputs.mnw.lib.wrap {inherit pkgs inputs;} ./_config/neovim;
+  mnw = inputs.mnw.lib.wrap {inherit pkgs inputs;} ./_config/neovim;
   yazi = pkgs.callPackage ./_config/yazi {};
 in
   builtins.attrValues {
@@ -39,6 +39,6 @@ in
         oldAttrs.desktopItems;
     }))
 
-    vixvim.devMode
+    mnw.devMode
     yazi
   ]

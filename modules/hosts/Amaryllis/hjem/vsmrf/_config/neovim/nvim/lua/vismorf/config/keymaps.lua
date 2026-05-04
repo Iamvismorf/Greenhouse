@@ -4,9 +4,15 @@ local map = vim.keymap.set
 --todo: highlights from %s not available
 map("n", ":", "q:i")
 map("n", "<esc>", function()
+	local state = require("flash.plugins.char").state
+	if state then
+		state:hide()
+		return
+	end
+
 	if vim.fn.getcmdwintype() ~= "" then
 		vim.cmd.close()
-	else
+	elseif vim.v.hlsearch == 1 then
 		vim.cmd.noh()
 	end
 end)
