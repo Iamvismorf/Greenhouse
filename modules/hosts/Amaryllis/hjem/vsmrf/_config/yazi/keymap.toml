@@ -18,7 +18,9 @@ prepend_keymap = [
   { on = "<C-j>", run = "seek 5" },
   { on = "q", run = "quit --no-cwd-file" },
   { on = "Q", run = "quit" },
+  { on = "<Esc>", run = [ "escape --all", "unyank" ] },
 
   # for nvim
   { on = "<C-n>", run = "quit --no-cwd-file" }
+
 ]
