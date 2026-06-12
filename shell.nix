@@ -1,3 +1,4 @@
+#todo: add formaters for config langs
 let
   src = import ./+npins;
   pkgs = import src.nixpkgs {};

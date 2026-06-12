@@ -2,7 +2,7 @@ let
   sources = import ./+npins;
 
   nixpkgs = import sources.nixpkgs {};
-  utils = import ./utils;
+  utils = import ./lib;
   inputs = import ./inputs.nix;
 
   modules = {

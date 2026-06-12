@@ -4,6 +4,7 @@ vim.api.nvim_create_autocmd("VimEnter", {
 		vim.cmd.clearjumps()
 	end,
 })
+-- todo: buffers
 return {
 	"bufjump.nvim",
 	event = "DeferredUIEnter",

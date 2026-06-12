@@ -20,15 +20,17 @@ in
         pkgs.mpvScripts.mpris
       ];
     })
+
     (pkgs.wrapOBS {
       plugins = [pkgs.obs-studio-plugins.obs-pipewire-audio-capture];
     })
-    #surely this can be improved
+
     (pkgs.callPackage (import inputs.quickshell) {
       withI3 = false;
       withX11 = false;
     })
-    inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default #use this
+
+    inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default
 
     (pkgs.vesktop.overrideAttrs (oldAttrs: {
       desktopItems =

@@ -10,11 +10,10 @@
 <br>
 
 > [!WARNING]
-> Very cursed config. Studying or yoinking from it is not recommended
+> If you are a beginner to nixos, you shouldn't use this repo as reference.
 
 <br>
 
-#### You have been warned
 The entry point is [./modules/hosts](modules/hosts)
 
 <br>
@@ -35,5 +34,6 @@ The entry point is [./modules/hosts](modules/hosts)
 ## Credits
 + [Rexcrazy804/Zaphkiel](https://github.com/Rexcrazy804/Zaphkiel)
 + [denful/dendritic-unflake](https://github.com/denful/dendritic-unflake)
++ [dendritic pattern guide](https://github.com/Doc-Steve/dendritic-design-with-flake-parts)
 + [pinning with npins blog by Jade](https://jade.fyi/blog/pinning-nixos-with-npins/)
 + [pinning with npins blog by piegames](https://piegames.de/dumps/pinning-nixos-with-npins-revisited/)

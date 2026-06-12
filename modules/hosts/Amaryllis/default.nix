@@ -14,8 +14,8 @@ in {
       self.modules.nixos.locale
       self.modules.nixos.networking
       self.modules.nixos.nix
-      self.modules.nixos.packages
-      self.modules.nixos.virtualisation
+      self.modules.nixos.nixosPackages
+      # self.modules.nixos.virtualisation
 
       self.modules.wm._
       self.modules.wm.hyprland

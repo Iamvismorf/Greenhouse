@@ -1,5 +1,5 @@
 {inputs, ...}: {
-  modules.nixos.packages = {
+  modules.nixos.nixosPackages = {
     pkgs,
     lib,
     config,

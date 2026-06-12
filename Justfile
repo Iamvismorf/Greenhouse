@@ -10,5 +10,8 @@ test host=`hostname` *flags:
 boot host=`hostname` *flags:
    nh os boot --file {{root}}/default.nix nC.{{host}} {{flags}}
 
+build host=`hostname` *flags:
+   nh os build --file {{root}}/default.nix nC.{{host}} {{flags}}
+
 clean:
    sudo nix-collect-garbage -d; nh clean all

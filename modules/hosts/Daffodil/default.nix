@@ -12,7 +12,7 @@ in {
       self.modules.nixos.locale
       self.modules.nixos.networking
       self.modules.nixos.nix
-      self.modules.nixos.packages
+      self.modules.nixos.nixosPackages
       self.modules.nixos.misc
 
       self.modules.wm._

@@ -1,4 +1,5 @@
 --todo: move highlights to theme
+--todo: remove this plugin and create a floating buffer that displays opened buffers
 vim.o.showtabline = 2
 
 return {

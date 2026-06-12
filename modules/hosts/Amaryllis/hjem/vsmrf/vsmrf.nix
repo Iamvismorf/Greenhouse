@@ -1,3 +1,4 @@
+#todo: put metadata into constant pattern module. This module imports the constant module
 {
   self,
   inputs,
