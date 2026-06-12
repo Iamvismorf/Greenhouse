@@ -1,9 +1,8 @@
 let
-  sources = import ./+npins;
+  sources = import ./+tack;
 
   nixpkgs = import sources.nixpkgs {};
   utils = import ./lib;
-  inputs = import ./inputs.nix;
 
   modules = {
     imports = utils.recursiveImport {
@@ -16,7 +15,8 @@ let
     (nixpkgs.lib.evalModules {
       modules = [modules];
       specialArgs = {
-        inherit self utils inputs;
+        inherit self utils;
+        inputs = sources;
         pkgs = nixpkgs;
       };
     }).config;

@@ -1,0 +1,62 @@
+# tack pins. edit by hand or with tack add / rm / alias
+# nix reads pins.lock.json; this file drives tack update
+
+# shorturl schemes. scheme:rest expands rest into {path}
+[shorturls]
+# gh = "github:{path}"
+
+# all_follow: input name -> top-level pin it follows wherever it appears
+# opt out per-input with exclude_follow
+[all_follow]
+nixpkgs = "nixpkgs"
+# nixpkgs = ["nixpkgs-stable", "nixpkgs-unstable"]
+
+# [inputs.<name>] fields
+#   url             required, shorturl ok; ?rev=<sha> pins an exact commit
+#   type            flake (default), fetch, or fixed
+#   flake           legacy false means type = "fetch"
+#   follows         { child = "pin" } override map
+#   exclude_follow  all_follow names to skip
+#   dir             subdir holding flake.nix
+#   submodules      fetch git submodules
+#   unpack          fixed-only: tarball or file
+[inputs]
+
+[inputs.tack]
+url = "github:manic-systems/tack"
+
+[inputs.blink-cmp]
+url = "github:saghen/blink.cmp/?rev=c573a15a62bd0bfd4006ee0849b24f5404395500"
+type = "fetch"
+
+[inputs.ghostty]
+url = "github:ghostty-org/ghostty/?rev=f8a0a45963010e5cb3baa8069dbcc07a60c5d26d"
+
+[inputs.hjem]
+url = "github:feel-co/hjem/?rev=63661135b11cf9461683fa1f65208263b545f5e0"
+
+[inputs.hyprland]
+url = "github:hyprwm/Hyprland/?rev=73f48077965d5b895a731c34ab648f73fdb7b2ce"
+
+[inputs.mnw]
+url = "github:Gerg-L/mnw/?rev=68a22f62ca7623fcb700d4ebf225bd91125c773e"
+
+[inputs.niri]
+url = "github:yalter/niri/?rev=b07bde3ee82dd73115e6b949e4f3f63695da35ea"
+
+[inputs.nixos-hardware]
+url = "github:Nixos/nixos-hardware/?rev=11b2a10c7be726321bb854403fdeec391e798bf0"
+
+[inputs.nixpkgs]
+url = "github:Nixos/nixpkgs/?rev=13043924aaa7375ce482ebe2494338e058282925"
+
+[inputs.qtengine]
+url = "github:kossLAN/qtengine/?rev=abf8c1d3068dd10739b0671fa62f96c5347f276f"
+follows = { nixpkgs = "nixpkgs" }
+
+[inputs.quickshell]
+url = "github:quickshell-mirror/quickshell/?rev=783c953987dc56ff0601abe6845ed96f1d00495a"
+
+[inputs.zenNvim]
+url = "github:nendix/zen.nvim/?rev=610dd60c948e7300e24092292fa47b9178aca3f5"
+type = "fetch"

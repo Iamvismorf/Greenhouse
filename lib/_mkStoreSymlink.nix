@@ -4,7 +4,7 @@
 #
 # _path -> path in nix store that is a symlink to _path
 let
-  sources = import ../+npins;
+  sources = import ../+tack;
   pkgs = import sources.nixpkgs {};
 in
   path: let

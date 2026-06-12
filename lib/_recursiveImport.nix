@@ -3,7 +3,7 @@
 #
 # [] []?: -> []
 let
-  sources = import ../+npins;
+  sources = import ../+tack;
   lib = import "${sources.nixpkgs}/lib";
   inherit
     (builtins)

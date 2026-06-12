@@ -1,5 +1,5 @@
 {
   modules.hosts.Amaryllis = {
-    nixos.packages.npins.buildFromSrc = true;
+    # nixos.packages.npins.buildFromSrc = true;
   };
 }
