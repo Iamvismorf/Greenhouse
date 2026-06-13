@@ -57,12 +57,7 @@ in {
       ++ [
         {
           name = "zen.nvim";
-          src = pkgs.fetchFromGitHub {
-            owner = "nendix";
-            repo = "zen.nvim";
-            rev = inputs.zenNvim.revision;
-            hash = inputs.zenNvim.hash;
-          };
+          src = inputs.zenNvim.outPath;
         }
       ];
     opt =
@@ -95,12 +90,7 @@ in {
         (
           pkgs.vimPlugins.blink-cmp.overrideAttrs
           (_: _: {
-            src = pkgs.fetchFromGitHub {
-              owner = "Saghen";
-              repo = "blink.cmp";
-              rev = inputs.blink-cmp.revision;
-              hash = inputs.blink-cmp.hash;
-            };
+            src = inputs.blink-cmp.outPath;
           })
         )
       ];
