@@ -1,16 +1,11 @@
 <div align="center">
 <h2>Greenhouse</h2>
-<p>My Nixos configuration<br>(npins + dendritic pattern)</p>
+<p>My Nixos configuration<br>(Flakeless + dendritic pattern)</p>
 </div>
 
 <br>
 
 ![](assets/image.png)
-
-<br>
-
-> [!WARNING]
-> If you are a beginner to nixos, you shouldn't use this repo as reference.
 
 <br>
 
@@ -24,7 +19,6 @@ The entry point is [./modules/hosts](modules/hosts)
     + see [./default.nix](default.nix) for example usage
 + [Impure symlink](utils/_mkStoreSymlink.nix) dotfiles experience like in traditional UNIX systems
     + see ./modules/hosts/hostName/hjem/username/username.nix for example usage
-+ [inputs.nix](inputs.nix) Automatic inputs creation
 + [Nvim config](/modules/hosts/Amaryllis/hjem/vsmrf/_config/neovim/nvim/lua/vismorf/config)
     + [root finder](modules/hosts/Amaryllis/hjem/vsmrf/_config/neovim/nvim/lua/vismorf/plugins/rootf.lua)
     + [vim mode in cmdline with some qol features](modules/hosts/Amaryllis/hjem/vsmrf/_config/neovim/nvim/lua/vismorf/config/keymaps.lua)
