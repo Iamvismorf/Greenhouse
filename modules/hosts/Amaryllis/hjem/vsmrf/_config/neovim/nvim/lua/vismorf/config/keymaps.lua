@@ -11,7 +11,7 @@ map("n", "<esc>", function()
 		vim.cmd.noh()
 	end
 end)
-vim.api.nvim_create_autocmd({ "CmdwinEnter", "WinResized" }, {
+vim.api.nvim_create_autocmd({ "CmdwinEnter", "VimResized" }, {
 	group = group,
 	callback = function()
 		if vim.fn.getcmdwintype() == "" then
