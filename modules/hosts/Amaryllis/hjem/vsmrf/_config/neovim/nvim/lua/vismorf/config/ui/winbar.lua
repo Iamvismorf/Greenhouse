@@ -42,6 +42,6 @@ vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
 			return
 		end
 
-		vim.o.winbar = "%=%m %{%v:lua.Winbar.file_name()%}%="
+		vim.o.winbar = "%=%m %{%v:lua.Winbar.file_name()%}"
 	end,
 })

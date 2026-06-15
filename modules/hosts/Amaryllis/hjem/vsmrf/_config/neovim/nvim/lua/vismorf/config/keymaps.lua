@@ -10,8 +10,12 @@ map("n", "<esc>", function()
 		vim.cmd.noh()
 	end
 end)
-vim.api.nvim_create_autocmd("CmdwinEnter", {
+vim.api.nvim_create_autocmd({ "CmdwinEnter", "VimResized" }, {
 	callback = function()
+		if vim.fn.getcmdwintype() == "" then
+			return
+		end
+
 		vim.api.nvim_win_set_config(0, {
 			relative = "laststatus",
 			width = vim.o.columns,
