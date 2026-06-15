@@ -1,5 +1,6 @@
 -- remap means if a key you map to is itself mapped to something else, that second mapping will also trigger.
 local map = vim.keymap.set
+local group = vim.api.nvim_create_augroup("cmdwindow", {})
 
 --todo: highlights from %s not available
 map("n", ":", "q:i")
@@ -10,8 +11,13 @@ map("n", "<esc>", function()
 		vim.cmd.noh()
 	end
 end)
-vim.api.nvim_create_autocmd("CmdwinEnter", {
+vim.api.nvim_create_autocmd({ "CmdwinEnter", "WinResized" }, {
+	group = group,
 	callback = function()
+		if vim.fn.getcmdwintype() == "" then
+			return
+		end
+
 		vim.api.nvim_win_set_config(0, {
 			relative = "laststatus",
 			width = vim.o.columns,

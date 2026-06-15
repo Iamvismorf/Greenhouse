@@ -59,6 +59,10 @@ in {
           name = "zen.nvim";
           src = inputs.zenNvim.outPath;
         }
+        {
+          name = "bafa";
+          src = inputs.bafa.outPath;
+        }
       ];
     opt =
       builtins.attrValues {

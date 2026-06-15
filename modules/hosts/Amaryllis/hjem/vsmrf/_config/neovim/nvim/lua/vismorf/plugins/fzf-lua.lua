@@ -3,15 +3,15 @@ return {
 	event = { "DeferredUIEnter", "LspAttach" },
 	keys = {
 		{
-			"<leader>ff",
+			"<leader>f",
 			function()
 				require("fzf-lua").files()
 			end,
 		},
 		{
-			"<leader>fg",
+			"<leader>g",
 			function()
-				require("fzf-lua").live_grep()
+				require("fzf-lua").live_grep({ resume = true })
 			end,
 		},
 	},
