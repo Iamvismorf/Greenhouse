@@ -51,7 +51,6 @@ url = "github:yalter/niri/?rev=b07bde3ee82dd73115e6b949e4f3f63695da35ea"
 [inputs.nixos-hardware]
 url = "github:Nixos/nixos-hardware/?rev=11b2a10c7be726321bb854403fdeec391e798bf0"
 
-
 [inputs.qtengine]
 url = "github:kossLAN/qtengine"
 
