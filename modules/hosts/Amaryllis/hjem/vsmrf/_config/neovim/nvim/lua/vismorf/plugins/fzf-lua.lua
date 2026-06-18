@@ -14,6 +14,12 @@ return {
 				require("fzf-lua").live_grep({ resume = true })
 			end,
 		},
+		{
+			"<C-b>",
+			function()
+				require("fzf-lua").buffers({ actions = { ["ctrl-b"] = function() end } })
+			end,
+		},
 	},
 	after = function()
 		require("fzf-lua").setup({

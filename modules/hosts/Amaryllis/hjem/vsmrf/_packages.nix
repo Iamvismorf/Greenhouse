@@ -25,6 +25,11 @@ in
       plugins = [pkgs.obs-studio-plugins.obs-pipewire-audio-capture];
     })
 
+    # (inputs.quickshell.packages.${pkgs.stdenv.hostPlatform.system}.default.override (_: {
+    #   withI3 = false;
+    #   withX11 = false;
+    # }))
+
     (pkgs.callPackage (import inputs.quickshell) {
       withI3 = false;
       withX11 = false;

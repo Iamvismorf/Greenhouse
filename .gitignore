@@ -1,4 +1,5 @@
-.direnv
-.git
+.direnv/
+.git/
 .directory
+result/
 
