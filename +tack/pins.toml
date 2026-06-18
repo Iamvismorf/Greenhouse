@@ -22,8 +22,12 @@ nixpkgs = "nixpkgs"
 #   unpack          fixed-only: tarball or file
 [inputs]
 
+[inputs.nixpkgs]
+url = "github:NixOS/nixpkgs/nixos-unstable"
+
 [inputs.tack]
 url = "github:manic-systems/tack"
+exclude_follow = ["nixpkgs"]
 
 [inputs.blink-cmp]
 url = "github:saghen/blink.cmp/?rev=c573a15a62bd0bfd4006ee0849b24f5404395500"
@@ -47,16 +51,17 @@ url = "github:yalter/niri/?rev=b07bde3ee82dd73115e6b949e4f3f63695da35ea"
 [inputs.nixos-hardware]
 url = "github:Nixos/nixos-hardware/?rev=11b2a10c7be726321bb854403fdeec391e798bf0"
 
-[inputs.nixpkgs]
-url = "github:Nixos/nixpkgs/?rev=13043924aaa7375ce482ebe2494338e058282925"
 
 [inputs.qtengine]
-url = "github:kossLAN/qtengine/?rev=abf8c1d3068dd10739b0671fa62f96c5347f276f"
-follows = { nixpkgs = "nixpkgs" }
+url = "github:kossLAN/qtengine"
 
 [inputs.quickshell]
-url = "github:quickshell-mirror/quickshell/?rev=783c953987dc56ff0601abe6845ed96f1d00495a"
+url = "github:quickshell-mirror/quickshell"
 
 [inputs.zenNvim]
 url = "github:nendix/zen.nvim/?rev=610dd60c948e7300e24092292fa47b9178aca3f5"
+type = "fetch"
+
+[inputs.yazi-relative-motions]
+url = "github:Jormala/relative-motions.yazi"
 type = "fetch"

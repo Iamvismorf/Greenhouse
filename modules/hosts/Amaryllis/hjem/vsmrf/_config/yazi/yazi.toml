@@ -15,11 +15,11 @@ prepend_previewers = [
 	{ mime = "application/java-archive",    run = "ouch" },
 ]
 [[plugin.prepend_fetchers]]
-id   = "git"
-name = "*"
-run  = "git"
+url   = "*"
+run   = "git"
+group = "git"
 
 [[plugin.prepend_fetchers]]
-id   = "git"
-name = "*/"
-run  = "git"
+url   = "*/"
+run   = "git"
+group = "git"

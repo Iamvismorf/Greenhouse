@@ -3,7 +3,7 @@
   inputs,
 }: let
   mnw = inputs.mnw.lib.wrap {inherit pkgs inputs;} ./_config/neovim;
-  yazi = pkgs.callPackage ./_config/yazi {};
+  yazi = pkgs.callPackage ./_config/yazi {inherit inputs;};
 in
   builtins.attrValues {
     inherit (pkgs) awww waypaper;

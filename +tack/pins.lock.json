@@ -56,27 +56,27 @@
     "type": "github"
   },
   "nixpkgs": {
-    "lastModified": 1775888245,
-    "narHash": "sha256-nwASzrRDD1JBEu/o8ekKYEXm/oJW6EMCzCRdrwcLe90=",
-    "owner": "Nixos",
+    "lastModified": 1781577229,
+    "narHash": "sha256-lrp67w8AulE9Ks53n27I45ADSzbOCn4H+CNW1Ck8B+8=",
+    "owner": "NixOS",
     "repo": "nixpkgs",
-    "rev": "13043924aaa7375ce482ebe2494338e058282925",
+    "rev": "567a49d1913ce81ac6e9582e3553dd90a955875f",
     "type": "github"
   },
   "qtengine": {
-    "lastModified": 1772766331,
-    "narHash": "sha256-aJ5ZdIX10nmhzMLjP6QMuFJHvljJD+xcojuKZjPkr70=",
+    "lastModified": 1778644540,
+    "narHash": "sha256-D7mzavE5WfLyvEXV0pvO3/gxC+SSmfjw4Lxy7I5qvnI=",
     "owner": "kossLAN",
     "repo": "qtengine",
-    "rev": "abf8c1d3068dd10739b0671fa62f96c5347f276f",
+    "rev": "073987f0120ac77a92fb9f0c0877aa7f1f04d3bf",
     "type": "github"
   },
   "quickshell": {
-    "lastModified": 1776854048,
-    "narHash": "sha256-lLbV66V3RMNp1l8/UelmR4YzoJ5ONtgvEtiUMJATH/o=",
+    "lastModified": 1781053488,
+    "narHash": "sha256-P4WEBaKgl8flRckHxXGHzT0potPvB3x8ZFIp9gLEAMY=",
     "owner": "quickshell-mirror",
     "repo": "quickshell",
-    "rev": "783c953987dc56ff0601abe6845ed96f1d00495a",
+    "rev": "d99d87d5e5ec4e696815348692fdaaf0b6be1b2c",
     "type": "github"
   },
   "tack": {
@@ -85,6 +85,14 @@
     "owner": "manic-systems",
     "repo": "tack",
     "rev": "8c574901340af860979500f24495417ce7e53cdc",
+    "type": "github"
+  },
+  "yazi-relative-motions": {
+    "lastModified": 1775404298,
+    "narHash": "sha256-lyzwbs1u4qXuIamE31QAD6e22RPJxROs7Q/tuTkz12Q=",
+    "owner": "Jormala",
+    "repo": "relative-motions.yazi",
+    "rev": "d4f2003b90a6129847e17107df76ba43091c7755",
     "type": "github"
   },
   "zenNvim": {

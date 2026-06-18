@@ -1,11 +1,15 @@
 {
   pkgs,
   yazi,
+  inputs,
   ...
 }:
 yazi.override {
   plugins = {
-    inherit (pkgs.yaziPlugins) git ouch relative-motions;
+    inherit (pkgs.yaziPlugins) git ouch;
+    relative-motions = pkgs.yaziPlugins.relative-motions.overrideAttrs {
+      src = inputs.yazi-relative-motions;
+    };
   };
   initLua = ./init.lua;
   flavors = {

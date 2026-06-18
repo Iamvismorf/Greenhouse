@@ -1,14 +1,11 @@
-# zen flavor for Yazi
-# https://github.com/nendix/zen.nvim
-#todo: doc
-"$schema" = "https://yazi-rs.github.io/schemas/theme.json"
+# "$schema" = "https://yazi-rs.github.io/schemas/theme.json"
 
 [mgr]
 cwd = { fg = "#9e9e9e" }
 
 # Hovered
-hovered         = { bg = "#222222" }
-preview_hovered = { underline = true }
+# hovered         = { bg = "#222222" }
+# preview_hovered = { underline = true }
 
 # Find
 find_keyword  = { fg = "#d46a6a", underline = true }
@@ -147,9 +144,10 @@ rules = [
 	# Documents
 	{ mime = "application/{pdf,doc,rtf}", fg = "#a0b0b0" },
 	# Fallback
-	{ name = "*", is = "orphan", bg = "#c07070" },
-	{ name = "*", is = "exec", fg = "#a0b9a0" },
-	{ name = "*/", fg = "#d46a6a" }
+	# { url = "*", is = "orphan" },
+	{ url = "*", fg = "#c5cddb" },
+	{ url = "*", is = "exec", fg = "#a0b9a0" },
+	{ url = "*/", fg = "#c5cddb" }
 ]
 
 [ icon ] 
