@@ -12,13 +12,14 @@ let
   };
 
   self =
-    (nixpkgs.lib.evalModules {
+    ((nixpkgs.lib.evalModules {
       modules = [modules];
       specialArgs = {
         inherit self utils;
         inputs = sources;
         pkgs = nixpkgs;
       };
-    }).config;
+    }).config)
+    // {inputs = sources;};
 in
   self
