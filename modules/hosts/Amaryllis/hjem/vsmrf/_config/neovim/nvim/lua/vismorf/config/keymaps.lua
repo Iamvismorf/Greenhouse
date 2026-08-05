@@ -2,7 +2,8 @@
 local map = vim.keymap.set
 local group = vim.api.nvim_create_augroup("cmdwindow", {})
 
---todo: highlights from %s not available
+-- highlights from %s not available
+-- sadge not planned see: https://github.com/neovim/neovim/issues/30340#event-27478325978
 map("n", ":", "q:i")
 map("n", "<esc>", function()
 	if vim.fn.getcmdwintype() ~= "" then
@@ -31,6 +32,7 @@ vim.api.nvim_create_autocmd({ "CmdwinEnter", "VimResized" }, {
 map("n", "<leader>o", "]<space>", { remap = true })
 map("n", "<leader>O", "[<space>", { remap = true })
 
+map("n", "<leader><leader>", "<C-^>") -- last focused buffer
 map({ "n", "v", "x" }, "<leader>y", '"+y')
 map({ "n", "v", "x" }, "<leader>Y", '"+Y', { remap = true })
 map({ "n", "v", "x" }, "<leader>d", '"+d')
@@ -59,11 +61,8 @@ map({ "n", "v", "i" }, "<C-j>", "<esc><C-w>j")
 map({ "n", "v", "i" }, "<C-k>", "<esc><C-w>k")
 map({ "n", "v", "i" }, "<C-l>", "<esc><C-w>l")
 
--- map("n", "H", "Hzz", opts)
--- map("n", "L", "Lzz", opts)
-
-map("n", "H", ':lua MiniAnimate.execute_after("scroll", "normal! Hzz")<CR>', { silent = true })
-map("n", "L", ':lua MiniAnimate.execute_after("scroll", "normal! Lzz")<CR>', { silent = true })
+-- map("n", "H", "Hzz")
+-- map("n", "L", "Lzz")
 
 vim.cmd("cnoremap <c-k> <c-p>")
 vim.cmd("cnoremap <c-j> <c-n>")

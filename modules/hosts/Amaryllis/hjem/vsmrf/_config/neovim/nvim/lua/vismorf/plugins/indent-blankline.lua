@@ -6,7 +6,6 @@ return {
 	after = function()
 		require("ibl").setup({
 			indent = {
-				-- char = "│",
 				char = "╏",
 				-- char = "┇",
 			},

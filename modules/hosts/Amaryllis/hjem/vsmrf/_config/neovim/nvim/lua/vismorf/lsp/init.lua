@@ -16,7 +16,7 @@ vim.lsp.enable({
 	"nixd",
 	"clangd",
 	"neocmake",
-	"qmlls",
+	-- "qmlls",
 	"glsl_analyzer",
 	"glslls",
 })

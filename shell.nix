@@ -6,6 +6,9 @@ in
   pkgs.mkShell {
     NPINS_DIRECTORY = "+npins";
     IMPURE = "true";
+    packages = [
+      pkgs.tokei
+    ];
 
     shellHook = ''
       export NIX_PATH="nixpkgs=$(npins get-path nixpkgs)"

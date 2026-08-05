@@ -71,7 +71,7 @@
 #disable_click = false
 
 # Show memory values in the processes widget as values by default
-process_memory_as_value = true
+# process_memory_as_value = true
 
 # Show tree mode by default in the processes widget.
 tree = true
@@ -80,7 +80,6 @@ tree = true
 #show_table_scroll_position = false
 
 # Show processes as their commands by default in the process widget.
-#process_command = false
 
 # Displays the network widget with binary prefixes.
 network_use_binary_prefix = true
@@ -111,9 +110,11 @@ network_use_binary_prefix = true
 
 # Processes widget configuration
 [processes]
+process_command = false
 # The columns shown by the process widget. The following columns are supported (the GPU columns are only available if the GPU feature is enabled when built):
 # PID, Name, CPU%, Mem%, R/s, W/s, T.Read, T.Write, User, State, Time, GMem%, GPU%
-columns = ["PID", "Name", "GMem%", "GPU%", "Mem%","CPU%"]
+columns = ["PID", "Name", "GMem", "GPU%", "Mem","CPU%"]
+default_memory_value = true
 
 
 # CPU widget configuration
@@ -185,7 +186,8 @@ list = ["wifi", "nvme"]
 
 
 # Network widget configuration
-#[network]
+[network]
+use_binary_prefix = true
 # By default, there are no network interface filters enabled. An example use case is provided below.
 #[network.interface_filter]
 # Whether to ignore any matches. Defaults to true.

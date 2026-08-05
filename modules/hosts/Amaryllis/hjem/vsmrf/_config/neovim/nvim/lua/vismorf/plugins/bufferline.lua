@@ -1,5 +1,4 @@
 --todo: move highlights to theme
---todo: remove this plugin and create a floating buffer that displays opened buffers
 vim.o.showtabline = 2
 
 return {
@@ -10,14 +9,12 @@ return {
 	keys = {
 		{
 			"<S-k>",
-			mode = { "n", "v" },
 			function()
 				require("cokeline.mappings").by_step("focus", 1)
 			end,
 		},
 		{
 			"<S-j>",
-			mode = { "n", "v" },
 			function()
 				require("cokeline.mappings").by_step("focus", -1)
 			end,
@@ -45,9 +42,9 @@ return {
 		require("cokeline").setup({
 			default_hl = {
 				bg = function(b)
-					if b.is_focused then
-						return palette.bg3
-					end
+					-- if b.is_focused then
+					-- 	return palette.bg3
+					-- end
 				end,
 			},
 			buffers = {

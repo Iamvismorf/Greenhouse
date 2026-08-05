@@ -28,6 +28,7 @@ if status is-interactive
    bind p fish_clipboard_paste
    bind k history-search-backward
    bind j history-search-forward
+   bind -M insert ctrl-w backward-kill-word
 
    alias off="shutdown now"
    alias ls="eza --colour=always --icons=always -la"
@@ -36,6 +37,8 @@ if status is-interactive
    alias slip="systemctl suspend"
    alias nix-shell="nix-shell --command fish"
    alias grep="grep --exclude-dir={.git,.direnv,build}"
+   alias emacs="emacs -nw"
+   alias try="nix-shell -p"
    alias fvim="fzf | xargs vim"
    abbr -a !! --position anywhere --function last_history_item
 end
@@ -49,7 +52,7 @@ abbr autocd --regex '.*' --function autocd
 
 
 
-#direnv hook fish | source
+direnv hook fish | source
 
 
 # function fzf-complete -d 'fzf completion and print selection back to commandline'

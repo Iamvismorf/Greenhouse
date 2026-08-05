@@ -1,3 +1,5 @@
+-- todo: add a command that prints root directory
+-- todo: yazi when "vim" in terminal
 local M = {}
 
 M.defaults = {
@@ -7,6 +9,7 @@ M.defaults = {
 local cached_roots = {}
 local augroup = vim.api.nvim_create_augroup("vismorf/rootf", {})
 local last_root = nil
+local root = nil
 
 function M._enable()
 	local last_dir = nil
@@ -21,7 +24,7 @@ function M._enable()
 
 			local current_file = ev.file
 			if current_file == "" then
-				vim.cmd.edit(vim.fn.getcwd()) -- without this yazi opens in the root instead of the directory.
+				-- vim.cmd.edit(vim.fn.getcwd()) -- without this yazi opens in the root instead of the directory.
 				current_file = vim.fn.getcwd()
 			end
 			local parent_dir = vim.fs.dirname(current_file)
@@ -31,7 +34,7 @@ function M._enable()
 				return
 			end
 
-			local root = cached_roots[current_file]
+			root = cached_roots[current_file]
 
 			if root == nil then
 				local should_ignore = vim.tbl_contains(M.config.ignoreDirs, function(v)
@@ -47,7 +50,8 @@ function M._enable()
 				)[1]
 
 				if root == nil then
-					return
+					root = current_file
+					-- return
 				end
 				root = vim.fs.dirname(root)
 
@@ -59,6 +63,9 @@ function M._enable()
 			vim.fn.chdir(root)
 		end,
 	})
+	vim.api.nvim_create_user_command("Root", function()
+		vim.print(root)
+	end, {})
 end
 
 function M.setup(opts)

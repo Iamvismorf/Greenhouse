@@ -38,9 +38,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "f8a0a45963010e5cb3baa8069dbcc07a60c5d26d",
-      "url": "https://github.com/ghostty-org/ghostty/archive/f8a0a45963010e5cb3baa8069dbcc07a60c5d26d.tar.gz",
-      "hash": "sha256-JmIVbdjtMFcGEJ7H883zvMs/TxNVyi7zFWc0cbB3q3M="
+      "revision": "46edeee407ff1cd15fb7db3837025386b2f3a327",
+      "url": "https://github.com/ghostty-org/ghostty/archive/46edeee407ff1cd15fb7db3837025386b2f3a327.tar.gz",
+      "hash": "sha256-Axb7Bk7riibkzKKBwXosqGUHb1p2cECZypHWDuJJ7p0="
     },
     "hjem": {
       "type": "Git",
@@ -90,9 +90,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "9001416dc5d0ca24c8e4b5a44bfe7cd6fbeb1dd1",
-      "url": "https://github.com/nix-community/neovim-nightly-overlay/archive/9001416dc5d0ca24c8e4b5a44bfe7cd6fbeb1dd1.tar.gz",
-      "hash": "sha256-LocQzkSjVS4G0AKMBiEIVdBKCNTMZXQFjQMWFId4Jpg="
+      "revision": "0f46eaeeea58c396929ed4d04ed46282e1e0e33f",
+      "url": "https://github.com/nix-community/neovim-nightly-overlay/archive/0f46eaeeea58c396929ed4d04ed46282e1e0e33f.tar.gz",
+      "hash": "sha256-OapoKXc31FbcfzT8Cehs3By0HnhgzZxnI42MCRXx6/8="
     },
     "niri": {
       "type": "Git",
@@ -128,11 +128,11 @@
         "owner": "nixos",
         "repo": "nixpkgs"
       },
-      "branch": "nixpkgs-unstable",
+      "branch": "nixos-unstable",
       "submodules": false,
-      "revision": "13043924aaa7375ce482ebe2494338e058282925",
-      "url": "https://github.com/nixos/nixpkgs/archive/13043924aaa7375ce482ebe2494338e058282925.tar.gz",
-      "hash": "sha256-nwASzrRDD1JBEu/o8ekKYEXm/oJW6EMCzCRdrwcLe90="
+      "revision": "e73de5be04e0eff4190a1432b946d469c794e7b4",
+      "url": "https://github.com/nixos/nixpkgs/archive/e73de5be04e0eff4190a1432b946d469c794e7b4.tar.gz",
+      "hash": "sha256-pGvFkM8N0xEkIIXDe5YYfbEAvHrk4IxBrjB/x8OomhE="
     },
     "npins": {
       "type": "Git",
@@ -143,9 +143,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "c664916b48964bdb442f8a1529d3a10c168ab195",
-      "url": "https://github.com/andir/npins/archive/c664916b48964bdb442f8a1529d3a10c168ab195.tar.gz",
-      "hash": "sha256-qoVRA4osHAXC+g+C3h/OjEm9ODRwCR4w9xOgjASjwOM="
+      "revision": "b7799bca849009ea150a91d9045aa7183f02bdec",
+      "url": "https://github.com/andir/npins/archive/b7799bca849009ea150a91d9045aa7183f02bdec.tar.gz",
+      "hash": "sha256-2DZ7zcCZlnwTsj8cDKg+i/Pb7plU/GPtO1pFPsnNBGE="
     },
     "qtengine": {
       "type": "Git",
@@ -156,9 +156,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "abf8c1d3068dd10739b0671fa62f96c5347f276f",
-      "url": "https://github.com/kossLAN/qtengine/archive/abf8c1d3068dd10739b0671fa62f96c5347f276f.tar.gz",
-      "hash": "sha256-aJ5ZdIX10nmhzMLjP6QMuFJHvljJD+xcojuKZjPkr70="
+      "revision": "073987f0120ac77a92fb9f0c0877aa7f1f04d3bf",
+      "url": "https://github.com/kossLAN/qtengine/archive/073987f0120ac77a92fb9f0c0877aa7f1f04d3bf.tar.gz",
+      "hash": "sha256-D7mzavE5WfLyvEXV0pvO3/gxC+SSmfjw4Lxy7I5qvnI="
     },
     "quickshell": {
       "type": "Git",
@@ -169,9 +169,35 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "783c953987dc56ff0601abe6845ed96f1d00495a",
-      "url": "https://github.com/quickshell-mirror/quickshell/archive/783c953987dc56ff0601abe6845ed96f1d00495a.tar.gz",
-      "hash": "sha256-lLbV66V3RMNp1l8/UelmR4YzoJ5ONtgvEtiUMJATH/o="
+      "revision": "68c2c85c33845385f7ab8147b32f1450b1e468e0",
+      "url": "https://github.com/quickshell-mirror/quickshell/archive/68c2c85c33845385f7ab8147b32f1450b1e468e0.tar.gz",
+      "hash": "sha256-Mo2YtNEGlcySnbq0YuP3nUKMAQCMAfE+TcCffo5vzD8="
+    },
+    "relative-motions-yazi": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "jormala",
+        "repo": "relative-motions.yazi"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "d4f2003b90a6129847e17107df76ba43091c7755",
+      "url": "https://github.com/jormala/relative-motions.yazi/archive/d4f2003b90a6129847e17107df76ba43091c7755.tar.gz",
+      "hash": "sha256-lyzwbs1u4qXuIamE31QAD6e22RPJxROs7Q/tuTkz12Q="
+    },
+    "south-nvim": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "arnaukl",
+        "repo": "south.nvim"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "cade7e93a4f5b37415b1ded6ae61ac56edd900fd",
+      "url": "https://github.com/arnaukl/south.nvim/archive/cade7e93a4f5b37415b1ded6ae61ac56edd900fd.tar.gz",
+      "hash": "sha256-it7SdFGr06+KXc/2OheHaasHgI2fcgmyqIrQRk0dVE8="
     },
     "zenNvim": {
       "type": "Git",
@@ -187,5 +213,5 @@
       "hash": "sha256-FSDIPyH6Fra9EO8fvr5uwwRaWEHJFjKMgfMZkl3BUeQ="
     }
   },
-  "version": 7
+  "version": 8
 }

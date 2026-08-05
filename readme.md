@@ -9,11 +9,6 @@
 
 <br>
 
-> [!WARNING]
-> If you are a beginner to nixos, you shouldn't use this repo as reference.
-
-<br>
-
 The entry point is [./modules/hosts](modules/hosts)
 
 <br>

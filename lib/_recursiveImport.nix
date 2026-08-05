@@ -1,3 +1,5 @@
+# [deprecated]
+# this function is rewritten in c++. This shit is not readable in nix.
 # files/directories starting with _(by default) and empty files will be ignored. Idea stolen from github.com/vic/import-tree
 # supports multiple directory
 #

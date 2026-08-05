@@ -14,9 +14,21 @@ return {
 				require("fzf-lua").live_grep({ resume = true })
 			end,
 		},
+		{
+			"<C-b>",
+			function()
+				require("fzf-lua").buffers({
+					actions = { ["ctrl-b"] = function() end },
+					fzf_opts = { ["--header-lines"] = 0 },
+				})
+			end,
+		},
 	},
 	after = function()
 		require("fzf-lua").setup({
+			fzf_opts = {
+				["--cycle"] = true,
+			},
 			files = {
 				hidden = true,
 				follow = true,
@@ -25,6 +37,11 @@ return {
 			grep = {
 				hidden = true,
 				follow = true,
+			},
+			winopts = {
+				preview = {
+					wrap = true,
+				},
 			},
 		})
 	end,

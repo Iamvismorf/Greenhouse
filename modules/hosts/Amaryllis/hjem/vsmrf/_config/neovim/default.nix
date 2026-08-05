@@ -10,7 +10,7 @@ in {
   initLua = ''
     require("vismorf")
   '';
-  # neovim = inputs.neovimNightlyOut.packages.${pkgs.stdenv.hostPlatform.system}.default;
+  # neovim = inputs.neovim-nightly.packages.${pkgs.stdenv.hostPlatform.system}.default;
   extraBinPath =
     [
       pkgs.fzf
@@ -60,8 +60,8 @@ in {
           src = inputs.zenNvim.outPath;
         }
         {
-          name = "bafa";
-          src = inputs.bafa.outPath;
+          name = "south-nvim";
+          src = inputs.south-nvim.outPath;
         }
       ];
     opt =
@@ -83,6 +83,7 @@ in {
           nvim-surround
           yazi-nvim
           bufjump-nvim
+          nvim-highlight-colors
           ;
       }
       ++ [

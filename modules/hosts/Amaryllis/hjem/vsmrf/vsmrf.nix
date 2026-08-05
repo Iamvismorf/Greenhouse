@@ -51,7 +51,7 @@ in {
         "fish/config.fish".source = utils.mkStoreSymlink ./_config/fish/config.fish;
         "fish/functions".source = utils.mkStoreSymlink ./_config/fish/functions;
         "swappy/config".source = ./_config/swappy/config;
-        "bottom".source = ./_config/bottom;
+        "bottom".source = utils.mkStoreSymlink ./_config/bottom;
       };
     };
   };

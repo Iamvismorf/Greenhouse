@@ -1,7 +1,7 @@
 {
   modules.hosts.Amaryllis = {
     wm.niri = {
-      enable = true;
+      enable = false;
       buildFromSrc = false;
     };
   };

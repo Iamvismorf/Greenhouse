@@ -10,6 +10,7 @@ return {
 				lua = { "stylua" },
 				nix = { "alejandra" },
 				sh = { "shfmt" },
+				qml = { "qmlformat" },
 			},
 
 			format_on_save = {

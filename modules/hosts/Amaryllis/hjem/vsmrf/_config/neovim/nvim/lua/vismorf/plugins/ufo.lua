@@ -8,11 +8,13 @@ return {
 		"nvim-ufo",
 		event = "DeferredUIEnter",
 		after = function()
-			require("ufo").setup({
-				provider_selector = function(bufnr, filetype, buftype)
-					return { "treesitter", "indent" }
-				end,
-			})
+			-- require("ufo").setup({
+			-- 	provider_selector = function(bufnr, filetype, buftype)
+			-- 		return { "treesitter", "indent" }
+			-- 	end,
+			-- })
+
+			require("ufo").setup()
 		end,
 	},
 	{

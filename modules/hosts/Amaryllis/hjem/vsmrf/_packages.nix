@@ -3,7 +3,12 @@
   inputs,
 }: let
   mnw = inputs.mnw.lib.wrap {inherit pkgs inputs;} ./_config/neovim;
-  yazi = pkgs.callPackage ./_config/yazi {};
+  yazi = pkgs.callPackage ./_config/yazi {inherit inputs;};
+  vimacs = with pkgs; ((emacsPackagesFor emacs-pgtk).emacsWithPackages (epkgs: [
+    epkgs.evil
+    epkgs.evil-collection
+    epkgs.evil-terminal-cursor-changer
+  ]));
 in
   builtins.attrValues {
     inherit (pkgs) awww waypaper;
@@ -30,16 +35,25 @@ in
       withX11 = false;
     })
 
+    # pkgs.ghostty
     inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default
 
-    (pkgs.vesktop.overrideAttrs (oldAttrs: {
-      desktopItems =
-        map (
-          item:
-            item.override {icon = "discord";}
-        )
-        oldAttrs.desktopItems;
+    (pkgs.equibop.overrideAttrs (o: {
+      desktopItems = o.desktopItems.override {
+        icon = "discord";
+        desktopName = "Discord";
+      };
     }))
+    vimacs
+
+    # (pkgs.vesktop.overrideAttrs (oldAttrs: {
+    #   desktopItems =
+    #     map (
+    #       item:
+    #         item.override {icon = "discord";}
+    #     )
+    #     oldAttrs.desktopItems;
+    # }))
 
     mnw.devMode
     yazi

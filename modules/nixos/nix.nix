@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   modules.nixos.nix = {
     documentation.enable = false;
 
@@ -7,6 +7,11 @@
     nix = {
       channel.enable = false;
       nixPath = ["nixpkgs=/etc/nixos/nixpkgs"];
+
+      # extraOptions = ''
+      #   plugin-files = ${pkgs.callPackage ../../lib/extraBuiltins {}}/lib/nix/plugins
+      #
+      # '';
 
       settings = {
         experimental-features = ["nix-command" "flakes" "pipe-operators"];

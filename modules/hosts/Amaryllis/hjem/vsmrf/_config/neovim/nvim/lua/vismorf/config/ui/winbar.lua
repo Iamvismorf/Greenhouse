@@ -29,20 +29,20 @@ function Winbar.render()
 	})
 end
 
-vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
-	callback = function()
-		-- vim.print(vim.api.nvim_win_get_config(0))
-		local wins = vim.api.nvim_tabpage_list_wins(0)
-		wins = vim.tbl_filter(function(win)
-			return vim.api.nvim_win_get_config(win).relative == "" and vim.fn.win_gettype(win) ~= "command"
-		end, wins)
-
-		if #wins <= 1 then
-			vim.o.winbar = ""
-			return
-		end
-
-		vim.o.winbar = "%=%m %{%v:lua.Winbar.file_name()%}"
-	end,
-})
--- vim.o.winbar = "%=%m %{%v:lua.Winbar.file_name()%}"
+-- vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
+-- 	callback = function()
+-- 		-- vim.print(vim.api.nvim_win_get_config(0))
+-- 		local wins = vim.api.nvim_tabpage_list_wins(0)
+-- 		wins = vim.tbl_filter(function(win)
+-- 			return vim.api.nvim_win_get_config(win).relative == "" and vim.fn.win_gettype(win) ~= "command"
+-- 		end, wins)
+--
+-- 		if #wins <= 1 then
+-- 			vim.o.winbar = ""
+-- 			return
+-- 		end
+--
+-- 		vim.o.winbar = "%=%m %{%v:lua.Winbar.file_name()%}"
+-- 	end,
+-- })
+vim.o.winbar = "%=%m %{%v:lua.Winbar.file_name()%}"
