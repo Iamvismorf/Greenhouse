@@ -38,9 +38,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "46edeee407ff1cd15fb7db3837025386b2f3a327",
-      "url": "https://github.com/ghostty-org/ghostty/archive/46edeee407ff1cd15fb7db3837025386b2f3a327.tar.gz",
-      "hash": "sha256-Axb7Bk7riibkzKKBwXosqGUHb1p2cECZypHWDuJJ7p0="
+      "revision": "47147324cee9d12b537f0ea204bf16449d706b3a",
+      "url": "https://github.com/ghostty-org/ghostty/archive/47147324cee9d12b537f0ea204bf16449d706b3a.tar.gz",
+      "hash": "sha256-ztYW0dP3SoNqCHzzBllPiwyb8vEcON+ys9P3aD3QF80="
     },
     "hjem": {
       "type": "Git",
