@@ -10,12 +10,14 @@ in
       pkgs.tokei
     ];
 
+    env = {
+      NIX_CONFIG = "
+      plugin-files = ${pkgs.callPackage ./lib/extraBuiltins {}}/lib/nix/plugins
+      ";
+    };
+
     shellHook = ''
       export NIX_PATH="nixpkgs=$(npins get-path nixpkgs)"
-
-      export NIX_CONFIG="
-      plugin-files = "${pkgs.callPackage ./lib/extraBuiltins {}}/lib/nix/plugins"
-      "
 
       export NIXD_FLAGS="
       --nixos-options-expr=\"(import ./evaledConfig.nix).options // (import ./evaledConfig.nix).config.nC.$(hostname).options\" \
