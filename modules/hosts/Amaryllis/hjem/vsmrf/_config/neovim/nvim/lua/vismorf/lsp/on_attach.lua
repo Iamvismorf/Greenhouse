@@ -1,8 +1,10 @@
-return function(ev)
-	-- local opts = { buffer = ev.buf, silent = true }
+return function(client, bufnr)
+	-- local opts = { buffer = bufnr, silent = true }
 	local map = function(keys, func, desc)
-		vim.keymap.set("n", keys, func, { buffer = ev.buf, desc = desc, silent = true })
+		vim.keymap.set("n", keys, func, { buffer = bufnr, desc = desc, silent = true })
 	end
+
+	vim.lsp.inlay_hint.enable(true)
 
 	local fzf = require("fzf-lua")
 
@@ -19,5 +21,4 @@ return function(ev)
 	-- map("<leader>di", vim.diagnostic.open_float, "show diagnostics for line")
 
 	map("<leader>ca", vim.lsp.buf.code_action)
-	-- vim.lsp.document_color.enable(false)
 end

@@ -142,6 +142,7 @@
           [
             cfg.gtk.package
             cfg.iconTheme.package
+            pkgs.atkinson-hyperlegible-next #todo: make option
           ]
           ++ cfg.qt.packages;
       };

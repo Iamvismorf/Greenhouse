@@ -34,8 +34,9 @@
             yazi
             neovim
             nh
+            wl-clip-persist
             wl-clipboard
-            cliphist
+            # cliphist
             libnotify
             firefox
             cachix

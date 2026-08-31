@@ -8,13 +8,9 @@
       channel.enable = false;
       nixPath = ["nixpkgs=/etc/nixos/nixpkgs"];
 
-      # extraOptions = ''
-      #   plugin-files = ${pkgs.callPackage ../../lib/extraBuiltins {}}/lib/nix/plugins
-      #
-      # '';
-
       settings = {
         experimental-features = ["nix-command" "flakes" "pipe-operators"];
+        plugin-files = "${pkgs.callPackage ../../lib/extraBuiltins {}}/lib/nix/plugins"; #not needed actually since I only need the plugins inside this repo but whatever ig
         auto-optimise-store = true;
         download-attempts = 3;
         show-trace = true;

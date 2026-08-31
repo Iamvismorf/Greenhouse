@@ -32,7 +32,7 @@ vim.api.nvim_create_autocmd({ "CmdwinEnter", "VimResized" }, {
 map("n", "<leader>o", "]<space>", { remap = true })
 map("n", "<leader>O", "[<space>", { remap = true })
 
-map("n", "<leader><leader>", "<C-^>") -- last focused buffer
+-- map("n", "<leader><leader>", "<C-^>") -- last focused buffer
 map({ "n", "v", "x" }, "<leader>y", '"+y')
 map({ "n", "v", "x" }, "<leader>Y", '"+Y', { remap = true })
 map({ "n", "v", "x" }, "<leader>d", '"+d')

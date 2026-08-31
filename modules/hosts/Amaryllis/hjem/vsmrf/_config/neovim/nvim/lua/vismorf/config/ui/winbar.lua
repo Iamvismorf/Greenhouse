@@ -45,4 +45,5 @@ end
 -- 		vim.o.winbar = "%=%m %{%v:lua.Winbar.file_name()%}"
 -- 	end,
 -- })
-vim.o.winbar = "%=%m %{%v:lua.Winbar.file_name()%}"
+-- vim.o.winbar = "%=%m %{%v:lua.Winbar.file_name()%}"
+vim.o.winbar = "%{%v:lua.Winbar.render()%}"

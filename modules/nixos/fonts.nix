@@ -1,13 +1,14 @@
 {
   modules.nixos.fonts = {pkgs, ...}: {
     fonts.fontDir.enable = true;
+    fonts.enableDefaultPackages = true;
     fonts = {
       fontconfig = {
         enable = true;
         defaultFonts = {
-          serif = ["Atkinson Hyperlegible Next"];
-          sansSerif = ["Atkinson Hyperlegible Next"];
-          monospace = ["Atkinson Hyperlegible Next"];
+          serif = ["Atkinson Hyperlegible Next Medium"];
+          sansSerif = ["Atkinson Hyperlegible Next Medium"];
+          monospace = ["Atkinson Hyperlegible Next Medium"];
         };
       };
     };

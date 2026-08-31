@@ -8,7 +8,11 @@ find_package(PkgConfig)
 pkg_check_modules(NIX REQUIRED nix-expr)
 
 
-add_library(greenlib MODULE main.cpp)
+add_library(greenlib
+   MODULE
+   main.cpp
+)
+
 target_include_directories(greenlib PUBLIC ${NIX_INCLUDE_DIRS})
 target_compile_options(greenlib PUBLIC ${NIX_CFLAGS_OTHER})
 

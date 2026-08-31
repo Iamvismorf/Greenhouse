@@ -7,9 +7,10 @@ vim.o.winborder = "single"
 
 vim.o.numberwidth = 3
 vim.o.statuscolumn = ""
+vim.o.showtabline = 0
 
-vim.opt.nu = true
-vim.opt.relativenumber = true
+vim.wo.nu = true
+vim.wo.relativenumber = true
 vim.opt.termguicolors = true
 
 vim.opt.ignorecase = true

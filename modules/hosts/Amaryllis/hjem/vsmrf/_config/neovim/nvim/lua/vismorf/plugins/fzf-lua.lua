@@ -19,7 +19,7 @@ return {
 			function()
 				require("fzf-lua").buffers({
 					actions = { ["ctrl-b"] = function() end },
-					fzf_opts = { ["--header-lines"] = 0 },
+					-- fzf_opts = { ["--header-lines"] = 0 },
 				})
 			end,
 		},

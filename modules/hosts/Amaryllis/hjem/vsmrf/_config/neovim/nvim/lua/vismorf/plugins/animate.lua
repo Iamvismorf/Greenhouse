@@ -10,7 +10,7 @@ return {
 				enable = false,
 			},
 		})
-		vim.opt.mousescroll = "ver:1,hor:6"
+		vim.opt.mousescroll = "ver:1,hor:6" --todo: breaks blink cmp doc scroll
 		-- vim.api.nvim_set_hl(0, "MiniAnimateCursor", { fg = "NONE", bg = "NONE" })
 	end,
 }

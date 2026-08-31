@@ -1,3 +1,4 @@
+#todo: this shit sucks ass
 let
   sources = removeAttrs (import ./+npins) ["__functor"];
   unflake = (import sources.flake-inputs).import-flake;

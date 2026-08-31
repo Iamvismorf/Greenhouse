@@ -60,7 +60,9 @@ return {
 					},
 					completion = {
 						menu = {
-							auto_show = true,
+							auto_show = function(ctx, _)
+								return ctx.mode == "cmdwin"
+							end,
 						},
 						list = {
 							selection = {
@@ -74,6 +76,11 @@ return {
 				appearance = {
 					nerd_font_variant = "normal",
 				},
+				fuzzy = {
+					implementation = "rust",
+					prebuilt_binaries = { download = false },
+				},
+				-- signature = { enabled = true },
 
 				completion = {
 					list = {
@@ -86,22 +93,26 @@ return {
 					menu = {
 						scrollbar = false,
 						draw = {
-							gap = 8,
-							padding = 1,
-							columns = function()
-								if vim.api.nvim_get_mode().mode == "c" then
-									return { { "kind_icon", "label", gap = 2 } }
+							padding = 2,
+							columns = function(ctx)
+								if ctx.mode == "cmdwin" then
+									return { { "kind_icon", "label" } }
 								else
-									return { { "kind_icon", "label", "label_description", "source_name", gap = 1 } }
+									return {
+										{ "kind_icon", "label" },
+										{ "label_description", gap = 6 },
+										{ "kind", "source_name", gap = 2 },
+									}
 								end
 							end,
 							components = {
-								source_name = {
-									width = { fill = true },
+								kind_icon = { width = { fill = false } },
+								kind = { width = { fill = true } },
+								space = {
 									text = function(ctx)
-										return ctx.source_name
+										return string.rep(" ", math.max(1, ctx.self.gap))
 									end,
-									highlight = "BlinkCmpSource",
+									width = { fill = true },
 								},
 							},
 						},

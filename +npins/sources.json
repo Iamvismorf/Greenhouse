@@ -169,9 +169,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "68c2c85c33845385f7ab8147b32f1450b1e468e0",
-      "url": "https://github.com/quickshell-mirror/quickshell/archive/68c2c85c33845385f7ab8147b32f1450b1e468e0.tar.gz",
-      "hash": "sha256-Mo2YtNEGlcySnbq0YuP3nUKMAQCMAfE+TcCffo5vzD8="
+      "revision": "1a4716cde794a59928d9d9fc15f2afc7a95de360",
+      "url": "https://github.com/quickshell-mirror/quickshell/archive/1a4716cde794a59928d9d9fc15f2afc7a95de360.tar.gz",
+      "hash": "sha256-CLX2Zp5i5BuLbOxNOkwRd9YY84IOrACNxBV79o9/F9Y="
     },
     "relative-motions-yazi": {
       "type": "Git",
@@ -185,6 +185,19 @@
       "revision": "d4f2003b90a6129847e17107df76ba43091c7755",
       "url": "https://github.com/jormala/relative-motions.yazi/archive/d4f2003b90a6129847e17107df76ba43091c7755.tar.gz",
       "hash": "sha256-lyzwbs1u4qXuIamE31QAD6e22RPJxROs7Q/tuTkz12Q="
+    },
+    "snippy": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "iamvismorf",
+        "repo": "snippy"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "7c55b13749cc9135134bb213334f49a1a7233cf5",
+      "url": "https://github.com/iamvismorf/snippy/archive/7c55b13749cc9135134bb213334f49a1a7233cf5.tar.gz",
+      "hash": "sha256-4dUk6F5YtZqai1h0aLsny0l3ECy6CLTACtYfFBL336M="
     },
     "south-nvim": {
       "type": "Git",
