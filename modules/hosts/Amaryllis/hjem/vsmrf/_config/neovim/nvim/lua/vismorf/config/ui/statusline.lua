@@ -19,7 +19,7 @@ function StatusLine.file_name()
 	local file_name = vim.fn.expand("%:t")
 	local parent_dir = vim.fn.expand("%:p:h:t")
 
-	--fixme: vim folder results in folder/folder but vim folder/ returns desired result. Assuming folder exists
+	--fixme: `vim folder` results in folder/folder but `vim folder/` doesn't return desired result. Assuming folder exists
 	return string.format(" %%#StatusLineFileName#%s/%s%%*", parent_dir, file_name)
 end
 

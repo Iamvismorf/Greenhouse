@@ -1,10 +1,10 @@
 {
   pkgs,
   lib,
-  inputs,
   ...
 }: let
   fs = lib.fileset;
+  pluh = import ./+npins;
 in {
   aliases = ["vim"];
   initLua = ''
@@ -57,11 +57,11 @@ in {
       ++ [
         {
           name = "zen.nvim";
-          src = inputs.zenNvim.outPath;
+          src = pluh.zen-nvim.outPath;
         }
         {
           name = "south-nvim";
-          src = inputs.south-nvim.outPath;
+          src = pluh.south-nvim.outPath;
         }
       ];
     opt =
@@ -95,7 +95,7 @@ in {
         (
           pkgs.vimPlugins.blink-cmp.overrideAttrs
           (_: _: {
-            src = inputs.blink-cmp.outPath;
+            src = pluh.blink-cmp.outPath;
           })
         )
       ];

@@ -10,4 +10,5 @@ vim.lsp.enable({
 	"qmlls",
 	"glsl_analyzer",
 	"glslls",
+	"rust_analyzer",
 })
