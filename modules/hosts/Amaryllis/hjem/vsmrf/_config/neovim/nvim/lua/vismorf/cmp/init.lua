@@ -80,7 +80,7 @@ return {
 					implementation = "rust",
 					prebuilt_binaries = { download = false },
 				},
-				-- signature = { enabled = true },
+				signature = { enabled = true },
 
 				completion = {
 					list = {

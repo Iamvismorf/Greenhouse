@@ -1,3 +1,4 @@
+-- '-- *.lua *.nix' to filter by filetype
 return {
 	"fzf-lua",
 	event = { "DeferredUIEnter", "LspAttach" },
@@ -11,7 +12,7 @@ return {
 		{
 			"<leader>g",
 			function()
-				require("fzf-lua").live_grep({ resume = true })
+				require("fzf-lua").live_grep({ resume = true, no_esc = true })
 			end,
 		},
 		{

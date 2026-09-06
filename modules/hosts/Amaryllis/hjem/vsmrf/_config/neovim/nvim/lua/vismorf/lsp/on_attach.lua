@@ -4,7 +4,7 @@ return function(client, bufnr)
 		vim.keymap.set("n", keys, func, { buffer = bufnr, desc = desc, silent = true })
 	end
 
-	vim.lsp.inlay_hint.enable(true)
+	-- vim.lsp.inlay_hint.enable(true)
 
 	local fzf = require("fzf-lua")
 
@@ -20,5 +20,6 @@ return function(client, bufnr)
 	map("<leader>di", fzf.diagnostics_document, "show  diagnostics for file") -- pass 0 as bufnr
 	-- map("<leader>di", vim.diagnostic.open_float, "show diagnostics for line")
 
+	-- map("<leader>b", vim.lsp.buf.hover)
 	map("<leader>ca", vim.lsp.buf.code_action)
 end
