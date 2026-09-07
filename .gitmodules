@@ -1,3 +1,6 @@
 [submodule "templates"]
 	path = templates
 	url = https://github.com/Iamvismorf/templates
+[submodule "modules/hosts/Amaryllis/hjem/vsmrf/_config/neovim"]
+	path = modules/hosts/Amaryllis/hjem/vsmrf/_config/neovim
+	url = git@github.com:Iamvismorf/nvim-flakey.git
