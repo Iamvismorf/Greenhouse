@@ -33,10 +33,10 @@
             just
             yazi
             neovim
+            cryptsetup
             nh
             wl-clip-persist
             wl-clipboard
-            # cliphist
             libnotify
             firefox
             cachix
