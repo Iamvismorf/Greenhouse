@@ -46,6 +46,12 @@ in rec {
       nixpkgs = nixpkgs.outPath;
     };
   };
+  nvim-flakey = evalFlake {
+    src = sources.nvim-flakey;
+    overrides = {
+      nixpkgs = nixpkgs.outPath;
+    };
+  };
   niri = evalFlake {
     src = sources.niri;
     overrides = {
