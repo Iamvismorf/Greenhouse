@@ -10,7 +10,7 @@ let
   self = evalModules {
     modules = [
       {
-        imports = builtins.listNixFilesRecursive {
+        imports = utils.recursiveImport {
           dirs = [./modules ./options];
           excludePrefixedWith = ["_" "+"];
         };

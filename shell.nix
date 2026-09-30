@@ -8,13 +8,15 @@ in
     IMPURE = "true";
     packages = [
       pkgs.tokei
+      pkgs.npins
+
     ];
 
-    env = {
-      NIX_CONFIG = "
-      plugin-files = ${pkgs.callPackage ./lib/extraBuiltins {}}/lib/nix/plugins
-      ";
-    };
+    # env = {
+    #   NIX_CONFIG = "
+    #   plugin-files = ${pkgs.callPackage ./lib/extraBuiltins {}}/lib/nix/plugins
+    #   ";
+    # };
 
     shellHook = ''
       export NIX_PATH="nixpkgs=$(npins get-path nixpkgs)"
