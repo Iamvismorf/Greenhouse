@@ -10,6 +10,10 @@ in
       pkgs.tokei
       pkgs.npins
 
+      #config file formatters
+      pkgs.alejandra #nix
+      pkgs.taplo #toml
+      pkgs.yq #yaml and json
     ];
 
     # env = {
@@ -19,7 +23,8 @@ in
     # };
 
     shellHook = ''
-      export NIX_PATH="nixpkgs=$(npins get-path nixpkgs)"
+      # export NIX_PATH="nixpkgs=$(npins get-path nixpkgs)"
+      export NIX_PATH="nixpkgs=${sources.nixpkgs.outPath}"
 
       export NIXD_FLAGS="
       --nixos-options-expr=\"(import ./evaledConfig.nix).options // (import ./evaledConfig.nix).config.nC.$(hostname).options\" \
