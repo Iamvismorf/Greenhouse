@@ -37,6 +37,7 @@ if status is-interactive
    alias nix-shell="nix-shell --command fish"
    alias grep="grep --exclude-dir={.git,.direnv,build}"
    alias fvim="fzf | xargs vim"
+   alias try="nix-shell -p"
    abbr -a !! --position anywhere --function last_history_item
 end
 # function autocd
@@ -99,3 +100,4 @@ function last_history_item
    echo $history[1]
 end
 
+zoxide init --cmd cd fish | source
