@@ -6,11 +6,6 @@
   unflake = (import sources.flake-inputs).import-flake;
   mnw = inputs.mnw.lib.wrap {inherit pkgs inputs;} ./_config/neovim;
   yazi = pkgs.callPackage ./_config/yazi {inherit inputs;};
-  vimacs = with pkgs; ((emacsPackagesFor emacs-pgtk).emacsWithPackages (epkgs: [
-    epkgs.evil
-    epkgs.evil-collection
-    epkgs.evil-terminal-cursor-changer
-  ]));
   snippy = unflake {src = sources.snippy;};
 in
   builtins.attrValues {
@@ -38,7 +33,6 @@ in
       withX11 = false;
     })
 
-    pkgs.cinny-desktop
     pkgs.ghostty
     # inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default
 
@@ -48,7 +42,6 @@ in
         desktopName = "Discord";
       };
     }))
-    vimacs
     snippy.packages.${pkgs.stdenv.hostPlatform.system}.default
 
     # (pkgs.vesktop.overrideAttrs (oldAttrs: {
