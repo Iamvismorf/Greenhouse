@@ -1,6 +1,6 @@
 <div align="center">
 <h2>Greenhouse</h2>
-<p>My Nixos configuration<br>(npins + dendritic pattern)</p>
+<p>My Nixos configuration<br>(fuck this shit)</p>
 </div>
 
 <br>

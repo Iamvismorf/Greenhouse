@@ -1,32 +1,32 @@
 {
-  "cpuTime": 9.636067390441895,
+  "cpuTime": 10.062858581542969,
   "envs": {
-    "bytes": 235657400,
-    "elements": 18514715,
-    "number": 10942460
+    "bytes": 233514288,
+    "elements": 18316668,
+    "number": 10872618
   },
   "gc": {
     "cycles": 6,
-    "heapSize": 1224998912,
-    "totalBytes": 1927982720
+    "heapSize": 1208221696,
+    "totalBytes": 1919004736
   },
   "list": {
-    "bytes": 33689744,
-    "concats": 737465,
-    "elements": 4211218
+    "bytes": 33513008,
+    "concats": 710742,
+    "elements": 4189126
   },
-  "nrAvoided": 14280728,
-  "nrExprs": 1750681,
-  "nrFunctionCalls": 9184707,
-  "nrLookups": 5554277,
-  "nrOpUpdateValuesCopied": 32369560,
-  "nrOpUpdates": 2089993,
-  "nrPrimOpCalls": 4439364,
-  "nrThunks": 16210610,
+  "nrAvoided": 14145705,
+  "nrExprs": 2011164,
+  "nrFunctionCalls": 9106389,
+  "nrLookups": 5594818,
+  "nrOpUpdateValuesCopied": 32675609,
+  "nrOpUpdates": 2060421,
+  "nrPrimOpCalls": 4493358,
+  "nrThunks": 16125184,
   "sets": {
-    "bytes": 936617544,
-    "elements": 52866087,
-    "number": 3781673
+    "bytes": 940078736,
+    "elements": 53109968,
+    "number": 3763302
   },
   "sizes": {
     "Attr": 16,
@@ -35,16 +35,16 @@
     "Value": 16
   },
   "symbols": {
-    "bytes": 1332988,
-    "number": 107236
+    "bytes": 1319594,
+    "number": 106233
   },
   "time": {
-    "cpu": 9.636067390441895,
-    "gc": 0.316,
-    "gcFraction": 0.032793460983206006
+    "cpu": 10.062858581542969,
+    "gc": 0.337,
+    "gcFraction": 0.03348948981734838
   },
   "values": {
-    "bytes": 441558000,
-    "number": 27597375
+    "bytes": 442047248,
+    "number": 27627953
   }
 }
