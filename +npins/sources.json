@@ -134,6 +134,19 @@
       "url": "https://github.com/andir/npins/archive/b7799bca849009ea150a91d9045aa7183f02bdec.tar.gz",
       "hash": "sha256-2DZ7zcCZlnwTsj8cDKg+i/Pb7plU/GPtO1pFPsnNBGE="
     },
+    "nvim-flakey": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "iamvismorf",
+        "repo": "nvim-flakey"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "c717c46158328a47bb53faeb5af48850c7a013bb",
+      "url": "https://github.com/iamvismorf/nvim-flakey/archive/c717c46158328a47bb53faeb5af48850c7a013bb.tar.gz",
+      "hash": "sha256-aDF1lB6EPfl0Kbbttq0GxuMBTIBdwOm/WyQ0QUB9hLc="
+    },
     "qtengine": {
       "type": "Git",
       "repository": {

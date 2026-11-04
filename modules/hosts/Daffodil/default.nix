@@ -14,6 +14,7 @@ in {
       self.modules.nixos.nix
       self.modules.nixos.nixosPackages
       self.modules.nixos.misc
+      self.modules.nixos.udisks
 
       self.modules.wm._
       self.modules.wm.hyprland
