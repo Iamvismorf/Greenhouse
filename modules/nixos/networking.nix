@@ -1,8 +1,12 @@
 {
-  modules.nixos.networking = {
-    networking.networkmanager.enable = true;
+  modules.nixos.networking = {pkgs, ...}: {
+    networking.networkmanager = {
+      enable = true;
+    };
 
     networking.firewall.enable = true;
+
+    systemd.network.wait-online.enable = false;
 
     services.openssh = {
       enable = true;
