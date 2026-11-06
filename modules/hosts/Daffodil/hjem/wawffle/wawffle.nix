@@ -24,6 +24,7 @@ in {
         "networkmanager"
         "input"
         "wheel"
+        "nixos"
       ];
       shell = pkgs.fish;
 

@@ -29,6 +29,7 @@ in {
         "video"
         "render"
         "libvrtd"
+        "nixos"
       ];
       shell = pkgs.fish;
 

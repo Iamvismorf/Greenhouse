@@ -16,6 +16,7 @@ in {
       self.modules.nixos.nix
       self.modules.nixos.nixosPackages
       self.modules.nixos.virtualisation
+      self.modules.nixos.users
 
       self.modules.wm._
       self.modules.wm.hyprland
