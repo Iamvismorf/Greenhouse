@@ -30,7 +30,7 @@ if status is-interactive
    bind j history-search-forward
 
    alias off="shutdown now"
-   alias ls="eza --colour=always --icons=always -la"
+   alias ls="eza --colour=always --icons=always -bgMola --group-directories-first --total-size --git"
    alias info="btm"
    alias fetch="fastfetch"
    alias slip="systemctl suspend"
@@ -50,7 +50,7 @@ end
 
 
 
-#direnv hook fish | source
+# direnv hook fish | source
 
 # function fzf-complete -d 'fzf completion and print selection back to commandline'
 # 	set -l cmd (commandline -co) (commandline -ct)
@@ -95,6 +95,17 @@ end
 # 	commandline -f repaint
 # end
 
+function umask_hook --on-variable UMASK
+   if test -z "$DEFAULT_UMASK"
+      set -gx DEFAULT_UMASK $(umask)
+   end
+
+   if test -n "$UMASK"
+      umask "$UMASK"
+   else
+      umask "$DEFAULT_UMASK"
+   end
+end
 
 function last_history_item
    echo $history[1]

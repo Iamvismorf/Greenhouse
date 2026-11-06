@@ -31,7 +31,7 @@ if status is-interactive
    bind -M insert ctrl-w backward-kill-word
 
    alias off="shutdown now"
-   alias ls="eza --colour=always --icons=always -la"
+   alias ls="eza --colour=always --icons=always -bgMola --group-directories-first --total-size --git"
    alias info="btm"
    alias fetch="fastfetch"
    alias slip="systemctl suspend"
@@ -98,6 +98,17 @@ direnv hook fish | source
 # 	commandline -f repaint
 # end
 
+function umask_hook --on-variable UMASK
+   if test -z "$DEFAULT_UMASK"
+      set -gx DEFAULT_UMASK $(umask)
+   end
+
+   if test -n "$UMASK"
+      umask "$UMASK"
+   else
+      umask "$DEFAULT_UMASK"
+   end
+end
 
 function last_history_item
    echo $history[1]

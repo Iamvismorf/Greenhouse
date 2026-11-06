@@ -1,7 +1,7 @@
 function fish_prompt
   set -l last_status $status
     set -l stat
-    if test $last_status -ne 0
+    if test "$last_status" -ne 0
         set stat (set_color red)'✗'
      else
         set stat (set_color green)'->'
