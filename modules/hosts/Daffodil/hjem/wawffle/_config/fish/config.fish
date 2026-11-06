@@ -30,7 +30,7 @@ if status is-interactive
    bind j history-search-forward
 
    alias off="shutdown now"
-   alias ls="eza --colour=always --icons=always -bgMola --group-directories-first --total-size --git"
+   alias ls="eza --colour=always --icons=always -bgMola --group-directories-first --total-size"
    alias info="btm"
    alias fetch="fastfetch"
    alias slip="systemctl suspend"

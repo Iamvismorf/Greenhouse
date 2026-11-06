@@ -31,7 +31,7 @@ if status is-interactive
    bind -M insert ctrl-w backward-kill-word
 
    alias off="shutdown now"
-   alias ls="eza --colour=always --icons=always -bgMola --group-directories-first --total-size --git"
+   alias ls="eza --colour=always --icons=always -bgMola --group-directories-first --total-size"
    alias info="btm"
    alias fetch="fastfetch"
    alias slip="systemctl suspend"
