@@ -15,12 +15,12 @@
         download-attempts = 3;
         show-trace = true;
         allowed-users = ["@wheel"];
-        # substituters = [
-        #   "https://amaryllis.cachix.org"
-        # ];
-        # trusted-public-keys = [
-        #   "amaryllis.cachix.org-1:vNkKbFIgjK1V74ll1v59Sg4n+mppn8hjcaIEICkq3ko="
-        # ];
+        substituters = [
+          "https://amaryllis.cachix.org"
+        ];
+        trusted-public-keys = [
+          "amaryllis.cachix.org-1:vNkKbFIgjK1V74ll1v59Sg4n+mppn8hjcaIEICkq3ko="
+        ];
       };
 
       optimise = {
