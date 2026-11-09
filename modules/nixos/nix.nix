@@ -1,5 +1,5 @@
-{pkgs, ...}: {
-  modules.nixos.nix = {
+{
+  modules.nixos.nix = {pkgs, ...}: {
     documentation.enable = false;
 
     nixpkgs.config.allowUnfree = true;

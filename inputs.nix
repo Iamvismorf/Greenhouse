@@ -18,9 +18,9 @@ in rec {
   };
   ghostty = evalFlake {
     src = sources.ghostty;
-    overrides = {
-      nixpkgs = nixpkgs.outPath;
-    };
+    # overrides = {
+    #   nixpkgs = nixpkgs.outPath;
+    # };
   };
   hjem = evalFlake {
     src = sources.hjem;

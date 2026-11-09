@@ -33,8 +33,8 @@ in
       withX11 = false;
     })
 
-    pkgs.ghostty
-    # inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default
+    # pkgs.ghostty
+    inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default
 
     (pkgs.equibop.overrideAttrs (o: {
       desktopItems = o.desktopItems.override {
