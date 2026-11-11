@@ -2,5 +2,8 @@
 
 .direnv/
 
-.git/
+.git
+.gitmodules
 templates/
+result
+readme.md
