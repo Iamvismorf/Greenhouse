@@ -2,10 +2,11 @@
   pkgs,
   inputs,
   sources,
+  config,
 }: let
   unflake = (import sources.flake-inputs).import-flake;
-  mnw = inputs.mnw.lib.wrap {inherit pkgs inputs;} ./_config/neovim;
-  yazi = pkgs.callPackage ./_config/yazi {inherit inputs;};
+  mnw = inputs.mnw.lib.wrap {inherit pkgs inputs;} config.hjem.metadata.vsmrf.neovim.defaultNix;
+  yazi = pkgs.callPackage config.hjem.metadata.vsmrf.yazi.defaultNix {inherit inputs;};
   snippy = unflake {src = sources.snippy;};
 in
   builtins.attrValues {

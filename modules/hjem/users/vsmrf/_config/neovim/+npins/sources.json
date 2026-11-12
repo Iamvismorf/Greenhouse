@@ -1,0 +1,44 @@
+{
+  "pins": {
+    "blink-cmp": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "saghen",
+        "repo": "blink.cmp"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "c573a15a62bd0bfd4006ee0849b24f5404395500",
+      "url": "https://github.com/saghen/blink.cmp/archive/c573a15a62bd0bfd4006ee0849b24f5404395500.tar.gz",
+      "hash": "sha256-9NVRDpv2aalLAsINMQcBaMuhunf3M4E9PG1q8YKqWo0="
+    },
+    "south-nvim": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "arnaukl",
+        "repo": "south.nvim"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "605c7efede69435ebebc2b45e5f131df1e158b4b",
+      "url": "https://github.com/arnaukl/south.nvim/archive/605c7efede69435ebebc2b45e5f131df1e158b4b.tar.gz",
+      "hash": "sha256-9+4G/K6kr7gSnrgbUBqX/k/06/BWeoNpe+0/48k/qWw="
+    },
+    "zen-nvim": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "nendix",
+        "repo": "zen.nvim"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "e552fc12f847113a05589981d02f69c953d6d3e9",
+      "url": "https://github.com/nendix/zen.nvim/archive/e552fc12f847113a05589981d02f69c953d6d3e9.tar.gz",
+      "hash": "sha256-cA7ncwuQf3CM4VCLUhnSCIpDEGmZr+jzFqlQA4l8JFk="
+    }
+  },
+  "version": 8
+}

@@ -1,9 +1,10 @@
 {
   pkgs,
   inputs,
+  config,
 }: let
-  mnw = inputs.mnw.lib.wrap {inherit pkgs inputs;} ../../../Amaryllis/hjem/vsmrf/_config/neovim;
-  yazi = pkgs.callPackage ./_config/yazi {inherit inputs;};
+  mnw = inputs.mnw.lib.wrap {inherit pkgs inputs;} config.hjem.metadata.vsmrf.neovim.defaultNix;
+  yazi = pkgs.callPackage config.hjem.metadata.vsmrf.yazi.defaultNix {inherit inputs;};
 in
   builtins.attrValues {
     inherit (pkgs) awww waypaper waybar;

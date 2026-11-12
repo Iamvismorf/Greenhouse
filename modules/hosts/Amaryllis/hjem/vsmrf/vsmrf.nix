@@ -8,15 +8,16 @@
 }: let
   username = "vsmrf";
 in {
-  modules.hjem.${username} = {pkgs, ...}: {
-    imports = [
-      self.modules.hjem.theming
-    ];
+  modules.hjem.${username} = {
+    pkgs,
+    config,
+    ...
+  }: {
     theming = {
       inherit username;
       enable = true;
       qt = {
-        colorScheme = ./_config/theme/BreezeDark.colors;
+        colorScheme = config.hjem.metadata.vsmrf.theme.BreezeDarkColors;
         iconTheme = "Papirus-Dark";
       };
     };
@@ -42,18 +43,18 @@ in {
 
     hjem.users.${username} = {
       clobberFiles = true;
-      packages = import ./_packages.nix {inherit inputs pkgs sources;};
-      xdg.config.files = {
-        "fuzzel/fuzzel.ini".source = ./_config/fuzzel/fuzzel.ini;
-        "nixpkgs".source = ./_config/nixpkgs;
-        "mpv/mpv.conf".source = ./_config/mpv/mpv.conf;
-        "ghostty".source = utils.mkStoreSymlink ./_config/ghostty;
-        "fastfetch".source = ./_config/fastfetch;
-        "git".source = ./_config/git;
-        "fish/config.fish".source = utils.mkStoreSymlink ./_config/fish/config.fish;
-        "fish/functions".source = utils.mkStoreSymlink ./_config/fish/functions;
-        "swappy/config".source = ./_config/swappy/config;
-        "bottom".source = utils.mkStoreSymlink ./_config/bottom;
+      packages = import ./_packages.nix {inherit inputs pkgs sources config;};
+      xdg.config.files = with config.hjem.metadata.vsmrf; {
+        "fuzzel/fuzzel.ini".source = fuzzel.fuzzelIni;
+        "nixpkgs".source = nixpkgs null;
+        "mpv/mpv.conf".source = mpv.mpvConf;
+        "ghostty".source = utils.mkStoreSymlink (ghostty null);
+        "fastfetch".source = fastfetch null;
+        "git".source = git null;
+        "fish/config.fish".source = utils.mkStoreSymlink fish.configFish;
+        "fish/functions".source = utils.mkStoreSymlink (fish.functions null);
+        "swappy/config".source = swappy.config;
+        "bottom".source = utils.mkStoreSymlink (bottom null);
       };
     };
   };
