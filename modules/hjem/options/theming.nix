@@ -1,5 +1,5 @@
 {
-  modules.hjem.theming = {
+  modules.hjem.options = {
     pkgs,
     lib,
     config,
