@@ -3,4 +3,4 @@
 	url = git@github.com:Iamvismorf/nvim-flakey.git
 [submodule "templates"]
 	path = templates
-	url = https://github.com/Iamvismorf/templates
+	url = git@github.com:Iamvismorf/templates.git
