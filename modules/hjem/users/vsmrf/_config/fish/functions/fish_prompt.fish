@@ -26,6 +26,7 @@ function fish_prompt
      set readOnly (set_color --bold red) '  '
   end
 
+  #todo: doesn't work
   set -l ssh
   if set -q SSH_CONNECTION
      set ssh (set_color blue) '$hostname'
