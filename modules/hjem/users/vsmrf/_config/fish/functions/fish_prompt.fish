@@ -5,41 +5,48 @@ function fish_prompt
 
     set -l stat
     if test "$last_status" -ne 0
-        set stat (set_color $retcc)'┗━✗'
+        set stat '┗━✗'
     else
-        set stat (set_color $retcc)'┗━➜'
+        set stat '┗━➜'
     end
-    echo''
 
-    set -l varMode
+    set -l mode
     switch $fish_bind_mode
         case default
-            set varMode (set_color --bold green)'[N]'
+            set mode (set_color --bold green)'[N]'
         case insert
-            set varMode (set_color --bold yellow )'[I]'
+            set mode (set_color --bold yellow )'[I]'
         case replace_one
-            set varMode (set_color --bold cyan)'[R]'
+            set mode (set_color --bold cyan)'[R]'
         case visual
-            set varMode (set_color --bold brmagenta)'[V]'
+            set mode (set_color --bold brmagenta)'[V]'
         case '*'
-            set varMode (set_color --bold red)'[?]'
+            set mode (set_color --bold red)'[?]'
     end
 
     set -l readOnly
     if not test -w .
-        set readOnly (set_color --bold red) '  '
+        set readOnly '  '
     end
 
-    #todo: doesn't work
     set -l ssh
-    set login $USER@(prompt_hostname) 
     if set -q SSH_CONNECTION
-        set ssh (set_color blue)$login
+        set ssh $USER@(prompt_hostname)
     end
 
-    set gitBranch (set_color magenta)" "(fish_vcs_prompt '%s')
+    set gitBranch (fish_vcs_prompt ' %s')
 
-    string join '' -- (set_color $retcc) '┳━'$varMode (set_color --reset) ' on '$gitBranch $readOnly ' ' \[$ssh\]: (set_color yellow)(prompt_pwd -d 0)
-    echo (set_color $retcc)'┃'
-    echo -n $stat (set_color --reset)
+    echo
+    string join '' -- \
+        (set_color $retcc) '┳━' \
+        $mode \
+        (set_color --reset)' on '(set_color magenta)$gitBranch \
+        (set_color --bold red) $readOnly \
+        ' ' \
+        (set_color blue) '['$ssh']:' \
+        (set_color yellow) (prompt_pwd -d 0) \
+        \n \
+        (set_color $retcc) '┃' \
+        \n \
+        (set_color $retcc) $stat (set_color --reset) ' '
 end
