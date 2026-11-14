@@ -32,13 +32,14 @@ function fish_prompt
 
     #todo: doesn't work
     set -l ssh
+    set login $USER@(prompt_hostname) 
     if set -q SSH_CONNECTION
-        set ssh (set_color blue) '$hostname'
+        set ssh (set_color blue)$login
     end
 
     set gitBranch (set_color magenta)" "(fish_vcs_prompt '%s')
 
-    string join '' -- (set_color $retcc) '┳━'$varMode (set_color --reset) ' on '$gitBranch $readOnly ' ' (set_color yellow)(prompt_pwd -d 0)
+    string join '' -- (set_color $retcc) '┳━'$varMode (set_color --reset) ' on '$gitBranch $readOnly ' ' \[$ssh\]: (set_color yellow)(prompt_pwd -d 0)
     echo (set_color $retcc)'┃'
-    echo -n $stat  (set_color --reset)
+    echo -n $stat (set_color --reset)
 end
