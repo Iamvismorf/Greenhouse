@@ -1,11 +1,13 @@
 function fish_prompt
     set -l last_status $status
+    set -l retcc red
+    test $status = 0; and set retcc green
 
     set -l stat
     if test "$last_status" -ne 0
-        set stat (set_color red)'✗'
+        set stat (set_color $retcc)'┗━✗'
     else
-        set stat (set_color green)'->'
+        set stat (set_color $retcc)'┗━➜'
     end
     echo''
 
@@ -34,7 +36,9 @@ function fish_prompt
         set ssh (set_color blue) '$hostname'
     end
 
-    set gitBranch (set_color magenta)" "(git branch --show-current 2>/dev/null)
+    set gitBranch (set_color magenta)" "(fish_vcs_prompt '%s')
 
-    string join '' -- ' '$varMode (set_color normal) ' on '$gitBranch $readOnly ' ' (set_color yellow)(prompt_pwd -d 0) ' ' $stat (set_color normal) ' '
+    string join '' -- (set_color $retcc) '┳━'$varMode (set_color --reset) ' on '$gitBranch $readOnly ' ' (set_color yellow)(prompt_pwd -d 0)
+    echo (set_color $retcc)'┃'
+    echo -n $stat  (set_color --reset)
 end
