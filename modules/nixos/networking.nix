@@ -17,6 +17,12 @@
       };
     };
 
+    services.fail2ban = {
+      enable = true;
+      bantime = "1h";
+      bantime-increment.enable = true;
+    };
+
     # Open ports in the firewall.
     # networking.firewall.allowedTCPPorts = [ ... ];
     # networking.firewall.allowedUDPPorts = [ ... ];
