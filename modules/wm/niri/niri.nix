@@ -46,6 +46,7 @@
         pkgs.fuzzel
         pkgs.alacritty
         pkgs.xwayland-satellite
+        pkgs.hyprpolkitagent
       ];
     };
   };
