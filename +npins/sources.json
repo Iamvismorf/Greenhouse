@@ -198,6 +198,19 @@
       "revision": "7c55b13749cc9135134bb213334f49a1a7233cf5",
       "url": "https://github.com/iamvismorf/snippy/archive/7c55b13749cc9135134bb213334f49a1a7233cf5.tar.gz",
       "hash": "sha256-4dUk6F5YtZqai1h0aLsny0l3ECy6CLTACtYfFBL336M="
+    },
+    "sops-nix": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "mic92",
+        "repo": "sops-nix"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "11e5885d241743ff0193465d533b20e754bc3ce0",
+      "url": "https://github.com/mic92/sops-nix/archive/11e5885d241743ff0193465d533b20e754bc3ce0.tar.gz",
+      "hash": "sha256-3q/hxp/flW1PnV3Dx+H3p8kHGEHJ7251BqVMNsAAB9E="
     }
   },
   "version": 8

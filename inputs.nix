@@ -40,12 +40,6 @@ in rec {
       nixpkgs = nixpkgs.outPath;
     };
   };
-  # nvim-flakey = evalFlake {
-  #   src = source.nvim-flakey;
-  #   overrides = {
-  #     nixpkgs = nixpkgs.outPath;
-  #   };
-  # };
   neovim-nightly = evalFlake {
     src = sources.neovim-nightly;
     overrides = {
@@ -75,6 +69,12 @@ in rec {
   };
   qtengine = evalFlake {
     src = sources.qtengine;
+    overrides = {
+      nixpkgs = nixpkgs.outPath;
+    };
+  };
+  sops-nix = evalFlake {
+    src = sources.sops-nix;
     overrides = {
       nixpkgs = nixpkgs.outPath;
     };
