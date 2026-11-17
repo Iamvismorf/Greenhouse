@@ -19,8 +19,17 @@ let
 
     specialArgs = {
       inherit utils inputs sources pkgs;
-      self = self.config;
+      self = self'.config;
     };
   };
+  self' =
+    self
+    // {
+      config =
+        self.config
+        // {
+          outPath = ./.;
+        };
+    };
 in
-  self
+  self'
