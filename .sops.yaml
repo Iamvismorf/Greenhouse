@@ -1,6 +1,6 @@
 keys:
   - &hosts '':
-      - &amaryllis todo
+      - &amaryllis age1xl0j598mms3pmrua9rnr47m3cmlewggkrg8rvh5rdauap5a9rgqqhl3d9s
 creation_rules:
   - path_regex: secrets/Amaryllis/[^/]+\.yaml$
     key_groups:
