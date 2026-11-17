@@ -14,8 +14,8 @@ in
       pkgs.alejandra #nix
       pkgs.taplo #toml
       pkgs.yq #yaml and json
-
       pkgs.sops
+      pkgs.yamlfmt
     ];
 
     # env = {
