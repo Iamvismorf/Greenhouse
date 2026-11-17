@@ -14,6 +14,8 @@ in
       pkgs.alejandra #nix
       pkgs.taplo #toml
       pkgs.yq #yaml and json
+
+      pkgs.ssh-to-age
       pkgs.sops
       pkgs.yamlfmt
     ];

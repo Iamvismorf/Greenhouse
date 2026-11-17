@@ -9,7 +9,7 @@
       usev6 = "ifv6, ifv6=eno1";
       server = "www.dnshome.de";
       username = "amaryllis.dnshome.eu";
-      passwordFile = config.sops.secrets.password.path;
+      passwordFile = config.sops.secrets."ddns/password".path;
       domains = [
         "amaryllis.dnshome.eu"
       ];
