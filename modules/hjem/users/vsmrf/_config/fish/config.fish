@@ -37,15 +37,20 @@ if status is-interactive
    alias slip="systemctl suspend"
    alias nix-shell="nix-shell --command fish"
    alias grep="grep --exclude-dir={.git,.direnv,build}"
-   alias emacs="emacs -nw"
    alias try="nix-shell -p"
    alias fvim="fzf | xargs vim"
+   alias fzf="fzf -m"
    abbr -a !! --position anywhere --function last_history_item
 end
 function autocd
    command -q $argv[1]; and return 1
    test -d "$argv[1]"; and echo cd $argv[1]; and return 0
    return 1
+end
+
+function fgs
+    commandline -i (git status --short | awk '{print $2}' | fzf | tr '\n' ' ')
+    commandline -C 0
 end
 
 abbr autocd --regex '.*' --function autocd
