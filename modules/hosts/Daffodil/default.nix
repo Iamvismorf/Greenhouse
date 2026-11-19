@@ -16,6 +16,7 @@ in {
       self.modules.nixos.misc
       self.modules.nixos.udisks
       self.modules.nixos.users
+      self.modules.nixos.security
 
       self.modules.wm._
       self.modules.wm.hyprland

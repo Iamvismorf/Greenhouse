@@ -18,6 +18,7 @@ in {
       self.modules.nixos.virtualisation
       self.modules.nixos.users
       self.modules.nixos.secrets
+      self.modules.nixos.security
 
       self.modules.wm._
       self.modules.wm.hyprland
