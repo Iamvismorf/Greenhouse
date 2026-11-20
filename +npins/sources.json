@@ -137,14 +137,13 @@
     "nvim-flakey": {
       "type": "Git",
       "repository": {
-        "type": "GitHub",
-        "owner": "iamvismorf",
-        "repo": "nvim-flakey"
+        "type": "Git",
+        "url": "https://tangled.org/iamvismorf.tngl.sh/nvim-flakey"
       },
       "branch": "main",
       "submodules": false,
       "revision": "fcc39d9d07542ce4daf23540502469e465b7b0a2",
-      "url": "https://github.com/iamvismorf/nvim-flakey/archive/fcc39d9d07542ce4daf23540502469e465b7b0a2.tar.gz",
+      "url": null,
       "hash": "sha256-+RwdOrnoA6Ub9Po6ZdaWjOIQKaZRHwjbhxD7Y0KL2w0="
     },
     "qtengine": {
@@ -189,15 +188,14 @@
     "snippy": {
       "type": "Git",
       "repository": {
-        "type": "GitHub",
-        "owner": "iamvismorf",
-        "repo": "snippy"
+        "type": "Git",
+        "url": "https://tangled.org/iamvismorf.tngl.sh/Snippy"
       },
       "branch": "main",
       "submodules": false,
-      "revision": "7c55b13749cc9135134bb213334f49a1a7233cf5",
-      "url": "https://github.com/iamvismorf/snippy/archive/7c55b13749cc9135134bb213334f49a1a7233cf5.tar.gz",
-      "hash": "sha256-4dUk6F5YtZqai1h0aLsny0l3ECy6CLTACtYfFBL336M="
+      "revision": "6c6b2b2667e2533af6ab696864e2e85984fcdd61",
+      "url": null,
+      "hash": "sha256-phTBhHn76OmMyawX/P4H0WDgdoKjkoaEjgrg6TDfZMw="
     },
     "sops-nix": {
       "type": "Git",
